@@ -1,0 +1,14378 @@
+/*==============================================================
+    GRACE COMMUNITY CHURCH
+    Premium CSS Framework
+    Version: 2026
+==============================================================*/
+
+/*==============================================================
+Google Fonts
+==============================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/*==============================================================
+CSS VARIABLES
+==============================================================*/
+
+:root{
+
+    --primary:#B88A44;
+    --primary-light:#D8B06E;
+    --primary-dark:#8C6330;
+
+    --secondary:#F5F1EA;
+
+    --white:#ffffff;
+
+    --dark:#222222;
+    --dark-2:#444444;
+    --dark-3:#666666;
+    --dark-4:#888888;
+
+    --light:#FDFBF7;
+    --light-2:#F7F4EE;
+    --light-3:#F1ECE4;
+
+    --text:#3C3C3C;
+    --text-light:#6A6A6A;
+
+    --border:rgba(0,0,0,.08);
+
+    --glass:rgba(255,255,255,.65);
+    --glass-2:rgba(255,255,255,.82);
+
+    --shadow:0 15px 45px rgba(0,0,0,.08);
+
+    --gradient:linear-gradient(135deg,#B88A44,#D7B16C);
+
+}
+/*==============================================================
+RESET
+==============================================================*/
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--dark);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+.header.scrolled .navbar{
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+.navbar-brand,
+.navbar-nav>li>a{
+
+    color:#222;
+
+}
+/*==============================================================
+SCROLLBAR
+==============================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B0E12;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-light);
+
+}
+
+/*==============================================================
+SELECTION
+==============================================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+/*==============================================================
+IMAGES
+==============================================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*==============================================================
+LINKS
+==============================================================*/
+
+a{
+
+    text-decoration:none;
+
+    transition:.4s ease;
+
+    color:inherit;
+
+}
+
+a:hover{
+
+    color:var(--primary);
+
+}
+
+/*==============================================================
+LIST
+==============================================================*/
+
+ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+/*==============================================================
+HEADINGS
+==============================================================*/
+
+h1,h2,h3,h4,h5,h6{
+
+    font-family:'Cinzel',serif;
+
+    color:#fff;
+
+    line-height:1.2;
+
+    margin-bottom:15px;
+
+}
+
+h1{
+
+    font-size:72px;
+
+}
+
+h2{
+
+    font-size:52px;
+
+}
+
+h3{
+
+    font-size:34px;
+
+}
+
+h4{
+
+    font-size:26px;
+
+}
+
+h5{
+
+    font-size:20px;
+
+}
+
+h6{
+
+    font-size:18px;
+
+}
+
+/*==============================================================
+PARAGRAPH
+==============================================================*/
+
+p{
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+}
+
+/*==============================================================
+SECTION
+==============================================================*/
+
+section{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.section-padding{
+
+    padding:120px 0;
+
+}
+
+/*==============================================================
+CONTAINER
+==============================================================*/
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==============================================================
+TEXT COLORS
+==============================================================*/
+
+.text-gold{
+
+    color:var(--primary);
+
+}
+
+.text-white{
+
+    color:#fff;
+
+}
+
+/*==============================================================
+SECTION TAG
+==============================================================*/
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    border:1px solid rgba(200,164,93,.25);
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+    backdrop-filter:blur(14px);
+
+}
+
+.section-tag i{
+
+    font-size:15px;
+
+}
+
+/*==============================================================
+SECTION TITLE
+==============================================================*/
+
+.section-title{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+.section-title h2{
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2 span{
+
+    color:var(--primary);
+
+}
+
+.section-title p{
+
+    font-size:18px;
+
+}
+
+/*==============================================================
+GLASS CARD
+==============================================================*/
+
+.glass-card{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/*==============================================================
+BUTTONS
+==============================================================*/
+
+.btn-primary-custom{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 38px;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-weight:700;
+
+    border-radius:60px;
+
+    transition:.45s;
+
+    border:none;
+
+    box-shadow:0 15px 40px rgba(200,164,93,.30);
+
+}
+
+.btn-primary-custom:hover{
+
+    transform:translateY(-6px);
+
+    color:#111;
+
+    box-shadow:0 20px 50px rgba(200,164,93,.45);
+
+}
+
+.btn-secondary-custom{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 38px;
+
+    border-radius:60px;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    transition:.45s;
+
+}
+
+.btn-secondary-custom:hover{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+/*==============================================================
+BACKGROUND GLOW
+==============================================================*/
+
+.glow{
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.08);
+
+    filter:blur(130px);
+
+    z-index:-1;
+
+}
+
+/*==============================================================
+UTILITY
+==============================================================*/
+
+.mt-80{
+
+    margin-top:80px;
+
+}
+
+.mb-80{
+
+    margin-bottom:80px;
+
+}
+
+.radius-30{
+
+    border-radius:30px;
+
+}
+
+.shadow-lg{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.overflow-hidden{
+
+    overflow:hidden;
+
+}
+
+.position-relative{
+
+    position:relative;
+
+}
+
+/*==============================================================
+FORMS
+==============================================================*/
+
+.form-control,
+.form-select{
+
+    height:58px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+    border-radius:16px;
+
+    padding:0 18px;
+
+    transition:.35s;
+
+}
+
+textarea.form-control{
+
+    height:auto;
+
+    padding:18px;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    background:rgba(255,255,255,.08);
+
+    border-color:var(--primary);
+
+    color:#fff;
+
+    box-shadow:none;
+
+}
+
+.form-control::placeholder{
+
+    color:#9BA3AF;
+
+}
+
+/*==============================================================
+END OF PART 1
+NEXT:
+PART 2
+HEADER
+PREMIUM NAVBAR
+MEGA MENU
+MOBILE MENU
+SCROLL EFFECT
+==============================================================*/
+/*==============================================================
+HEADER
+TOP BAR
+PREMIUM GLASS NAVBAR
+==============================================================*/
+
+/*==============================
+Header Wrapper
+==============================*/
+
+.header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    transition:.45s ease;
+
+}
+
+/*==============================
+Top Bar
+==============================*/
+
+.top-bar{
+
+    background:#050608;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    padding:10px 0;
+
+    font-size:14px;
+
+}
+
+.top-bar .container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+}
+
+.top-left,
+.top-right{
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+}
+
+.top-left a,
+.top-right a{
+
+    color:#c9d0d8;
+    font-size:14px;
+
+}
+
+.top-left a:hover,
+.top-right a:hover{
+
+    color:var(--primary);
+
+}
+
+.top-left i,
+.top-right i{
+
+    color:var(--primary);
+    margin-right:8px;
+
+}
+
+/*==============================
+Navigation
+==============================*/
+
+.navbar{
+
+    padding:20px 0;
+
+    transition:.45s;
+
+    background:transparent;
+
+}
+
+.header.scrolled .navbar{
+
+    background:rgba(10,12,17,.88);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/*==============================
+Container
+==============================*/
+
+.navbar .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/*==============================
+Logo
+==============================*/
+
+.navbar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#fff;
+
+}
+
+.navbar-brand img{
+
+    width:58px;
+
+    height:58px;
+
+    object-fit:contain;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-text h4{
+
+    margin:0;
+
+    font-size:22px;
+
+    color:#fff;
+
+}
+
+.logo-text span{
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/*==============================
+Desktop Menu
+==============================*/
+
+.navbar-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:38px;
+
+}
+
+.navbar-nav li{
+
+    position:relative;
+
+}
+
+.navbar-nav>li>a{
+
+    color:#fff;
+
+    font-weight:600;
+
+    position:relative;
+
+    padding:12px 0;
+
+    transition:.35s;
+
+}
+
+/*==============================
+Animated Underline
+==============================*/
+
+.navbar-nav>li>a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gradient);
+
+    transition:.4s;
+
+}
+
+.navbar-nav>li>a:hover::after,
+
+.navbar-nav>li>a.active::after{
+
+    width:100%;
+
+}
+
+.navbar-nav>li>a:hover{
+
+    color:var(--primary);
+
+}
+
+/*==============================
+Dropdown
+==============================*/
+
+.navbar-nav li ul{
+
+    position:absolute;
+
+    left:0;
+
+    top:120%;
+
+    min-width:240px;
+
+    background:rgba(15,18,24,.96);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.4s;
+
+    padding:12px 0;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.navbar-nav li:hover ul{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.navbar-nav li ul li{
+
+    width:100%;
+
+}
+
+.navbar-nav li ul li a{
+
+    display:block;
+
+    padding:12px 24px;
+
+    color:#d2d7df;
+
+    transition:.3s;
+
+}
+
+.navbar-nav li ul li a:hover{
+
+    background:rgba(255,255,255,.04);
+
+    color:var(--primary);
+
+    padding-left:34px;
+
+}
+
+/*==============================
+Navigation Buttons
+==============================*/
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+/* Search */
+
+.search-btn{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.search-btn:hover{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+/* Donate Button */
+
+.nav-donate{
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-weight:700;
+
+    transition:.4s;
+
+    box-shadow:0 12px 35px rgba(200,164,93,.35);
+
+}
+
+.nav-donate:hover{
+
+    transform:translateY(-4px);
+
+    color:#111;
+
+    box-shadow:0 20px 45px rgba(200,164,93,.45);
+
+}
+
+/*==============================
+Navbar Blur Border
+==============================*/
+
+.navbar::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    width:92%;
+
+    height:1px;
+
+    transform:translateX(-50%);
+
+    background:linear-gradient(to right,
+    transparent,
+    rgba(255,255,255,.08),
+    transparent);
+
+}
+
+/*==============================
+Header Animation
+==============================*/
+
+@keyframes headerFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.header{
+
+    animation:headerFade .9s ease;
+
+}
+
+/*==============================================================
+END OF PART 2A
+
+NEXT
+PART 2B
+
+✔ Mobile Menu
+✔ Hamburger Animation
+✔ Offcanvas Navigation
+✔ Responsive Navbar
+✔ Sticky Mobile Header
+✔ Tablet Navigation
+==============================================================*/
+/*==============================================================
+PART 2B
+MOBILE NAVIGATION
+OFFCANVAS MENU
+HAMBURGER
+RESPONSIVE NAVBAR
+==============================================================*/
+
+/*==============================================================
+Mobile Toggle Button
+==============================================================*/
+
+.menu-toggle{
+
+    width:56px;
+    height:56px;
+
+    border:none;
+    outline:none;
+
+    cursor:pointer;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    gap:6px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+
+.menu-toggle:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.menu-toggle span{
+
+    width:26px;
+    height:2px;
+
+    border-radius:20px;
+
+    background:#ffffff;
+
+    transition:.35s;
+
+}
+
+/* Active Hamburger */
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:translateY(8px) rotate(45deg);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:translateY(-8px) rotate(-45deg);
+
+}
+
+/*==============================================================
+Mobile Menu
+==============================================================*/
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:0;
+    right:-100%;
+
+    width:360px;
+    max-width:100%;
+
+    height:100vh;
+
+    background:rgba(10,12,18,.98);
+
+    backdrop-filter:blur(30px);
+
+    z-index:99999;
+
+    overflow-y:auto;
+
+    transition:.45s ease;
+
+    box-shadow:-20px 0 60px rgba(0,0,0,.45);
+
+}
+
+.mobile-menu.active{
+
+    right:0;
+
+}
+
+/*==============================================================
+Close Button
+==============================================================*/
+
+.mobile-close{
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    margin-left:auto;
+
+    margin-bottom:40px;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.mobile-close:hover{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+/*==============================================================
+Menu Header
+==============================================================*/
+
+.mobile-header{
+
+    padding:35px 30px 15px;
+
+}
+
+.mobile-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:40px;
+
+}
+
+.mobile-logo img{
+
+    width:55px;
+
+}
+
+.mobile-logo h4{
+
+    margin:0;
+
+    color:#fff;
+
+}
+
+.mobile-logo span{
+
+    display:block;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/*==============================================================
+Navigation
+==============================================================*/
+
+.mobile-nav{
+
+    padding:0 30px 40px;
+
+}
+
+.mobile-nav ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.mobile-nav li{
+
+    width:100%;
+
+}
+
+.mobile-nav li a{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 20px;
+
+    border-radius:16px;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    background:rgba(255,255,255,.04);
+
+    transition:.35s;
+
+}
+
+.mobile-nav li a:hover{
+
+    background:rgba(200,164,93,.15);
+
+    color:var(--primary);
+
+    transform:translateX(8px);
+
+}
+
+/*==============================================================
+Dropdown
+==============================================================*/
+
+.mobile-dropdown{
+
+    display:none;
+
+    padding-top:8px;
+
+}
+
+.mobile-dropdown a{
+
+    padding:14px 18px;
+
+    margin-left:20px;
+
+    font-size:15px;
+
+}
+
+/*==============================================================
+Donate Button
+==============================================================*/
+
+.mobile-btn{
+
+    margin-top:35px;
+
+}
+
+.mobile-btn .btn-primary-custom{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+/*==============================================================
+Overlay
+==============================================================*/
+
+.mobile-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(5px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:99990;
+
+}
+
+.mobile-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media (max-width:991px){
+
+    .top-bar{
+
+        display:none;
+
+    }
+
+    .navbar{
+
+        padding:14px 0;
+
+    }
+
+    .navbar-nav{
+
+        display:none;
+
+    }
+
+    .nav-actions{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .logo-text h4{
+
+        font-size:20px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .mobile-menu{
+
+        width:100%;
+
+    }
+
+    .navbar-brand img{
+
+        width:50px;
+        height:50px;
+
+    }
+
+    .logo-text h4{
+
+        font-size:18px;
+
+    }
+
+    .logo-text span{
+
+        font-size:11px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .mobile-header{
+
+        padding:25px 20px 10px;
+
+    }
+
+    .mobile-nav{
+
+        padding:0 20px 30px;
+
+    }
+
+    .mobile-nav li a{
+
+        padding:15px 16px;
+
+        font-size:15px;
+
+    }
+
+    .menu-toggle{
+
+        width:50px;
+        height:50px;
+
+    }
+
+}
+
+@media (min-width:992px){
+
+    .mobile-menu,
+    .mobile-overlay{
+
+        display:none;
+
+    }
+
+}
+
+/*==============================================================
+Sticky Header Shadow
+==============================================================*/
+
+.header.scrolled{
+
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
+
+}
+
+/*==============================================================
+END OF PART 2B
+
+NEXT:
+PART 3
+✔ Premium Hero Section
+✔ Hero Background
+✔ Floating Cards
+✔ Animated Statistics
+✔ Scroll Indicator
+✔ Decorative Shapes
+✔ Glass CTA Buttons
+✔ 100% Responsive Hero
+==============================================================*/
+/*==============================================================
+PART 3A-1
+PREMIUM HERO SECTION
+LAYOUT • BACKGROUND • OVERLAYS • TYPOGRAPHY
+==============================================================*/
+
+/*==============================================================
+Hero Section
+==============================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding-top:130px;
+
+    background:#FDFBF7;
+
+    isolation:isolate;
+
+}
+
+.hero::before{
+
+    background:linear-gradient(
+    90deg,
+    rgba(253,251,247,.95),
+    rgba(253,251,247,.75),
+    rgba(253,251,247,.55));
+
+}
+
+/*==============================================================
+Hero Background
+==============================================================*/
+
+.hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-5;
+
+}
+
+.hero-bg img,
+.hero-bg video{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1.05);
+
+    animation:heroZoom 18s linear infinite alternate;
+
+}
+
+/*==============================================================
+Dark Overlay
+==============================================================*/
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(90deg,
+    rgba(7,9,13,.92) 0%,
+    rgba(7,9,13,.80) 35%,
+    rgba(7,9,13,.45) 70%,
+    rgba(7,9,13,.70) 100%);
+
+    z-index:-4;
+
+}
+
+/*==============================================================
+Gradient Overlay
+==============================================================*/
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(200,164,93,.18),
+    transparent 40%),
+
+    radial-gradient(circle at bottom left,
+    rgba(200,164,93,.10),
+    transparent 35%);
+
+    z-index:-3;
+
+}
+
+/*==============================================================
+Hero Container
+==============================================================*/
+
+.hero .container{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+/*==============================================================
+Row
+==============================================================*/
+
+.hero-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+/*==============================================================
+Left Content
+==============================================================*/
+
+.hero-content{
+
+    max-width:720px;
+
+}
+
+/*==============================================================
+Badge
+==============================================================*/
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 26px;
+
+    margin-bottom:28px;
+
+    border-radius:60px;
+
+    color:var(--primary);
+
+    background:rgba(200,164,93,.10);
+
+    border:1px solid rgba(200,164,93,.20);
+
+    backdrop-filter:blur(20px);
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+.hero-badge i{
+
+    font-size:15px;
+
+}
+
+/*==============================================================
+Hero Heading
+==============================================================*/
+
+.hero-title{
+
+    font-family:'Cinzel',serif;
+
+    font-size:78px;
+
+    line-height:1.08;
+
+    color:#ffffff;
+
+    margin-bottom:30px;
+
+}
+
+.hero-title span{
+
+    color:var(--primary);
+
+    display:inline-block;
+
+}
+
+/*==============================================================
+Hero Paragraph
+==============================================================*/
+
+.hero-text{
+
+    font-size:20px;
+
+    color:#d0d5dd;
+
+    max-width:650px;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+}
+
+/*==============================================================
+CTA Area
+==============================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+/*==============================================================
+Watch Button
+==============================================================*/
+
+.watch-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+.watch-btn .play{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#111;
+
+    background:var(--gradient);
+
+    box-shadow:0 15px 40px rgba(200,164,93,.35);
+
+    transition:.4s;
+
+}
+
+.watch-btn:hover .play{
+
+    transform:scale(1.08);
+
+}
+
+.watch-btn:hover{
+
+    color:var(--primary);
+
+}
+
+/*==============================================================
+Bottom Info
+==============================================================*/
+
+.hero-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:45px;
+
+    margin-top:55px;
+
+}
+
+.hero-info-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.hero-info-item i{
+
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:#111;
+
+    background:var(--gradient);
+
+    font-size:20px;
+
+}
+
+.hero-info-item h6{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.hero-info-item p{
+
+    margin:2px 0 0;
+
+    font-size:14px;
+
+    color:#B8C0CB;
+
+}
+
+/*==============================================================
+Hero Zoom Animation
+==============================================================*/
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:scale(1.05);
+
+    }
+
+    to{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 3A-1
+
+NEXT:
+PART 3A-2
+
+✔ Hero Right Image
+✔ Floating Glass Cards
+✔ Experience Badge
+✔ Live Worship Card
+✔ Prayer Card
+✔ Premium Image Effects
+==============================================================*/
+/*==============================================================
+PART 3A-2
+HERO RIGHT SIDE
+FLOATING IMAGE
+GLASS CARDS
+LIVE WORSHIP
+PRAYER CARD
+==============================================================*/
+
+/*==============================================================
+Hero Right Column
+==============================================================*/
+
+.hero-right{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:760px;
+
+}
+
+/*==============================================================
+Main Hero Image
+==============================================================*/
+
+.hero-image{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:560px;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    box-shadow:0 35px 100px rgba(0,0,0,.45);
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:40px;
+
+    transition:1.2s;
+
+}
+
+.hero-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==============================================================
+Golden Border
+==============================================================*/
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:30px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+/*==============================================================
+Glow Behind Image
+==============================================================*/
+
+.hero-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.22);
+
+    filter:blur(120px);
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:-1;
+
+}
+
+/*==============================================================
+Floating Glass Cards
+==============================================================*/
+
+.hero-card{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 24px;
+
+    min-width:250px;
+
+    background:rgba(255,255,255,.82);
+
+border:1px solid rgba(0,0,0,.06);
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(24px);
+
+    border-radius:22px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.28);
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+/*==============================================================
+Card Icon
+==============================================================*/
+
+.hero-card-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+/*==============================================================
+Card Text
+==============================================================*/
+
+.hero-card h5{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.hero-card p{
+
+    margin-top:5px;
+
+    margin-bottom:0;
+
+    color:#C8CDD7;
+
+    font-size:14px;
+
+}
+
+/*==============================================================
+Live Worship Card
+==============================================================*/
+
+.live-card{
+
+    top:70px;
+
+    left:-60px;
+
+    animation-delay:.3s;
+
+}
+
+.live-card .live-dot{
+
+    width:10px;
+
+    height:10px;
+
+    background:#ff3131;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    margin-right:6px;
+
+    animation:pulseLive 1.4s infinite;
+
+}
+
+/*==============================================================
+Prayer Card
+==============================================================*/
+
+.prayer-card{
+
+    bottom:60px;
+
+    right:-70px;
+
+    animation-delay:1.2s;
+
+}
+
+/*==============================================================
+Statistics Card
+==============================================================*/
+
+.stats-card{
+
+    position:absolute;
+
+    bottom:180px;
+
+    left:-40px;
+
+    width:190px;
+
+    padding:24px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(22px);
+
+    border-radius:24px;
+
+    text-align:center;
+
+    animation:floatCard 6s ease-in-out infinite;
+
+}
+
+.stats-card h2{
+
+    color:var(--primary);
+
+    font-size:52px;
+
+    margin-bottom:5px;
+
+}
+
+.stats-card span{
+
+    color:#D0D6DE;
+
+    font-size:15px;
+
+}
+
+/*==============================================================
+Experience Badge
+==============================================================*/
+
+.experience-badge{
+
+    position:absolute;
+
+    top:45%;
+
+    right:-45px;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:var(--gradient);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    color:#111;
+
+    font-weight:700;
+
+    box-shadow:0 18px 45px rgba(200,164,93,.35);
+
+}
+
+.experience-badge strong{
+
+    font-size:34px;
+
+    line-height:1;
+
+}
+
+.experience-badge small{
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-top:5px;
+
+}
+
+/*==============================================================
+Floating Animation
+==============================================================*/
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-16px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/*==============================================================
+Live Pulse
+==============================================================*/
+
+@keyframes pulseLive{
+
+    0%{
+
+        transform:scale(.8);
+
+        opacity:.5;
+
+    }
+
+    70%{
+
+        transform:scale(1.4);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.8);
+
+        opacity:.5;
+
+    }
+
+}
+
+/*==============================================================
+Image Shine Effect
+==============================================================*/
+
+.hero-image .shine{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.hero-image .shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-50%;
+
+    width:60%;
+
+    height:260%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.28),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1.2s;
+
+}
+
+.hero-image:hover .shine::before{
+
+    left:160%;
+
+}
+
+/*==============================================================
+END OF PART 3A-2
+
+NEXT
+PART 3B
+
+✔ Animated Statistics
+✔ Scroll Down Indicator
+✔ Floating Cross
+✔ Background Particles
+✔ Hero Decorative Shapes
+✔ Premium Mouse Scroll Animation
+==============================================================*/
+/*==============================================================
+PART 3B-1
+HERO STATISTICS
+SCROLL INDICATOR
+MOUSE ANIMATION
+==============================================================*/
+
+/*==============================================================
+Hero Bottom Area
+==============================================================*/
+
+.hero-bottom{
+
+    margin-top:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==============================================================
+Statistics
+==============================================================*/
+
+.hero-stats{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-stat{
+
+    min-width:180px;
+
+    padding:26px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    transition:.45s;
+
+}
+
+.hero-stat:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.hero-stat h2{
+
+    color:var(--primary);
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
+    line-height:1;
+
+}
+
+.hero-stat p{
+
+    margin:0;
+
+    color:#C9D1DA;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/*==============================================================
+Counter Icon
+==============================================================*/
+
+.hero-stat-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+/*==============================================================
+Scroll Indicator
+==============================================================*/
+
+.scroll-indicator{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+}
+
+.scroll-indicator span{
+
+    color:#d0d5dd;
+
+}
+
+/*==============================================================
+Mouse
+==============================================================*/
+
+.mouse{
+
+    width:34px;
+
+    height:56px;
+
+    border-radius:30px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    display:flex;
+
+    justify-content:center;
+
+    padding-top:10px;
+
+    position:relative;
+
+}
+
+/*==============================================================
+Wheel
+==============================================================*/
+
+.mouse::before{
+
+    content:"";
+
+    width:6px;
+
+    height:12px;
+
+    border-radius:20px;
+
+    background:var(--primary);
+
+    animation:wheelMove 1.8s infinite;
+
+}
+
+/*==============================================================
+Arrow
+==============================================================*/
+
+.scroll-arrow{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.scroll-arrow i{
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    animation:arrowDown 1.8s infinite;
+
+}
+
+.scroll-arrow i:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.scroll-arrow i:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+/*==============================================================
+Wheel Animation
+==============================================================*/
+
+@keyframes wheelMove{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    70%{
+
+        transform:translateY(16px);
+
+        opacity:.2;
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/*==============================================================
+Arrow Animation
+==============================================================*/
+
+@keyframes arrowDown{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        transform:translateY(8px);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(16px);
+
+        opacity:0;
+
+    }
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:992px){
+
+    .hero-bottom{
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .hero-stats{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-stat{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .scroll-indicator{
+
+        margin-top:15px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero-stat{
+
+        padding:22px;
+
+    }
+
+    .hero-stat h2{
+
+        font-size:42px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 3B-1
+
+NEXT
+PART 3B-2
+
+✔ Floating Cross
+✔ Decorative Circles
+✔ Light Rays
+✔ Background Particles
+✔ Premium Hero Shapes
+✔ Animated Glow Effects
+==============================================================*/
+/*==============================================================
+PART 3B-2
+FLOATING DECORATIONS
+BACKGROUND PARTICLES
+LIGHT RAYS
+PREMIUM SHAPES
+==============================================================*/
+
+/*==============================================================
+Hero Decorative Layer
+==============================================================*/
+
+.hero-decorations{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/*==============================================================
+Floating Cross
+==============================================================*/
+
+.hero-cross{
+
+    position:absolute;
+
+    width:70px;
+
+    height:70px;
+
+    opacity:.08;
+
+    right:10%;
+
+    top:18%;
+
+    animation:crossFloat 9s ease-in-out infinite;
+
+}
+
+.hero-cross::before,
+.hero-cross::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    background:var(--primary);
+
+    transform:translate(-50%,-50%);
+
+}
+
+.hero-cross::before{
+
+    width:12px;
+
+    height:70px;
+
+    border-radius:20px;
+
+}
+
+.hero-cross::after{
+
+    width:70px;
+
+    height:12px;
+
+    border-radius:20px;
+
+}
+
+/*==============================================================
+Large Golden Circle
+==============================================================*/
+
+.hero-circle{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(200,164,93,.12);
+
+    top:-180px;
+
+    right:-120px;
+
+    animation:rotateCircle 35s linear infinite;
+
+}
+
+.hero-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(200,164,93,.18);
+
+}
+
+/*==============================================================
+Small Circle
+==============================================================*/
+
+.hero-circle-small{
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    left:6%;
+
+    bottom:10%;
+
+    animation:floatSlow 10s ease-in-out infinite;
+
+}
+
+/*==============================================================
+Light Rays
+==============================================================*/
+
+.hero-rays{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    opacity:.15;
+
+}
+
+.hero-rays span{
+
+    position:absolute;
+
+    width:2px;
+
+    height:420px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(200,164,93,.8),
+        transparent
+    );
+
+    transform:rotate(20deg);
+
+    filter:blur(.3px);
+
+}
+
+.hero-rays span:nth-child(1){
+
+    left:12%;
+    top:-120px;
+
+}
+
+.hero-rays span:nth-child(2){
+
+    left:45%;
+    top:-180px;
+
+    animation-delay:2s;
+
+}
+
+.hero-rays span:nth-child(3){
+
+    right:20%;
+    top:-100px;
+
+    animation-delay:4s;
+
+}
+
+/*==============================================================
+Particles
+==============================================================*/
+
+.hero-particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.65);
+
+    animation:particleMove linear infinite;
+
+}
+
+/* Different Sizes */
+
+.hero-particle.small{
+
+    width:4px;
+    height:4px;
+    animation-duration:12s;
+
+}
+
+.hero-particle.medium{
+
+    width:8px;
+    height:8px;
+    animation-duration:18s;
+
+}
+
+.hero-particle.large{
+
+    width:12px;
+    height:12px;
+    animation-duration:22s;
+
+}
+
+/*==============================================================
+Blur Glow
+==============================================================*/
+
+.hero-glow{
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.14);
+
+    filter:blur(130px);
+
+    animation:glowPulse 8s ease-in-out infinite;
+
+}
+
+.hero-glow.left{
+
+    left:-180px;
+
+    bottom:-180px;
+
+}
+
+.hero-glow.right{
+
+    right:-180px;
+
+    top:-150px;
+
+}
+
+/*==============================================================
+Floating Dots
+==============================================================*/
+
+.hero-dot{
+
+    position:absolute;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:0 0 18px rgba(200,164,93,.8);
+
+    animation:dotFloat 5s ease-in-out infinite;
+
+}
+
+.hero-dot.dot1{
+
+    left:12%;
+
+    top:22%;
+
+}
+
+.hero-dot.dot2{
+
+    right:18%;
+
+    top:42%;
+
+    animation-delay:1s;
+
+}
+
+.hero-dot.dot3{
+
+    left:30%;
+
+    bottom:18%;
+
+    animation-delay:2s;
+
+}
+
+/*==============================================================
+Animations
+==============================================================*/
+
+@keyframes crossFloat{
+
+    0%,100%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px) rotate(12deg);
+
+    }
+
+}
+
+@keyframes rotateCircle{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes floatSlow{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px);
+
+    }
+
+}
+
+@keyframes particleMove{
+
+    from{
+
+        transform:translateY(0) scale(.8);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    80%{
+
+        opacity:.8;
+
+    }
+
+    to{
+
+        transform:translateY(-900px) scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes glowPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:.45;
+
+    }
+
+    50%{
+
+        transform:scale(1.18);
+
+        opacity:.9;
+
+    }
+
+}
+
+@keyframes dotFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:991px){
+
+    .hero-circle{
+
+        width:380px;
+
+        height:380px;
+
+    }
+
+    .hero-cross{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-rays{
+
+        display:none;
+
+    }
+
+    .hero-circle{
+
+        width:260px;
+
+        height:260px;
+
+        right:-80px;
+
+    }
+
+    .hero-circle-small{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero-dot{
+
+        display:none;
+
+    }
+
+    .hero-glow{
+
+        width:260px;
+
+        height:260px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 3B-2
+
+NEXT:
+PART 3C
+
+✔ Complete Hero Responsive Layout
+✔ Mobile Hero
+✔ Tablet Hero
+✔ Laptop Hero
+✔ Desktop Hero
+✔ 4K Optimization
+✔ GSAP Helper Classes
+✔ Scroll Reveal Classes
+==============================================================*/
+/*==============================================================
+PART 3C-1
+HERO RESPONSIVE
+MOBILE • TABLET • LAPTOP
+==============================================================*/
+
+/*==============================================================
+Large Laptop
+==============================================================*/
+
+@media (max-width:1400px){
+
+    .hero{
+
+        padding-top:120px;
+
+    }
+
+    .hero-row{
+
+        gap:50px;
+
+    }
+
+    .hero-title{
+
+        font-size:64px;
+
+    }
+
+    .hero-text{
+
+        font-size:18px;
+
+        max-width:580px;
+
+    }
+
+    .hero-right{
+
+        min-height:650px;
+
+    }
+
+    .hero-image{
+
+        max-width:500px;
+
+    }
+
+    .live-card{
+
+        left:-35px;
+
+    }
+
+    .prayer-card{
+
+        right:-35px;
+
+    }
+
+    .experience-badge{
+
+        right:-20px;
+
+    }
+
+}
+
+/*==============================================================
+Laptop
+==============================================================*/
+
+@media (max-width:1199px){
+
+    .hero{
+
+        padding-top:115px;
+
+        min-height:auto;
+
+        padding-bottom:90px;
+
+    }
+
+    .hero-row{
+
+        gap:45px;
+
+    }
+
+    .hero-title{
+
+        font-size:56px;
+
+    }
+
+    .hero-text{
+
+        font-size:17px;
+
+    }
+
+    .hero-info{
+
+        gap:22px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .hero-image{
+
+        max-width:460px;
+
+    }
+
+    .hero-card{
+
+        min-width:220px;
+
+        padding:16px 18px;
+
+    }
+
+    .hero-card-icon{
+
+        width:54px;
+
+        height:54px;
+
+        font-size:20px;
+
+    }
+
+    .stats-card{
+
+        width:170px;
+
+    }
+
+    .stats-card h2{
+
+        font-size:44px;
+
+    }
+
+}
+
+/*==============================================================
+Tablet
+==============================================================*/
+
+@media (max-width:991px){
+
+    .hero{
+
+        text-align:center;
+
+        padding-top:120px;
+
+        padding-bottom:80px;
+
+    }
+
+    .hero-row{
+
+        flex-direction:column;
+
+        gap:70px;
+
+    }
+
+    .hero-content{
+
+        max-width:100%;
+
+    }
+
+    .hero-title{
+
+        font-size:48px;
+
+    }
+
+    .hero-text{
+
+        max-width:700px;
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-info{
+
+        justify-content:center;
+
+    }
+
+    .hero-right{
+
+        min-height:620px;
+
+        width:100%;
+
+    }
+
+    .hero-image{
+
+        max-width:500px;
+
+    }
+
+    .live-card{
+
+        top:25px;
+
+        left:0;
+
+    }
+
+    .prayer-card{
+
+        right:0;
+
+        bottom:20px;
+
+    }
+
+    .stats-card{
+
+        left:20px;
+
+        bottom:160px;
+
+    }
+
+    .experience-badge{
+
+        right:10px;
+
+    }
+
+}
+
+/*==============================================================
+Mobile Landscape
+==============================================================*/
+
+@media (max-width:768px){
+
+    .hero{
+
+        padding-top:110px;
+
+        padding-bottom:70px;
+
+    }
+
+    .hero-title{
+
+        font-size:40px;
+
+        line-height:1.2;
+
+    }
+
+    .hero-text{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    .hero-badge{
+
+        padding:10px 18px;
+
+        font-size:14px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .hero-buttons .btn-primary-custom,
+
+    .hero-buttons .btn-secondary-custom{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .watch-btn{
+
+        justify-content:center;
+
+    }
+
+    .hero-info{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:18px;
+
+    }
+
+    .hero-right{
+
+        min-height:520px;
+
+    }
+
+    .hero-image{
+
+        max-width:100%;
+
+        border-radius:26px;
+
+    }
+
+    .hero-image img{
+
+        border-radius:26px;
+
+    }
+
+    .hero-card{
+
+        min-width:200px;
+
+        padding:15px;
+
+    }
+
+    .hero-card h5{
+
+        font-size:16px;
+
+    }
+
+    .hero-card p{
+
+        font-size:13px;
+
+    }
+
+    .experience-badge{
+
+        width:95px;
+
+        height:95px;
+
+    }
+
+    .experience-badge strong{
+
+        font-size:26px;
+
+    }
+
+}
+
+/*==============================================================
+Small Mobile
+==============================================================*/
+
+@media (max-width:576px){
+
+    .hero{
+
+        padding-top:100px;
+
+    }
+
+    .hero-title{
+
+        font-size:34px;
+
+    }
+
+    .hero-text{
+
+        font-size:15px;
+
+    }
+
+    .hero-right{
+
+        min-height:auto;
+
+    }
+
+    .hero-image{
+
+        border-radius:22px;
+
+    }
+
+    .hero-image::before{
+
+        inset:10px;
+
+        border-radius:16px;
+
+    }
+
+    .hero-card{
+
+        position:relative;
+
+        left:auto;
+
+        right:auto;
+
+        top:auto;
+
+        bottom:auto;
+
+        margin:15px auto;
+
+        width:100%;
+
+        max-width:320px;
+
+        animation:none;
+
+    }
+
+    .stats-card{
+
+        position:relative;
+
+        left:auto;
+
+        right:auto;
+
+        bottom:auto;
+
+        margin:20px auto;
+
+        width:100%;
+
+        max-width:220px;
+
+    }
+
+    .experience-badge{
+
+        top:15px;
+
+        right:15px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 3C-1
+
+NEXT
+PART 3C-2
+
+✔ Desktop & 4K Optimizations
+✔ GSAP Animation Helper Classes
+✔ Scroll Reveal Classes
+✔ Performance Optimizations
+✔ Accessibility Motion Preferences
+==============================================================*/
+/*==============================================================
+PART 3C-2
+DESKTOP • 4K • GSAP HELPERS • ACCESSIBILITY
+==============================================================*/
+
+/*==============================================================
+Large Desktop
+==============================================================*/
+
+@media (min-width:1400px){
+
+    .hero{
+
+        min-height:100vh;
+
+        padding-top:140px;
+
+    }
+
+    .hero .container{
+
+        max-width:1320px;
+
+    }
+
+    .hero-title{
+
+        font-size:82px;
+
+        line-height:1.05;
+
+    }
+
+    .hero-text{
+
+        font-size:21px;
+
+        max-width:700px;
+
+    }
+
+    .hero-image{
+
+        max-width:620px;
+
+    }
+
+    .hero-right{
+
+        min-height:780px;
+
+    }
+
+}
+
+/*==============================================================
+Ultra Wide / 4K
+==============================================================*/
+
+@media (min-width:2000px){
+
+    .hero{
+
+        min-height:110vh;
+
+    }
+
+    .hero .container{
+
+        max-width:1800px;
+
+    }
+
+    .hero-title{
+
+        font-size:110px;
+
+    }
+
+    .hero-text{
+
+        font-size:28px;
+
+        max-width:900px;
+
+    }
+
+    .hero-image{
+
+        max-width:760px;
+
+    }
+
+    .hero-card{
+
+        transform:scale(1.15);
+
+    }
+
+    .stats-card{
+
+        transform:scale(1.15);
+
+    }
+
+    .experience-badge{
+
+        transform:scale(1.25);
+
+    }
+
+}
+
+/*==============================================================
+GSAP READY
+==============================================================*/
+
+.gsap-fade{
+
+    opacity:0;
+
+}
+
+.gsap-left{
+
+    opacity:0;
+
+    transform:translateX(-120px);
+
+}
+
+.gsap-right{
+
+    opacity:0;
+
+    transform:translateX(120px);
+
+}
+
+.gsap-top{
+
+    opacity:0;
+
+    transform:translateY(-120px);
+
+}
+
+.gsap-bottom{
+
+    opacity:0;
+
+    transform:translateY(120px);
+
+}
+
+.gsap-scale{
+
+    opacity:0;
+
+    transform:scale(.85);
+
+}
+
+.gsap-rotate{
+
+    opacity:0;
+
+    transform:rotate(-8deg) scale(.92);
+
+}
+
+.gsap-blur{
+
+    opacity:0;
+
+    filter:blur(20px);
+
+}
+
+/*==============================================================
+Scroll Reveal
+==============================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==============================================================
+Animation Delay Helpers
+==============================================================*/
+
+.delay-1{
+
+    transition-delay:.15s;
+
+}
+
+.delay-2{
+
+    transition-delay:.30s;
+
+}
+
+.delay-3{
+
+    transition-delay:.45s;
+
+}
+
+.delay-4{
+
+    transition-delay:.60s;
+
+}
+
+.delay-5{
+
+    transition-delay:.75s;
+
+}
+
+/*==============================================================
+Performance
+==============================================================*/
+
+.hero-image,
+.hero-card,
+.stats-card,
+.hero-circle,
+.hero-glow{
+
+    will-change:transform;
+
+}
+
+.hero-image img{
+
+    backface-visibility:hidden;
+
+    transform:translateZ(0);
+
+}
+
+/*==============================================================
+Accessibility
+==============================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+    .hero-bg img,
+    .hero-bg video{
+
+        transform:none !important;
+
+    }
+
+}
+
+/*==============================================================
+Utility Classes
+==============================================================*/
+
+.overflow-visible{
+
+    overflow:visible;
+
+}
+
+.pointer-none{
+
+    pointer-events:none;
+
+}
+
+.z-1{
+
+    z-index:1;
+
+}
+
+.z-2{
+
+    z-index:2;
+
+}
+
+.z-3{
+
+    z-index:3;
+
+}
+
+.z-10{
+
+    z-index:10;
+
+}
+
+/*==============================================================
+Hero Loaded State
+==============================================================*/
+
+.hero.loaded .hero-content,
+.hero.loaded .hero-right{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.hero-content,
+.hero-right{
+
+    transition:opacity .6s ease;
+
+}
+
+/*==============================================================
+END OF HERO CSS
+
+NEXT:
+PART 4A
+
+✔ Premium About Section
+✔ About Image
+✔ Experience Card
+✔ Decorative Elements
+✔ Glassmorphism Cards
+✔ Responsive Layout
+==============================================================*/
+/*==============================================================
+PART 4A-1
+PREMIUM ABOUT SECTION
+LAYOUT • IMAGE • EXPERIENCE BADGE
+==============================================================*/
+
+/*==============================================================
+About Section
+==============================================================*/
+
+.about-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:linear-gradient(
+        180deg,
+        var(--dark) 0%,
+        var(--dark-2) 100%
+    );
+
+    overflow:hidden;
+
+}
+
+/*==============================================================
+Background Decorations
+==============================================================*/
+
+.about-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.05);
+
+    filter:blur(140px);
+
+    left:-250px;
+
+    top:-180px;
+
+}
+
+.about-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    filter:blur(120px);
+
+    right:-180px;
+
+    bottom:-180px;
+
+}
+
+/*==============================================================
+About Row
+==============================================================*/
+
+.about-wrapper{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/*==============================================================
+Image Wrapper
+==============================================================*/
+
+.about-image{
+
+    position:relative;
+
+    max-width:580px;
+
+    margin:auto;
+
+}
+
+/*==============================================================
+Main Image
+==============================================================*/
+
+.about-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:32px;
+
+    object-fit:cover;
+
+    transition:.8s;
+
+    box-shadow:0 35px 90px rgba(0,0,0,.45);
+
+}
+
+.about-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*==============================================================
+Premium Border
+==============================================================*/
+
+.about-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+/*==============================================================
+Glow
+==============================================================*/
+
+.about-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.18);
+
+    filter:blur(120px);
+
+    left:50%;
+
+    bottom:-120px;
+
+    transform:translateX(-50%);
+
+    z-index:-1;
+
+}
+
+/*==============================================================
+Image Shape
+==============================================================*/
+
+.about-shape{
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(18px);
+
+    right:-45px;
+
+    top:-40px;
+
+    transform:rotate(18deg);
+
+}
+
+/*==============================================================
+Experience Card
+==============================================================*/
+
+.about-experience{
+
+    position:absolute;
+
+    left:-35px;
+
+    bottom:35px;
+
+    width:220px;
+
+    padding:28px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(24px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    animation:aboutFloat 5s ease-in-out infinite;
+
+}
+
+.about-experience h2{
+
+    font-size:54px;
+
+    color:var(--primary);
+
+    margin-bottom:6px;
+
+    line-height:1;
+
+}
+
+.about-experience h2 span{
+
+    font-size:28px;
+
+}
+
+.about-experience p{
+
+    margin:0;
+
+    color:#d5dbe4;
+
+    font-size:15px;
+
+}
+
+/*==============================================================
+Floating Mini Card
+==============================================================*/
+
+.about-mini-card{
+
+    position:absolute;
+
+    top:55px;
+
+    left:-45px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    min-width:240px;
+
+    padding:18px 22px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(22px);
+
+    animation:aboutFloat 6s ease-in-out infinite;
+
+}
+
+.about-mini-card i{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:22px;
+
+}
+
+.about-mini-card h5{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.about-mini-card span{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#c9d0d8;
+
+    font-size:14px;
+
+}
+
+/*==============================================================
+Floating Animation
+==============================================================*/
+
+@keyframes aboutFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-16px);
+
+    }
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:1199px){
+
+    .about-wrapper{
+
+        gap:55px;
+
+    }
+
+    .about-image{
+
+        max-width:500px;
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .about-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:70px;
+
+    }
+
+    .about-image{
+
+        max-width:620px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .about-mini-card{
+
+        left:0;
+
+        top:20px;
+
+    }
+
+    .about-experience{
+
+        left:15px;
+
+        bottom:15px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .about-section{
+
+        padding:90px 0;
+
+    }
+
+    .about-image{
+
+        max-width:100%;
+
+    }
+
+    .about-mini-card{
+
+        position:relative;
+
+        left:auto;
+
+        top:auto;
+
+        width:100%;
+
+        margin:20px auto;
+
+    }
+
+    .about-experience{
+
+        position:relative;
+
+        left:auto;
+
+        bottom:auto;
+
+        width:100%;
+
+        margin-top:20px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 4A-1
+
+NEXT:
+PART 4A-2
+
+✔ About Content
+✔ Feature Cards
+✔ Icon Boxes
+✔ Signature
+✔ Buttons
+✔ Decorative Lines
+✔ Hover Effects
+==============================================================*/
+/*==============================================================
+PART 4A-2
+ABOUT CONTENT
+FEATURE CARDS
+MISSION • VISION
+SIGNATURE
+==============================================================*/
+
+/*==============================================================
+About Content
+==============================================================*/
+
+.about-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.about-content .section-tag{
+
+    margin-bottom:22px;
+
+}
+
+.about-content h2{
+
+    font-size:54px;
+
+    line-height:1.15;
+
+    margin-bottom:28px;
+
+}
+
+.about-content h2 span{
+
+    color:var(--primary);
+
+}
+
+.about-content p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:var(--text);
+
+    margin-bottom:22px;
+
+}
+
+/*==============================================================
+Mission & Vision Grid
+==============================================================*/
+
+.about-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin:45px 0;
+
+}
+
+/*==============================================================
+Feature Card
+==============================================================*/
+
+.about-feature{
+
+    position:relative;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    transition:.45s ease;
+
+}
+
+.about-feature:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:0 20px 55px rgba(0,0,0,.35);
+
+}
+
+.about-feature::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(200,164,93,.10),
+        transparent 70%
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.about-feature:hover::before{
+
+    opacity:1;
+
+}
+
+/*==============================================================
+Feature Icon
+==============================================================*/
+
+.about-feature-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:28px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 15px 35px rgba(200,164,93,.25);
+
+}
+
+/*==============================================================
+Feature Content
+==============================================================*/
+
+.about-feature h4{
+
+    margin-bottom:12px;
+
+    color:#fff;
+
+}
+
+.about-feature p{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#C8CDD7;
+
+}
+
+/*==============================================================
+Mission List
+==============================================================*/
+
+.about-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+.about-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#ffffff;
+
+    font-weight:500;
+
+}
+
+.about-list li i{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    font-size:15px;
+
+}
+
+/*==============================================================
+Pastor Signature Area
+==============================================================*/
+
+.signature-box{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+    margin-top:20px;
+
+    padding-top:35px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.signature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.signature img{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid rgba(200,164,93,.35);
+
+}
+
+.signature h5{
+
+    margin:0;
+
+    color:#fff;
+
+}
+
+.signature span{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+/*==============================================================
+CTA Buttons
+==============================================================*/
+
+.about-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+/*==============================================================
+Decorative Vertical Line
+==============================================================*/
+
+.about-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-35px;
+
+    top:0;
+
+    width:3px;
+
+    height:120px;
+
+    border-radius:30px;
+
+    background:var(--gradient);
+
+}
+
+/*==============================================================
+Hover Accent
+==============================================================*/
+
+.about-feature:hover .about-feature-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    transition:.45s;
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:1199px){
+
+    .about-content h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .about-content{
+
+        text-align:center;
+
+    }
+
+    .about-content::before{
+
+        display:none;
+
+    }
+
+    .about-list{
+
+        justify-content:center;
+
+    }
+
+    .signature-box{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .about-features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .about-content h2{
+
+        font-size:34px;
+
+    }
+
+    .about-content p{
+
+        font-size:15px;
+
+    }
+
+    .signature{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .about-buttons .btn-primary-custom,
+
+    .about-buttons .btn-secondary-custom{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 4A-2
+
+NEXT:
+PART 4B
+
+✔ Statistics Counter Section
+✔ Counter Cards
+✔ Animated Numbers
+✔ Premium Hover Effects
+✔ Responsive Statistics Grid
+✔ Glassmorphism Design
+==============================================================*/
+/*==============================================================
+PART 4B-2
+COUNTER ANIMATIONS
+HOVER EFFECTS
+RESPONSIVE GRID
+GSAP READY
+==============================================================*/
+
+/*==============================================================
+Hover Effects
+==============================================================*/
+
+.counter-card:hover{
+
+    transform:translateY(-15px);
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+.counter-card:hover .counter-icon{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:rotate(-8deg) scale(1.08);
+
+    box-shadow:0 20px 45px rgba(200,164,93,.35);
+
+}
+
+.counter-card:hover .counter-number h2{
+
+    color:var(--primary);
+
+}
+
+.counter-card:hover .counter-divider{
+
+    width:100px;
+
+}
+
+/*==============================================================
+Counter Glow
+==============================================================*/
+
+.counter-glow{
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.14);
+
+    filter:blur(90px);
+
+    top:-60px;
+
+    right:-60px;
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.counter-card:hover .counter-glow{
+
+    opacity:1;
+
+}
+
+/*==============================================================
+Floating Animation
+==============================================================*/
+
+.counter-card{
+
+    animation:counterFloat 6s ease-in-out infinite;
+
+}
+
+.counter-card:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.counter-card:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+.counter-card:nth-child(4){
+
+    animation-delay:1.5s;
+
+}
+
+@keyframes counterFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/*==============================================================
+Pulse Icon
+==============================================================*/
+
+.counter-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-6px;
+
+    border-radius:24px;
+
+    border:2px solid rgba(200,164,93,.20);
+
+    animation:iconPulse 2.5s infinite;
+
+}
+
+@keyframes iconPulse{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:.7;
+
+    }
+
+    70%{
+
+        transform:scale(1.2);
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+    }
+
+}
+
+/*==============================================================
+Counter Number Highlight
+==============================================================*/
+
+.counter-number{
+
+    position:relative;
+
+}
+
+.counter-number::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gradient);
+
+    transition:.4s;
+
+}
+
+.counter-card:hover .counter-number::after{
+
+    width:80px;
+
+}
+
+/*==============================================================
+Responsive Grid
+==============================================================*/
+
+@media(max-width:1200px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .stats-section{
+
+        padding:100px 0;
+
+    }
+
+    .stats-heading h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .counter-card{
+
+        max-width:480px;
+
+        margin:auto;
+
+    }
+
+    .counter-number h2{
+
+        font-size:52px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .stats-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .stats-heading p{
+
+        font-size:15px;
+
+    }
+
+    .counter-card{
+
+        padding:30px 24px;
+
+    }
+
+    .counter-icon{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:28px;
+
+    }
+
+    .counter-number h2{
+
+        font-size:42px;
+
+    }
+
+}
+
+/*==============================================================
+GSAP READY
+==============================================================*/
+
+.counter-card.gsap-counter{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+}
+
+.counter-card.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+        transform .8s ease,
+        opacity .8s ease;
+
+}
+
+/*==============================================================
+Accessibility
+==============================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .counter-card,
+    .counter-icon::after{
+
+        animation:none !important;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 4B-2
+
+NEXT:
+PART 4C
+
+✔ Mission & Vision Section
+✔ Core Values Cards
+✔ Timeline / History
+✔ Call-to-Action Banner
+✔ Decorative Background Effects
+✔ Fully Responsive
+==============================================================*/
+/*==============================================================
+PART 4C-1
+MISSION • VISION • CORE VALUES
+PREMIUM GLASS SECTION
+==============================================================*/
+
+/*==============================================================
+Mission Vision Section
+==============================================================*/
+
+.mission-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:linear-gradient(
+        180deg,
+        var(--dark) 0%,
+        #0d1320 100%
+    );
+
+    overflow:hidden;
+
+}
+
+/*==============================================================
+Background Glow
+==============================================================*/
+
+.mission-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.06);
+
+    filter:blur(160px);
+
+    left:-220px;
+    top:-180px;
+
+}
+
+.mission-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    filter:blur(150px);
+
+    right:-180px;
+    bottom:-180px;
+
+}
+
+/*==============================================================
+Section Heading
+==============================================================*/
+
+.mission-heading{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.mission-heading h2{
+
+    color:#ffffff;
+
+    font-size:56px;
+
+    margin-bottom:20px;
+
+}
+
+.mission-heading h2 span{
+
+    color:var(--primary);
+
+}
+
+.mission-heading p{
+
+    color:var(--text);
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/*==============================================================
+Cards Grid
+==============================================================*/
+
+.mission-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==============================================================
+Card
+==============================================================*/
+
+.mission-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:45px 35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+}
+
+/*==============================================================
+Gradient Overlay
+==============================================================*/
+
+.mission-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(200,164,93,.12),
+        transparent 70%
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.mission-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*==============================================================
+Top Line
+==============================================================*/
+
+.mission-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    width:0;
+
+    height:4px;
+
+    transform:translateX(-50%);
+
+    background:var(--gradient);
+
+    transition:.45s;
+
+}
+
+.mission-card:hover::after{
+
+    width:100%;
+
+}
+
+/*==============================================================
+Icon
+==============================================================*/
+
+.mission-icon{
+
+    width:88px;
+
+    height:88px;
+
+    border-radius:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:30px;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    font-size:34px;
+
+    transition:.45s;
+
+}
+
+.mission-card:hover .mission-icon{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==============================================================
+Heading
+==============================================================*/
+
+.mission-card h3{
+
+    color:#ffffff;
+
+    margin-bottom:18px;
+
+    font-size:28px;
+
+}
+
+/*==============================================================
+Paragraph
+==============================================================*/
+
+.mission-card p{
+
+    color:#c9d0d8;
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+}
+
+/*==============================================================
+List
+==============================================================*/
+
+.mission-card ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.mission-card li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+}
+
+.mission-card li i{
+
+    width:34px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    font-size:13px;
+
+}
+
+/*==============================================================
+Hover
+==============================================================*/
+
+.mission-card:hover{
+
+    transform:translateY(-14px);
+
+    border-color:rgba(200,164,93,.30);
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+}
+
+/*==============================================================
+Shine Effect
+==============================================================*/
+
+.mission-card .shine{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.mission-card .shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-60%;
+
+    width:50%;
+
+    height:300%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.28),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.mission-card:hover .shine::before{
+
+    left:180%;
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:1200px){
+
+    .mission-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .mission-heading h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .mission-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .mission-card{
+
+        max-width:560px;
+
+        margin:auto;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .mission-section{
+
+        padding:90px 0;
+
+    }
+
+    .mission-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .mission-heading p{
+
+        font-size:15px;
+
+    }
+
+    .mission-card{
+
+        padding:32px 24px;
+
+    }
+
+    .mission-icon{
+
+        width:72px;
+
+        height:72px;
+
+        font-size:28px;
+
+    }
+
+    .mission-card h3{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 4C-1
+
+NEXT:
+PART 4C-2
+
+✔ Church History Timeline
+✔ Journey Section
+✔ CTA Banner
+✔ Decorative Background
+✔ Floating Shapes
+✔ Responsive Layout
+✔ GSAP Ready
+==============================================================*/
+/*==============================================================
+PART 4C-2
+CHURCH HISTORY
+TIMELINE
+CTA BANNER
+RESPONSIVE
+==============================================================*/
+
+/*==============================================================
+Church Journey Section
+==============================================================*/
+
+.journey-section{
+
+    position:relative;
+
+    margin-top:120px;
+
+}
+
+/*==============================================================
+Timeline
+==============================================================*/
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:0 auto 100px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:4px;
+
+    height:100%;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        var(--primary),
+        transparent
+    );
+
+}
+
+/*==============================================================
+Timeline Item
+==============================================================*/
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:25px 50px;
+
+}
+
+.timeline-item:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+
+}
+
+.timeline-item:nth-child(even){
+
+    left:50%;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    top:38px;
+
+    box-shadow:0 0 20px rgba(200,164,93,.45);
+
+}
+
+.timeline-item:nth-child(odd)::before{
+
+    right:-13px;
+
+}
+
+.timeline-item:nth-child(even)::before{
+
+    left:-13px;
+
+}
+
+/*==============================================================
+Timeline Card
+==============================================================*/
+
+.timeline-card{
+
+    position:relative;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(200,164,93,.30);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.40);
+
+}
+
+.timeline-year{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    margin-bottom:18px;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.timeline-card h4{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.timeline-card p{
+
+    color:#c9d0d8;
+
+    line-height:1.8;
+
+    margin:0;
+
+}
+
+/*==============================================================
+CTA Banner
+==============================================================*/
+
+.cta-banner{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:80px 60px;
+
+    border-radius:35px;
+
+    background:linear-gradient(
+        135deg,
+        #c8a45d 0%,
+        #f4deb3 100%
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.35);
+
+}
+
+.cta-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    right:-100px;
+
+    top:-100px;
+
+}
+
+.cta-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.10);
+
+    left:-60px;
+
+    bottom:-60px;
+
+}
+
+/*==============================================================
+CTA Content
+==============================================================*/
+
+.cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.cta-content h2{
+
+    color:#111;
+
+    font-size:52px;
+
+    margin-bottom:18px;
+
+}
+
+.cta-content p{
+
+    color:#2c2c2c;
+
+    font-size:18px;
+
+    max-width:650px;
+
+    margin:0;
+
+}
+
+/*==============================================================
+CTA Buttons
+==============================================================*/
+
+.cta-buttons{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.cta-buttons .btn-light{
+
+    background:#ffffff;
+
+    color:#111;
+
+}
+
+.cta-buttons .btn-light:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+.cta-buttons .btn-dark{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+.cta-buttons .btn-dark:hover{
+
+    background:#fff;
+
+    color:#111;
+
+}
+
+/*==============================================================
+GSAP Helpers
+==============================================================*/
+
+.timeline-item.gsap-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+}
+
+.timeline-item.gsap-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+}
+
+.cta-banner.gsap-scale{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:991px){
+
+    .timeline::before{
+
+        left:20px;
+
+    }
+
+    .timeline-item{
+
+        width:100%;
+
+        left:0 !important;
+
+        text-align:left;
+
+        padding:25px 25px 25px 60px;
+
+    }
+
+    .timeline-item::before{
+
+        left:10px !important;
+
+        right:auto;
+
+    }
+
+    .cta-banner{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:60px 35px;
+
+    }
+
+    .cta-content h2{
+
+        font-size:42px;
+
+    }
+
+    .cta-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .timeline-card{
+
+        padding:24px;
+
+    }
+
+    .cta-banner{
+
+        padding:45px 25px;
+
+    }
+
+    .cta-content h2{
+
+        font-size:30px;
+
+    }
+
+    .cta-content p{
+
+        font-size:15px;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .cta-buttons .btn-light,
+    .cta-buttons .btn-dark{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 4C
+
+NEXT:
+PART 5A
+
+✔ Premium Ministries Section
+✔ Ministry Cards
+✔ Icon Effects
+✔ Hover Animations
+✔ Glassmorphism Design
+✔ Fully Responsive
+==============================================================*/
+/*==============================================================
+PART 5A
+PREMIUM MINISTRIES SECTION
+MINISTRY CARDS
+GLASSMORPHISM
+ICON EFFECTS
+==============================================================*/
+
+/*==============================================================
+Ministry Section
+==============================================================*/
+
+.ministry-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--dark),
+        var(--dark-2)
+    );
+
+    overflow:hidden;
+
+}
+
+/*==============================================================
+Background Effects
+==============================================================*/
+
+.ministry-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.06);
+
+    filter:blur(150px);
+
+    left:-250px;
+
+    top:100px;
+
+}
+
+.ministry-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    filter:blur(140px);
+
+    right:-200px;
+
+    bottom:-100px;
+
+}
+
+/*==============================================================
+Heading
+==============================================================*/
+
+.ministry-heading{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.ministry-heading h2{
+
+    font-size:56px;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.ministry-heading h2 span{
+
+    color:var(--primary);
+
+}
+
+.ministry-heading p{
+
+    font-size:18px;
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+/*==============================================================
+Ministry Grid
+==============================================================*/
+
+.ministry-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==============================================================
+Ministry Card
+==============================================================*/
+
+.ministry-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px 35px;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    transition:.5s ease;
+
+}
+
+/*==============================================================
+Card Glow
+==============================================================*/
+
+.ministry-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(200,164,93,.15),
+        transparent 70%
+    );
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.ministry-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*==============================================================
+Icon Box
+==============================================================*/
+
+.ministry-icon{
+
+    position:relative;
+
+    width:90px;
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:28px;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    font-size:36px;
+
+    margin-bottom:28px;
+
+    transition:.5s;
+
+}
+
+.ministry-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-8px;
+
+    border-radius:32px;
+
+    border:1px solid rgba(200,164,93,.25);
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.ministry-card:hover .ministry-icon{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:rotate(-8deg) scale(1.1);
+
+}
+
+.ministry-card:hover .ministry-icon::after{
+
+    opacity:1;
+
+}
+
+/*==============================================================
+Card Content
+==============================================================*/
+
+.ministry-card h3{
+
+    color:#fff;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.ministry-card p{
+
+    color:#c8ced8;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+/*==============================================================
+Read More
+==============================================================*/
+
+.ministry-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.ministry-link i{
+
+    transition:.35s;
+
+}
+
+.ministry-link:hover i{
+
+    transform:translateX(8px);
+
+}
+
+/*==============================================================
+Image Ministry Card
+==============================================================*/
+
+.ministry-image{
+
+    height:230px;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    margin-bottom:25px;
+
+}
+
+.ministry-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+.ministry-card:hover .ministry-image img{
+
+    transform:scale(1.12);
+
+}
+
+/*==============================================================
+Number Badge
+==============================================================*/
+
+.ministry-number{
+
+    position:absolute;
+
+    top:25px;
+
+    right:25px;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--primary);
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    font-weight:700;
+
+}
+
+/*==============================================================
+Hover
+==============================================================*/
+
+.ministry-card:hover{
+
+    transform:translateY(-15px);
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:1200px){
+
+    .ministry-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .ministry-heading h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .ministry-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .ministry-card{
+
+        max-width:520px;
+
+        margin:auto;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .ministry-section{
+
+        padding:90px 0;
+
+    }
+
+    .ministry-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .ministry-heading p{
+
+        font-size:15px;
+
+    }
+
+    .ministry-card{
+
+        padding:30px 24px;
+
+    }
+
+    .ministry-icon{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:30px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 5A
+
+NEXT:
+PART 5B
+
+✔ Events Section
+✔ Upcoming Services Cards
+✔ Calendar Style
+✔ Hover Animation
+✔ Glass Design
+✔ Responsive Layout
+==============================================================*/
+/*==============================================================
+PART 5B
+CHURCH EVENTS SECTION
+UPCOMING SERVICES
+EVENT CARDS
+GLASSMORPHISM DESIGN
+==============================================================*/
+
+/*==============================================================
+Events Section
+==============================================================*/
+
+.events-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--dark-2),
+        var(--dark)
+    );
+
+    overflow:hidden;
+
+}
+
+/*==============================================================
+Background Glow
+==============================================================*/
+
+.events-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.07);
+
+    filter:blur(150px);
+
+    top:-200px;
+
+    right:-150px;
+
+}
+
+.events-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    filter:blur(120px);
+
+    bottom:-150px;
+
+    left:-120px;
+
+}
+
+/*==============================================================
+Events Header
+==============================================================*/
+
+.events-header{
+
+    display:flex;
+
+    align-items:end;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    margin-bottom:70px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.events-header h2{
+
+    color:#fff;
+
+    font-size:56px;
+
+    margin:0;
+
+}
+
+.events-header h2 span{
+
+    color:var(--primary);
+
+}
+
+.events-header p{
+
+    max-width:520px;
+
+    color:#c8ced8;
+
+    line-height:1.8;
+
+}
+
+/*==============================================================
+Events Grid
+==============================================================*/
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==============================================================
+Event Card
+==============================================================*/
+
+.event-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    transition:.5s;
+
+}
+
+/*==============================================================
+Event Image
+==============================================================*/
+
+.event-image{
+
+    height:260px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.event-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+.event-card:hover .event-image img{
+
+    transform:scale(1.12);
+
+}
+
+/*==============================================================
+Date Badge
+==============================================================*/
+
+.event-date{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    width:75px;
+
+    height:85px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-weight:700;
+
+    z-index:3;
+
+}
+
+.event-date strong{
+
+    font-size:32px;
+
+    line-height:1;
+
+}
+
+.event-date span{
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+}
+
+/*==============================================================
+Event Content
+==============================================================*/
+
+.event-content{
+
+    padding:35px 30px;
+
+}
+
+.event-content h3{
+
+    color:#fff;
+
+    font-size:26px;
+
+    margin-bottom:15px;
+
+}
+
+.event-content p{
+
+    color:#c9d0d8;
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+
+}
+
+/*==============================================================
+Event Meta
+==============================================================*/
+
+.event-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.event-meta div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+}
+
+.event-meta i{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+}
+
+/*==============================================================
+Button
+==============================================================*/
+
+.event-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.event-btn i{
+
+    transition:.35s;
+
+}
+
+.event-btn:hover i{
+
+    transform:translateX(8px);
+
+}
+
+/*==============================================================
+Hover
+==============================================================*/
+
+.event-card:hover{
+
+    transform:translateY(-15px);
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+/*==============================================================
+Featured Event
+==============================================================*/
+
+.event-card.featured{
+
+    border-color:rgba(200,164,93,.35);
+
+}
+
+.event-card.featured::before{
+
+    content:"Featured";
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    z-index:5;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:1200px){
+
+    .events-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .events-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .events-header h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .events-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .event-card{
+
+        max-width:520px;
+
+        margin:auto;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .events-section{
+
+        padding:90px 0;
+
+    }
+
+    .events-header h2{
+
+        font-size:34px;
+
+    }
+
+    .event-content{
+
+        padding:28px 22px;
+
+    }
+
+    .event-content h3{
+
+        font-size:23px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 5B
+
+NEXT:
+PART 5C
+
+✔ Sermons Section
+✔ Video Cards
+✔ YouTube Style Layout
+✔ Play Button Animation
+✔ Premium Hover Effects
+✔ Responsive Design
+==============================================================*/
+/*==============================================================
+PART 5C
+SERMONS SECTION
+VIDEO CARDS
+PLAY BUTTON ANIMATION
+PREMIUM MEDIA DESIGN
+==============================================================*/
+
+/*==============================================================
+Sermons Section
+==============================================================*/
+
+.sermons-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--dark),
+        #090e18
+    );
+
+    overflow:hidden;
+
+}
+
+/*==============================================================
+Background Effects
+==============================================================*/
+
+.sermons-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.06);
+
+    filter:blur(160px);
+
+    left:-250px;
+
+    top:50px;
+
+}
+
+.sermons-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    filter:blur(140px);
+
+    right:-200px;
+
+    bottom:-150px;
+
+}
+
+/*==============================================================
+Sermon Header
+==============================================================*/
+
+.sermon-header{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 75px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.sermon-header h2{
+
+    color:#fff;
+
+    font-size:56px;
+
+    margin-bottom:20px;
+
+}
+
+.sermon-header h2 span{
+
+    color:var(--primary);
+
+}
+
+.sermon-header p{
+
+    color:#c8ced8;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/*==============================================================
+Sermon Grid
+==============================================================*/
+
+.sermon-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==============================================================
+Sermon Card
+==============================================================*/
+
+.sermon-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    transition:.5s;
+
+}
+
+/*==============================================================
+Thumbnail
+==============================================================*/
+
+.sermon-thumb{
+
+    position:relative;
+
+    height:260px;
+
+    overflow:hidden;
+
+}
+
+.sermon-thumb img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+.sermon-card:hover .sermon-thumb img{
+
+    transform:scale(1.12);
+
+}
+
+/*==============================================================
+Overlay
+==============================================================*/
+
+.sermon-thumb::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.65)
+    );
+
+}
+
+/*==============================================================
+Play Button
+==============================================================*/
+
+.sermon-play{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:#fff;
+
+    font-size:30px;
+
+    z-index:3;
+
+    transition:.45s;
+
+}
+
+.sermon-play::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(200,164,93,.5);
+
+    animation:sermonPulse 2s infinite;
+
+}
+
+.sermon-card:hover .sermon-play{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:translate(-50%,-50%) scale(1.1);
+
+}
+
+/*==============================================================
+Play Animation
+==============================================================*/
+
+@keyframes sermonPulse{
+
+    0%{
+
+        transform:scale(.8);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1.35);
+
+        opacity:0;
+
+    }
+
+}
+
+/*==============================================================
+Content
+==============================================================*/
+
+.sermon-content{
+
+    padding:32px 30px;
+
+}
+
+.sermon-category{
+
+    display:inline-block;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    background:rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.sermon-content h3{
+
+    color:#fff;
+
+    font-size:26px;
+
+    margin-bottom:14px;
+
+}
+
+.sermon-content p{
+
+    color:#c8ced8;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+/*==============================================================
+Author
+==============================================================*/
+
+.sermon-author{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.sermon-author img{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.sermon-author span{
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+/*==============================================================
+Hover
+==============================================================*/
+
+.sermon-card:hover{
+
+    transform:translateY(-15px);
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+/*==============================================================
+Featured Sermon
+==============================================================*/
+
+.sermon-card.featured{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(200,164,93,.4);
+
+}
+
+.sermon-card.featured::before{
+
+    content:"Latest Message";
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    z-index:5;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:1200px){
+
+    .sermon-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .sermon-header h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sermon-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sermon-card{
+
+        max-width:520px;
+
+        margin:auto;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .sermons-section{
+
+        padding:90px 0;
+
+    }
+
+    .sermon-header h2{
+
+        font-size:34px;
+
+    }
+
+    .sermon-header p{
+
+        font-size:15px;
+
+    }
+
+    .sermon-thumb{
+
+        height:220px;
+
+    }
+
+    .sermon-play{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:24px;
+
+    }
+
+    .sermon-content{
+
+        padding:26px 22px;
+
+    }
+
+}
+
+/*==============================================================
+END OF PART 5C
+
+NEXT:
+PART 6A
+
+✔ Gallery Section
+✔ Masonry Image Layout
+✔ Lightbox Ready
+✔ Hover Effects
+✔ Premium Animations
+==============================================================*/
+/*==============================================================
+PART 6A
+PREMIUM GALLERY SECTION
+MASONRY GRID
+IMAGE HOVER EFFECTS
+LIGHTBOX READY
+==============================================================*/
+
+/*==============================================================
+Gallery Section
+==============================================================*/
+
+.gallery-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        #090e18,
+        var(--dark)
+    );
+
+    overflow:hidden;
+
+}
+
+/*==============================================================
+Background Glow
+==============================================================*/
+
+.gallery-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.06);
+
+    filter:blur(160px);
+
+    top:-200px;
+
+    right:-200px;
+
+}
+
+.gallery-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    filter:blur(140px);
+
+    left:-180px;
+
+    bottom:-150px;
+
+}
+
+
+/*==============================================================
+Gallery Header
+==============================================================*/
+
+.gallery-header{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.gallery-header h2{
+
+    color:#fff;
+
+    font-size:56px;
+
+    margin-bottom:18px;
+
+}
+
+
+.gallery-header h2 span{
+
+    color:var(--primary);
+
+}
+
+
+.gallery-header p{
+
+    color:#c8ced8;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+/*==============================================================
+Gallery Masonry Grid
+==============================================================*/
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(12,1fr);
+
+    grid-auto-rows:120px;
+
+    gap:24px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==============================================================
+Gallery Item
+==============================================================*/
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    cursor:pointer;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s ease;
+
+}
+
+
+/*==============================================================
+Masonry Sizes
+==============================================================*/
+
+
+.gallery-item:nth-child(1){
+
+    grid-column:span 5;
+
+    grid-row:span 4;
+
+}
+
+
+.gallery-item:nth-child(2){
+
+    grid-column:span 3;
+
+    grid-row:span 2;
+
+}
+
+
+.gallery-item:nth-child(3){
+
+    grid-column:span 4;
+
+    grid-row:span 3;
+
+}
+
+
+.gallery-item:nth-child(4){
+
+    grid-column:span 3;
+
+    grid-row:span 3;
+
+}
+
+
+.gallery-item:nth-child(5){
+
+    grid-column:span 4;
+
+    grid-row:span 2;
+
+}
+
+
+.gallery-item:nth-child(6){
+
+    grid-column:span 5;
+
+    grid-row:span 3;
+
+}
+
+
+/*==============================================================
+Overlay
+==============================================================*/
+
+.gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(0,0,0,.55);
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+
+.gallery-overlay i{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:25px;
+
+    transform:scale(.7);
+
+    transition:.45s;
+
+}
+
+
+/*==============================================================
+Hover
+==============================================================*/
+
+.gallery-item:hover img{
+
+    transform:scale(1.15);
+
+}
+
+
+.gallery-item:hover .gallery-overlay{
+
+    opacity:1;
+
+}
+
+
+.gallery-item:hover .gallery-overlay i{
+
+    transform:scale(1);
+
+}
+
+
+.gallery-item:hover{
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+
+/*==============================================================
+Category Badge
+==============================================================*/
+
+.gallery-tag{
+
+    position:absolute;
+
+    left:20px;
+
+    bottom:20px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    color:#fff;
+
+    font-size:13px;
+
+    z-index:3;
+
+}
+
+
+/*==============================================================
+Floating Animation
+==============================================================*/
+
+.gallery-item{
+
+    animation:galleryFloat 7s ease-in-out infinite;
+
+}
+
+
+.gallery-item:nth-child(2){
+
+    animation-delay:1s;
+
+}
+
+
+.gallery-item:nth-child(3){
+
+    animation-delay:2s;
+
+}
+
+
+.gallery-item:nth-child(4){
+
+    animation-delay:3s;
+
+}
+
+
+@keyframes galleryFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+
+}
+
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+
+@media(max-width:1200px){
+
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(8,1fr);
+
+    }
+
+
+}
+
+
+@media(max-width:991px){
+
+
+    .gallery-header h2{
+
+        font-size:46px;
+
+    }
+
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        grid-auto-rows:220px;
+
+    }
+
+
+    .gallery-item:nth-child(n){
+
+        grid-column:span 1;
+
+        grid-row:span 1;
+
+    }
+
+
+    .gallery-item:first-child{
+
+        grid-column:span 2;
+
+    }
+
+
+}
+
+
+@media(max-width:576px){
+
+
+    .gallery-section{
+
+        padding:90px 0;
+
+    }
+
+
+    .gallery-header h2{
+
+        font-size:34px;
+
+    }
+
+
+    .gallery-header p{
+
+        font-size:15px;
+
+    }
+
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+        grid-auto-rows:250px;
+
+    }
+
+
+    .gallery-item:first-child{
+
+        grid-column:auto;
+
+    }
+
+
+}
+
+
+/*==============================================================
+GSAP READY
+==============================================================*/
+
+
+.gallery-item.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+}
+
+
+.gallery-item.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s ease;
+
+}
+
+
+/*==============================================================
+END OF PART 6A
+
+NEXT:
+PART 6B
+
+✔ Gallery Filter Tabs
+✔ Lightbox Animation
+✔ Image Popup
+✔ Modal Design
+✔ GSAP Gallery Reveal
+✔ Responsive Lightbox
+==============================================================*/
+/*==============================================================
+PART 6B
+GALLERY FILTER
+LIGHTBOX MODAL
+IMAGE POPUP
+GSAP READY ANIMATIONS
+==============================================================*/
+
+
+/*==============================================================
+Gallery Filter Tabs
+==============================================================*/
+
+.gallery-filter{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:60px;
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+
+.gallery-filter button{
+
+    position:relative;
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+
+/* Active Button */
+
+.gallery-filter button.active{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    border-color:transparent;
+
+}
+
+
+/* Hover */
+
+.gallery-filter button:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(200,164,93,.40);
+
+}
+
+
+/*==============================================================
+Filter Animation
+==============================================================*/
+
+.gallery-item.hide{
+
+    opacity:0;
+
+    transform:scale(.7);
+
+    pointer-events:none;
+
+}
+
+
+.gallery-item.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+
+/*==============================================================
+Lightbox Overlay
+==============================================================*/
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.88);
+
+    backdrop-filter:blur(20px);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.5s;
+
+    z-index:9999;
+
+}
+
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+/*==============================================================
+Lightbox Image Box
+==============================================================*/
+
+.lightbox-content{
+
+    position:relative;
+
+    width:min(90%,1000px);
+
+    max-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.lightbox-content img{
+
+    width:100%;
+
+    max-height:85vh;
+
+    object-fit:contain;
+
+    border-radius:25px;
+
+    box-shadow:0 40px 100px rgba(0,0,0,.7);
+
+    transform:scale(.8);
+
+    transition:.5s;
+
+}
+
+
+.lightbox.active img{
+
+    transform:scale(1);
+
+}
+
+
+
+/*==============================================================
+Close Button
+==============================================================*/
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:-60px;
+
+    right:0;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#fff;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+.lightbox-close:hover{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:rotate(90deg);
+
+}
+
+
+
+/*==============================================================
+Navigation Buttons
+==============================================================*/
+
+.lightbox-nav{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.35s;
+
+}
+
+
+.lightbox-prev{
+
+    left:-80px;
+
+}
+
+
+.lightbox-next{
+
+    right:-80px;
+
+}
+
+
+
+.lightbox-nav:hover{
+
+    background:var(--gradient);
+
+    color:#111;
+
+}
+
+
+
+/*==============================================================
+Image Counter
+==============================================================*/
+
+.lightbox-counter{
+
+    position:absolute;
+
+    bottom:-55px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+
+
+/*==============================================================
+GSAP Animation Classes
+==============================================================*/
+
+
+.gallery-fade{
+
+    opacity:0;
+
+}
+
+
+.gallery-slide-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+}
+
+
+.gallery-slide-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+}
+
+
+.gallery-zoom{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+}
+
+
+/*==============================================================
+Smooth Image Loading
+==============================================================*/
+
+.gallery-item img{
+
+    opacity:0;
+
+    transition:
+    opacity .6s ease,
+    transform 1s ease;
+
+}
+
+
+.gallery-item img.loaded{
+
+    opacity:1;
+
+}
+
+
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+
+@media(max-width:991px){
+
+
+    .lightbox-prev{
+
+        left:20px;
+
+    }
+
+
+    .lightbox-next{
+
+        right:20px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+    .gallery-filter button{
+
+        width:100%;
+
+        max-width:220px;
+
+    }
+
+
+    .lightbox-close{
+
+        top:-70px;
+
+    }
+
+
+    .lightbox-nav{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+
+    .lightbox-prev{
+
+        left:10px;
+
+    }
+
+
+    .lightbox-next{
+
+        right:10px;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+END OF PART 6B
+
+NEXT:
+PART 6C
+
+✔ Gallery Advanced GSAP Effects
+✔ Parallax Images
+✔ Cursor Effects
+✔ Mobile Optimizations
+✔ Performance Enhancements
+==============================================================*/
+/*==============================================================
+PART 6C
+ADVANCED GALLERY EFFECTS
+GSAP READY
+PARALLAX
+CURSOR EFFECTS
+PERFORMANCE
+==============================================================*/
+
+
+/*==============================================================
+Gallery Parallax Wrapper
+==============================================================*/
+
+.gallery-parallax{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.gallery-parallax img{
+
+    will-change:transform;
+
+    transform:translateZ(0);
+
+}
+
+
+
+/*==============================================================
+3D Tilt Effect Ready
+==============================================================*/
+
+.gallery-tilt{
+
+    transform-style:preserve-3d;
+
+    perspective:1000px;
+
+    transition:transform .4s ease;
+
+}
+
+
+.gallery-tilt:hover{
+
+    transform:
+
+    perspective(1000px)
+
+    rotateX(5deg)
+
+    rotateY(-5deg)
+
+    translateY(-10px);
+
+}
+
+
+
+/*==============================================================
+Image Depth Layer
+==============================================================*/
+
+.gallery-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(255,255,255,.12),
+
+        transparent 40%
+
+    );
+
+    opacity:0;
+
+    transition:.5s;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+
+.gallery-item:hover::before{
+
+    opacity:1;
+
+}
+
+
+
+/*==============================================================
+Cursor Glow Effect
+==============================================================*/
+
+.gallery-cursor{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.25);
+
+    filter:blur(40px);
+
+    pointer-events:none;
+
+    opacity:0;
+
+    transition:.3s;
+
+    z-index:5;
+
+}
+
+
+
+/*==============================================================
+Floating Decorative Shapes
+==============================================================*/
+
+.gallery-shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    animation:galleryShapeFloat 10s infinite ease-in-out;
+
+}
+
+
+.gallery-shape.one{
+
+    width:160px;
+
+    height:160px;
+
+    top:15%;
+
+    left:5%;
+
+}
+
+
+.gallery-shape.two{
+
+    width:220px;
+
+    height:220px;
+
+    right:5%;
+
+    bottom:10%;
+
+    animation-delay:2s;
+
+}
+
+
+
+@keyframes galleryShapeFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-30px);
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+Image Overlay Text
+==============================================================*/
+
+.gallery-info{
+
+    position:absolute;
+
+    left:25px;
+
+    bottom:25px;
+
+    z-index:4;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.5s;
+
+}
+
+
+.gallery-info h4{
+
+    color:#fff;
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+
+.gallery-info span{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+}
+
+
+
+.gallery-item:hover .gallery-info{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/*==============================================================
+Advanced Loading Animation
+==============================================================*/
+
+.gallery-loading{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.gallery-loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.15),
+
+        transparent
+
+    );
+
+    transform:translateX(-100%);
+
+    animation:imageLoading 1.8s infinite;
+
+}
+
+
+@keyframes imageLoading{
+
+
+    100%{
+
+        transform:translateX(100%);
+
+    }
+
+}
+
+
+
+/*==============================================================
+GSAP Scroll Reveal States
+==============================================================*/
+
+.gallery-reveal-up{
+
+    opacity:0;
+
+    transform:translateY(100px);
+
+}
+
+
+.gallery-reveal-down{
+
+    opacity:0;
+
+    transform:translateY(-100px);
+
+}
+
+
+.gallery-reveal-scale{
+
+    opacity:0;
+
+    transform:scale(.85);
+
+}
+
+
+.gallery-reveal-rotate{
+
+    opacity:0;
+
+    transform:
+
+    rotate(-8deg)
+
+    scale(.9);
+
+}
+
+
+
+/*==============================================================
+Mobile Performance
+==============================================================*/
+
+@media(max-width:768px){
+
+
+    .gallery-tilt:hover{
+
+        transform:none;
+
+    }
+
+
+    .gallery-cursor{
+
+        display:none;
+
+    }
+
+
+    .gallery-item{
+
+        animation:none;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+Reduced Motion
+==============================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+
+    .gallery-item,
+
+    .gallery-shape,
+
+    .gallery-loading::after{
+
+        animation:none !important;
+
+    }
+
+
+    .gallery-item:hover img{
+
+        transform:none;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+GPU Optimization
+==============================================================*/
+
+.gallery-item,
+
+.gallery-item img,
+
+.gallery-overlay,
+
+.gallery-info{
+
+    backface-visibility:hidden;
+
+    transform:translateZ(0);
+
+}
+
+
+
+/*==============================================================
+END OF PART 6C
+
+NEXT:
+PART 7A
+
+✔ Testimonials Section
+✔ Church Member Reviews
+✔ Premium Slider Design
+✔ Swiper.js Ready
+✔ Glass Cards
+✔ Responsive Layout
+==============================================================*/
+/*==============================================================
+PART 7A
+TESTIMONIAL SECTION
+MEMBER REVIEWS
+PREMIUM GLASS SLIDER DESIGN
+SWIPER.JS READY
+==============================================================*/
+
+
+/*==============================================================
+Testimonials Section
+==============================================================*/
+
+.testimonial-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        var(--dark),
+
+        #080d17
+
+    );
+
+    overflow:hidden;
+
+}
+
+
+
+/*==============================================================
+Background Effects
+==============================================================*/
+
+.testimonial-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.06);
+
+    filter:blur(160px);
+
+    top:-200px;
+
+    left:-250px;
+
+}
+
+
+
+.testimonial-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    filter:blur(150px);
+
+    right:-180px;
+
+    bottom:-150px;
+
+}
+
+
+
+/*==============================================================
+Header
+==============================================================*/
+
+.testimonial-header{
+
+    max-width:760px;
+
+    text-align:center;
+
+    margin:0 auto 75px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.testimonial-header h2{
+
+    font-size:56px;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.testimonial-header h2 span{
+
+    color:var(--primary);
+
+}
+
+
+
+.testimonial-header p{
+
+    color:#c8ced8;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==============================================================
+Swiper Container
+==============================================================*/
+
+.testimonial-slider{
+
+    position:relative;
+
+    z-index:3;
+
+    overflow:hidden;
+
+}
+
+
+
+.swiper-wrapper{
+
+    align-items:stretch;
+
+}
+
+
+
+/*==============================================================
+Testimonial Card
+==============================================================*/
+
+.testimonial-card{
+
+    position:relative;
+
+    height:100%;
+
+    padding:40px 35px;
+
+    border-radius:32px;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    transition:.5s;
+
+    overflow:hidden;
+
+}
+
+
+
+/*==============================================================
+Quote Icon
+==============================================================*/
+
+.quote-icon{
+
+    position:absolute;
+
+    top:30px;
+
+    right:30px;
+
+    font-size:70px;
+
+    color:rgba(200,164,93,.15);
+
+}
+
+
+
+/*==============================================================
+Stars
+==============================================================*/
+
+.testimonial-stars{
+
+    display:flex;
+
+    gap:6px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.testimonial-stars i{
+
+    color:var(--primary);
+
+    font-size:16px;
+
+}
+
+
+
+/*==============================================================
+Review Text
+==============================================================*/
+
+.testimonial-card p{
+
+    color:#d4dae3;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/*==============================================================
+Member Profile
+==============================================================*/
+
+.testimonial-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+
+.testimonial-user img{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid rgba(200,164,93,.35);
+
+}
+
+
+
+.testimonial-user h5{
+
+    color:#fff;
+
+    margin:0 0 5px;
+
+    font-size:18px;
+
+}
+
+
+
+.testimonial-user span{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+}
+
+
+
+/*==============================================================
+Hover Effects
+==============================================================*/
+
+.testimonial-card:hover{
+
+    transform:translateY(-15px);
+
+    border-color:rgba(200,164,93,.35);
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.45);
+
+}
+
+
+
+.testimonial-card:hover .quote-icon{
+
+    color:rgba(200,164,93,.30);
+
+}
+
+
+
+/*==============================================================
+Featured Card
+==============================================================*/
+
+.testimonial-card.featured{
+
+    border-color:rgba(200,164,93,.40);
+
+}
+
+
+
+.testimonial-card.featured::before{
+
+    content:"Featured";
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+
+/*==============================================================
+Swiper Pagination
+==============================================================*/
+
+.swiper-pagination{
+
+    position:relative;
+
+    margin-top:45px;
+
+}
+
+
+
+.swiper-pagination-bullet{
+
+    width:12px;
+
+    height:12px;
+
+    background:rgba(255,255,255,.25);
+
+    opacity:1;
+
+}
+
+
+
+.swiper-pagination-bullet-active{
+
+    background:var(--primary);
+
+    width:35px;
+
+    border-radius:20px;
+
+}
+
+
+
+/*==============================================================
+Swiper Navigation
+==============================================================*/
+
+.testimonial-btn{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+
+
+.testimonial-btn:hover{
+
+    background:var(--gradient);
+
+    color:#111;
+
+}
+
+
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:991px){
+
+
+    .testimonial-header h2{
+
+        font-size:46px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .testimonial-card{
+
+        padding:32px 25px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+    .testimonial-section{
+
+        padding:90px 0;
+
+    }
+
+
+    .testimonial-header h2{
+
+        font-size:34px;
+
+    }
+
+
+    .testimonial-header p{
+
+        font-size:15px;
+
+    }
+
+
+    .testimonial-card p{
+
+        font-size:15px;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+GSAP READY
+==============================================================*/
+
+.testimonial-reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+}
+
+
+.testimonial-active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s ease;
+
+}
+
+
+
+/*==============================================================
+END OF PART 7A
+
+NEXT:
+PART 7B
+
+✔ Testimonial Advanced Slider
+✔ Auto Play Effects
+✔ 3D Card Animation
+✔ GSAP Reveal
+✔ Mobile Optimization
+==============================================================*/
+/*==============================================================
+PART 7B
+ADVANCED TESTIMONIAL SLIDER
+3D EFFECTS
+SWIPER READY
+GSAP ANIMATION
+==============================================================*/
+
+
+/*==============================================================
+Slider Perspective
+==============================================================*/
+
+.testimonial-slider{
+
+    perspective:1200px;
+
+}
+
+
+
+/*==============================================================
+3D Card Effect
+==============================================================*/
+
+.testimonial-card{
+
+    transform-style:preserve-3d;
+
+    transition:
+
+    transform .6s ease,
+
+    box-shadow .6s ease;
+
+}
+
+
+
+/*==============================================================
+Active Slide
+==============================================================*/
+
+.swiper-slide-active .testimonial-card{
+
+    transform:
+
+    translateY(-15px)
+
+    scale(1.03);
+
+    box-shadow:
+
+    0 35px 90px rgba(0,0,0,.55);
+
+}
+
+
+
+/*==============================================================
+Previous / Next Slides
+==============================================================*/
+
+.swiper-slide-prev .testimonial-card{
+
+    transform:
+
+    rotateY(8deg)
+
+    scale(.95);
+
+    opacity:.75;
+
+}
+
+
+
+.swiper-slide-next .testimonial-card{
+
+    transform:
+
+    rotateY(-8deg)
+
+    scale(.95);
+
+    opacity:.75;
+
+}
+
+
+
+/*==============================================================
+Floating Glow
+==============================================================*/
+
+.testimonial-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(200,164,93,.12);
+
+    filter:blur(90px);
+
+    top:-100px;
+
+    right:-100px;
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+
+
+.testimonial-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+
+/*==============================================================
+Moving Shine Effect
+==============================================================*/
+
+.testimonial-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-80%;
+
+    width:50%;
+
+    height:300%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+
+
+.testimonial-card:hover::after{
+
+    left:170%;
+
+}
+
+
+
+/*==============================================================
+Quote Animation
+==============================================================*/
+
+.quote-icon{
+
+    animation:
+
+    quoteFloat 5s ease-in-out infinite;
+
+}
+
+
+
+@keyframes quoteFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+User Image Animation
+==============================================================*/
+
+.testimonial-user img{
+
+    transition:.45s;
+
+}
+
+
+
+.testimonial-card:hover
+
+.testimonial-user img{
+
+    transform:
+
+    scale(1.12)
+
+    rotate(5deg);
+
+}
+
+
+
+/*==============================================================
+GSAP READY STATES
+==============================================================*/
+
+.testimonial-left{
+
+    opacity:0;
+
+    transform:translateX(-100px);
+
+}
+
+
+
+.testimonial-right{
+
+    opacity:0;
+
+    transform:translateX(100px);
+
+}
+
+
+
+.testimonial-scale{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+}
+
+
+
+.testimonial-fade{
+
+    opacity:0;
+
+}
+
+
+
+/*==============================================================
+Counter Style Review Badge
+==============================================================*/
+
+.review-badge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:40px;
+
+    padding:18px 25px;
+
+    width:max-content;
+
+    border-radius:50px;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+
+.review-badge strong{
+
+    font-size:28px;
+
+    color:#fff;
+
+}
+
+
+
+.review-badge span{
+
+    color:#c8ced8;
+
+    font-size:14px;
+
+}
+
+
+
+/*==============================================================
+Responsive Slider
+==============================================================*/
+
+@media(max-width:991px){
+
+
+    .swiper-slide-prev .testimonial-card,
+
+    .swiper-slide-next .testimonial-card{
+
+
+        transform:none;
+
+        opacity:1;
+
+
+    }
+
+
+    .swiper-slide-active .testimonial-card{
+
+
+        transform:
+
+        translateY(-8px)
+
+        scale(1.01);
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+    .testimonial-card{
+
+
+        border-radius:25px;
+
+
+    }
+
+
+    .quote-icon{
+
+
+        font-size:55px;
+
+
+    }
+
+
+    .review-badge{
+
+
+        width:100%;
+
+        justify-content:center;
+
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+Reduced Motion
+==============================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+
+    .testimonial-card,
+
+    .quote-icon{
+
+
+        animation:none !important;
+
+        transition:none !important;
+
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+END OF PART 7B
+
+NEXT:
+PART 7C
+
+✔ Testimonial JS Integration Ready
+✔ Swiper Configuration Support
+✔ Auto Play
+✔ Mouse Interaction
+✔ Final Responsive Fixes
+==============================================================*/
+/*==============================================================
+PART 8A
+CONTACT SECTION
+CONTACT CARDS
+CONTACT FORM
+PREMIUM GLASS UI
+GOOGLE MAP READY
+==============================================================*/
+
+
+/*==============================================================
+Contact Section
+==============================================================*/
+
+.contact-section{
+
+    position:relative;
+
+    padding:140px 0;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #080d17,
+
+        var(--dark)
+
+    );
+
+    overflow:hidden;
+
+}
+
+
+
+/*==============================================================
+Background Glow
+==============================================================*/
+
+.contact-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(200,164,93,.07);
+
+    filter:blur(170px);
+
+    left:-250px;
+
+    top:-150px;
+
+}
+
+
+
+.contact-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(255,255,255,.03);
+
+    filter:blur(150px);
+
+    right:-200px;
+
+    bottom:-150px;
+
+}
+
+
+
+/*==============================================================
+Contact Header
+==============================================================*/
+
+.contact-header{
+
+    max-width:760px;
+
+    text-align:center;
+
+    margin:0 auto 80px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.contact-header h2{
+
+    font-size:56px;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.contact-header h2 span{
+
+    color:var(--primary);
+
+}
+
+
+
+.contact-header p{
+
+    color:#c8ced8;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+/*==============================================================
+Contact Grid
+==============================================================*/
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 1.2fr;
+
+    gap:40px;
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+
+
+/*==============================================================
+Contact Cards Wrapper
+==============================================================*/
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+/*==============================================================
+Contact Card
+==============================================================*/
+
+.contact-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    transition:.45s;
+
+}
+
+
+
+/*==============================================================
+Contact Icon
+==============================================================*/
+
+.contact-icon{
+
+    width:70px;
+
+    height:70px;
+
+    flex-shrink:0;
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    rgba(200,164,93,.12);
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    transition:.45s;
+
+}
+
+
+
+.contact-card:hover .contact-icon{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:
+
+    rotate(-8deg)
+
+    scale(1.1);
+
+}
+
+
+
+/*==============================================================
+Contact Content
+==============================================================*/
+
+.contact-card h4{
+
+    color:#fff;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.contact-card p{
+
+    color:#c8ced8;
+
+    margin:0;
+
+    line-height:1.6;
+
+}
+
+
+
+/*==============================================================
+Contact Hover
+==============================================================*/
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:
+
+    rgba(200,164,93,.35);
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.4);
+
+}
+
+
+
+/*==============================================================
+Contact Form
+==============================================================*/
+
+.contact-form{
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+
+}
+
+
+
+/*==============================================================
+Input Group
+==============================================================*/
+
+.form-group{
+
+    position:relative;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.form-group input,
+
+.form-group textarea{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    color:#fff;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+
+
+.form-group textarea{
+
+    height:160px;
+
+    resize:none;
+
+}
+
+
+
+.form-group input::placeholder,
+
+.form-group textarea::placeholder{
+
+    color:#aab2bd;
+
+}
+
+
+
+/*==============================================================
+Input Focus
+==============================================================*/
+
+.form-group input:focus,
+
+.form-group textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+    0 0 25px rgba(200,164,93,.18);
+
+}
+
+
+
+/*==============================================================
+Submit Button
+==============================================================*/
+
+.contact-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:50px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.4s;
+
+}
+
+
+
+.contact-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 20px 45px rgba(200,164,93,.35);
+
+}
+
+
+
+/*==============================================================
+Google Map Placeholder
+==============================================================*/
+
+.contact-map{
+
+    margin-top:50px;
+
+    height:400px;
+
+    overflow:hidden;
+
+    border-radius:35px;
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.contact-map iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+    filter:
+
+    grayscale(100%)
+
+    contrast(1.1);
+
+}
+
+
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:991px){
+
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .contact-header h2{
+
+        font-size:46px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+    .contact-section{
+
+        padding:90px 0;
+
+    }
+
+
+    .contact-header h2{
+
+        font-size:34px;
+
+    }
+
+
+    .contact-header p{
+
+        font-size:15px;
+
+    }
+
+
+    .contact-form{
+
+        padding:30px 22px;
+
+    }
+
+
+    .contact-card{
+
+        padding:22px;
+
+    }
+
+
+    .contact-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+GSAP READY
+==============================================================*/
+
+.contact-reveal-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+}
+
+
+.contact-reveal-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+}
+
+
+.contact-reveal-up{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+}
+
+
+
+/*==============================================================
+END OF PART 8A
+
+NEXT:
+PART 8B
+
+✔ Contact Advanced Animation
+✔ Floating Icons
+✔ Form Success Animation
+✔ GSAP Scroll Reveal
+✔ Mobile Final Polish
+==============================================================*/
+/*==============================================================
+PART 8B
+CONTACT ADVANCED ANIMATION
+FLOATING ICONS
+FORM EFFECTS
+GSAP READY
+MOBILE FINAL POLISH
+==============================================================*/
+
+
+/*==============================================================
+Contact Floating Animation
+==============================================================*/
+
+.contact-card{
+
+    animation:
+
+    contactFloat 7s ease-in-out infinite;
+
+}
+
+
+.contact-card:nth-child(2){
+
+    animation-delay:1s;
+
+}
+
+
+.contact-card:nth-child(3){
+
+    animation-delay:2s;
+
+}
+
+
+
+@keyframes contactFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+Icon Pulse Effect
+==============================================================*/
+
+.contact-icon{
+
+    position:relative;
+
+}
+
+
+
+.contact-icon::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-8px;
+
+    border-radius:28px;
+
+    border:
+
+    2px solid rgba(200,164,93,.25);
+
+    animation:
+
+    contactPulse 2.5s infinite;
+
+}
+
+
+
+@keyframes contactPulse{
+
+
+    0%{
+
+        transform:scale(.85);
+
+        opacity:.8;
+
+    }
+
+
+    70%{
+
+        transform:scale(1.25);
+
+        opacity:0;
+
+    }
+
+
+    100%{
+
+        opacity:0;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+Form Glass Shine
+==============================================================*/
+
+.contact-form{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.contact-form::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+
+    height:200px;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(200,164,93,.15);
+
+    filter:blur(80px);
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+.contact-form > *{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/*==============================================================
+Floating Labels Ready
+==============================================================*/
+
+.form-group label{
+
+    position:absolute;
+
+    left:20px;
+
+    top:18px;
+
+    color:#aab2bd;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    font-size:15px;
+
+}
+
+
+
+.form-group input:focus + label,
+
+.form-group input:not(:placeholder-shown)+label,
+
+.form-group textarea:focus + label,
+
+.form-group textarea:not(:placeholder-shown)+label{
+
+
+    top:-12px;
+
+    font-size:12px;
+
+    color:var(--primary);
+
+    background:#090e18;
+
+    padding:0 8px;
+
+}
+
+
+
+/*==============================================================
+Submit Button Animation
+==============================================================*/
+
+.contact-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.contact-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.5),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+
+
+.contact-btn:hover::before{
+
+    left:150%;
+
+}
+
+
+
+/*==============================================================
+Success Message Animation
+==============================================================*/
+
+.form-success{
+
+    display:none;
+
+    margin-top:20px;
+
+    padding:15px 20px;
+
+    border-radius:20px;
+
+    background:
+
+    rgba(46,204,113,.15);
+
+    color:#2ecc71;
+
+    border:
+
+    1px solid rgba(46,204,113,.3);
+
+}
+
+
+
+.form-success.show{
+
+    display:block;
+
+    animation:
+
+    successShow .5s ease;
+
+}
+
+
+
+@keyframes successShow{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+Social Media Buttons
+==============================================================*/
+
+.contact-social{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:35px;
+
+}
+
+
+
+.contact-social a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    border:
+
+    1px solid rgba(255,255,255,.10);
+
+    color:#fff;
+
+    transition:.4s;
+
+}
+
+
+
+.contact-social a:hover{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:
+
+    translateY(-8px)
+
+    rotate(8deg);
+
+}
+
+
+
+/*==============================================================
+Map Animation
+==============================================================*/
+
+.contact-map{
+
+    position:relative;
+
+}
+
+
+
+.contact-map::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(200,164,93,.18),
+
+        transparent
+
+    );
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+
+
+/*==============================================================
+GSAP Scroll Classes
+==============================================================*/
+
+.contact-card.reveal{
+
+    opacity:0;
+
+    transform:
+
+    translateY(70px);
+
+}
+
+
+
+.contact-form.reveal{
+
+    opacity:0;
+
+    transform:
+
+    translateX(100px);
+
+}
+
+
+
+.contact-map.reveal{
+
+    opacity:0;
+
+    transform:
+
+    scale(.9);
+
+}
+
+
+
+/*==============================================================
+Responsive Animation Fix
+==============================================================*/
+
+@media(max-width:768px){
+
+
+    .contact-card{
+
+        animation:none;
+
+    }
+
+
+    .contact-form{
+
+        margin-top:20px;
+
+    }
+
+
+}
+
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+    .contact-card,
+
+    .contact-icon::after,
+
+    .contact-btn::before{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+END OF PART 8B
+
+NEXT:
+PART 8C
+
+✔ Footer Section
+✔ Newsletter
+✔ Church Links
+✔ Social Icons
+✔ Premium Dark Footer
+✔ Responsive Design
+==============================================================*/
+/*==============================================================
+PART 8C
+PREMIUM CHURCH FOOTER
+NEWSLETTER
+SOCIAL LINKS
+DARK GLASS DESIGN
+RESPONSIVE FOOTER
+==============================================================*/
+
+
+/*==============================================================
+Footer Section
+==============================================================*/
+
+.footer{
+
+    position:relative;
+
+    padding:100px 0 0;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #080d17,
+
+        #050912
+
+    );
+
+    overflow:hidden;
+
+}
+
+
+
+/*==============================================================
+Footer Glow
+==============================================================*/
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(200,164,93,.07);
+
+    filter:blur(170px);
+
+    top:-250px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+
+
+.footer::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(255,255,255,.04) 1px,
+
+        transparent 1px
+
+    );
+
+    background-size:35px 35px;
+
+    opacity:.15;
+
+}
+
+
+
+/*==============================================================
+Footer Grid
+==============================================================*/
+
+.footer-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+
+    1.4fr 1fr 1fr 1.2fr;
+
+    gap:45px;
+
+    padding-bottom:70px;
+
+}
+
+
+
+/*==============================================================
+Footer Logo
+==============================================================*/
+
+.footer-logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+.footer-logo img{
+
+    width:160px;
+
+}
+
+
+
+.footer-logo p{
+
+    color:#c8ced8;
+
+    line-height:1.8;
+
+    max-width:350px;
+
+}
+
+
+
+/*==============================================================
+Footer Headings
+==============================================================*/
+
+.footer h3{
+
+    color:#fff;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+}
+
+
+
+.footer h3::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+
+    width:45px;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:var(--gradient);
+
+}
+
+
+
+/*==============================================================
+Footer Links
+==============================================================*/
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+.footer-links a{
+
+    color:#c8ced8;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.35s;
+
+}
+
+
+
+.footer-links a i{
+
+    color:var(--primary);
+
+    font-size:12px;
+
+}
+
+
+
+.footer-links a:hover{
+
+    color:var(--primary);
+
+    transform:translateX(8px);
+
+}
+
+
+
+/*==============================================================
+Newsletter
+==============================================================*/
+
+.newsletter-box p{
+
+    color:#c8ced8;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.newsletter-form{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:8px;
+
+    border-radius:50px;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:
+
+    1px solid rgba(255,255,255,.10);
+
+}
+
+
+
+.newsletter-form input{
+
+    flex:1;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    padding:12px 18px;
+
+    color:#fff;
+
+}
+
+
+
+.newsletter-form button{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transition:.35s;
+
+}
+
+
+
+.newsletter-form button:hover{
+
+    transform:rotate(15deg) scale(1.1);
+
+}
+
+
+
+/*==============================================================
+Footer Social
+==============================================================*/
+
+.footer-social{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+
+
+.footer-social a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    border:
+
+    1px solid rgba(255,255,255,.10);
+
+    transition:.4s;
+
+}
+
+
+
+.footer-social a:hover{
+
+    background:var(--gradient);
+
+    color:#111;
+
+    transform:
+
+    translateY(-8px)
+
+    rotate(8deg);
+
+}
+
+
+
+/*==============================================================
+Footer Bottom
+==============================================================*/
+
+.footer-bottom{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:30px 0;
+
+    border-top:
+
+    1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+.footer-bottom p{
+
+    color:#9fa7b4;
+
+    margin:0;
+
+}
+
+
+
+.footer-bottom a{
+
+    color:var(--primary);
+
+}
+
+
+
+/*==============================================================
+Back To Top Button
+==============================================================*/
+
+.back-top{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--gradient);
+
+    color:#111;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+
+
+.back-top:hover{
+
+    transform:
+
+    translateY(-8px);
+
+}
+
+
+
+/*==============================================================
+Footer Animation
+==============================================================*/
+
+.footer-column{
+
+    opacity:0;
+
+    transform:
+
+    translateY(60px);
+
+}
+
+
+
+.footer-column.show{
+
+    opacity:1;
+
+    transform:none;
+
+    transition:.8s ease;
+
+}
+
+
+
+/*==============================================================
+Responsive
+==============================================================*/
+
+@media(max-width:1200px){
+
+
+    .footer-grid{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+    .footer{
+
+        padding-top:80px;
+
+    }
+
+
+    .newsletter-form{
+
+        flex-direction:column;
+
+        border-radius:25px;
+
+    }
+
+
+    .newsletter-form button{
+
+        width:100%;
+
+        border-radius:20px;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+ACCESSIBILITY
+==============================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+
+    .footer-column,
+
+    .footer-social a,
+
+    .back-top{
+
+        transition:none;
+
+    }
+
+
+}
+
+
+
+/*==============================================================
+END OF PART 8C
+
+CHURCH WEBSITE CSS COMPLETE
+
+FINAL PARTS AVAILABLE:
+✔ style.css merge
+✔ main.js GSAP animations
+✔ Swiper.js setup
+✔ Navbar JS
+✔ Mobile menu
+✔ Scroll effects
+✔ Preloader
+==============================================================*/
+/*==============================================================
+PART 9A
+MAIN.JS
+CHURCH WEBSITE INTERACTIONS
+
+FEATURES:
+✔ GSAP Animations
+✔ ScrollTrigger
+✔ Swiper Slider Ready
+✔ Mobile Menu
+✔ Preloader
+✔ Smooth Scroll
+✔ Counter Animation
+✔ Scroll To Top
+✔ Gallery Ready
+==============================================================*/
+
+
+/*==============================================================
+PRELOADER
+==============================================================*/
+
+window.addEventListener("load",()=>{
+
+    const loader=document.querySelector(".preloader");
+
+    if(loader){
+
+        gsap.to(loader,{
+
+            opacity:0,
+
+            duration:1,
+
+            ease:"power3.out",
+
+            onComplete:()=>{
+
+                loader.style.display="none";
+
+            }
+
+        });
+
+    }
+
+});
+
+
+
+/*==============================================================
+GSAP INITIALIZE
+==============================================================*/
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+/*==============================================================
+NAVBAR SCROLL EFFECT
+==============================================================*/
+
+const navbar=document.querySelector(".navbar");
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(!navbar) return;
+
+
+    if(window.scrollY>80){
+
+        navbar.classList.add("scrolled");
+
+    }
+
+    else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+
+});
+
+
+
+/*==============================================================
+MOBILE MENU
+==============================================================*/
+
+const menuBtn=document.querySelector(".menu-toggle");
+
+const navMenu=document.querySelector(".nav-menu");
+
+
+if(menuBtn && navMenu){
+
+
+    menuBtn.addEventListener("click",()=>{
+
+
+        menuBtn.classList.toggle("active");
+
+
+        navMenu.classList.toggle("active");
+
+
+        document.body.classList.toggle("menu-open");
+
+
+    });
+
+
+
+    document.querySelectorAll(".nav-menu a")
+
+    .forEach(link=>{
+
+
+        link.addEventListener("click",()=>{
+
+
+            navMenu.classList.remove("active");
+
+            menuBtn.classList.remove("active");
+
+
+        });
+
+
+    });
+
+
+}
+
+
+
+/*==============================================================
+SMOOTH SCROLL
+==============================================================*/
+
+
+document.querySelectorAll('a[href^="#"]')
+
+.forEach(anchor=>{
+
+
+    anchor.addEventListener("click",function(e){
+
+
+        const target=document.querySelector(
+
+            this.getAttribute("href")
+
+        );
+
+
+        if(target){
+
+
+            e.preventDefault();
+
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+
+        }
+
+
+    });
+
+
+});
+
+
+
+/*==============================================================
+HERO ANIMATION
+==============================================================*/
+
+
+gsap.from(".hero-content",{
+
+
+    y:80,
+
+    opacity:0,
+
+    duration:1.2,
+
+    ease:"power4.out"
+
+
+});
+
+
+gsap.from(".hero-image",{
+
+
+    scale:.8,
+
+    opacity:0,
+
+    duration:1.3,
+
+    delay:.2,
+
+    ease:"power4.out"
+
+
+});
+
+
+
+/*==============================================================
+SCROLL REVEAL COMMON
+==============================================================*/
+
+
+const revealElements=document.querySelectorAll(
+
+".reveal, .gallery-reveal-up, .contact-reveal-up"
+
+);
+
+
+
+revealElements.forEach(element=>{
+
+
+    gsap.from(element,{
+
+
+        scrollTrigger:{
+
+
+            trigger:element,
+
+            start:"top 85%",
+
+
+        },
+
+
+        y:80,
+
+        opacity:0,
+
+        duration:1,
+
+        ease:"power3.out"
+
+
+    });
+
+
+});
+
+
+
+/*==============================================================
+SECTION HEADINGS ANIMATION
+==============================================================*/
+
+
+gsap.utils.toArray(
+
+".mission-heading, .ministry-heading, .events-header, .sermon-header, .gallery-header, .testimonial-header, .contact-header"
+
+)
+
+.forEach(title=>{
+
+
+    gsap.from(title,{
+
+
+        scrollTrigger:{
+
+
+            trigger:title,
+
+            start:"top 85%"
+
+
+        },
+
+
+        y:60,
+
+        opacity:0,
+
+        duration:.9,
+
+        ease:"power3.out"
+
+
+    });
+
+
+});
+
+
+
+/*==============================================================
+CARD STAGGER ANIMATION
+==============================================================*/
+
+
+const cards=[
+
+".mission-card",
+
+".ministry-card",
+
+".event-card",
+
+".sermon-card",
+
+".testimonial-card",
+
+".contact-card"
+
+];
+
+
+cards.forEach(selector=>{
+
+
+    gsap.utils.toArray(selector)
+
+    .forEach((card,index)=>{
+
+
+        gsap.from(card,{
+
+
+            scrollTrigger:{
+
+
+                trigger:card,
+
+                start:"top 90%"
+
+
+            },
+
+
+            y:70,
+
+            opacity:0,
+
+            delay:index*.12,
+
+            duration:.8,
+
+            ease:"power3.out"
+
+
+        });
+
+
+    });
+
+
+});
+
+
+
+/*==============================================================
+COUNTER ANIMATION
+==============================================================*/
+
+
+const counters=document.querySelectorAll(".counter");
+
+
+counters.forEach(counter=>{
+
+
+    let target=
+
+    Number(counter.dataset.target);
+
+
+
+    ScrollTrigger.create({
+
+
+        trigger:counter,
+
+
+        start:"top 85%",
+
+
+        once:true,
+
+
+        onEnter:()=>{
+
+
+            gsap.to(counter,{
+
+                innerText:target,
+
+                duration:2,
+
+                snap:{innerText:1},
+
+                ease:"power2.out"
+
+            });
+
+
+        }
+
+
+    });
+
+
+});
+
+
+
+/*==============================================================
+PARALLAX IMAGES
+==============================================================*/
+
+
+gsap.utils.toArray(".parallax-img")
+
+.forEach(image=>{
+
+
+    gsap.to(image,{
+
+
+        yPercent:-15,
+
+
+        ease:"none",
+
+
+        scrollTrigger:{
+
+
+            trigger:image,
+
+            scrub:true
+
+
+        }
+
+
+    });
+
+
+});
+
+
+
+/*==============================================================
+SCROLL TO TOP
+==============================================================*/
+
+
+const topBtn=document.querySelector(".back-top");
+
+
+if(topBtn){
+
+
+    window.addEventListener("scroll",()=>{
+
+
+        if(window.scrollY>500){
+
+            topBtn.classList.add("show");
+
+        }
+
+        else{
+
+            topBtn.classList.remove("show");
+
+        }
+
+
+    });
+
+
+
+    topBtn.addEventListener("click",()=>{
+
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+
+    });
+
+
+}
+
+
+
+/*==============================================================
+END OF PART 9A
+
+NEXT:
+PART 9B
+
+✔ Swiper Testimonials JS
+✔ Gallery Filter JS
+✔ Lightbox System
+✔ Image Navigation
+✔ Contact Form Animation
+✔ Newsletter Interaction
+==============================================================
+*/
+/*==============================================================
+PART 9B
+ADVANCED WEBSITE JAVASCRIPT
+
+FEATURES:
+✔ Swiper Testimonial Slider
+✔ Gallery Filter
+✔ Gallery Lightbox
+✔ Image Navigation
+✔ Contact Form Animation
+✔ Newsletter Interaction
+==============================================================*/
+
+
+/*==============================================================
+SWIPER TESTIMONIAL SLIDER
+==============================================================*/
+
+
+if(document.querySelector(".testimonial-slider")){
+
+
+const testimonialSwiper = new Swiper(".testimonial-slider",{
+
+
+    slidesPerView:3,
+
+    spaceBetween:30,
+
+
+    loop:true,
+
+
+    speed:900,
+
+
+    autoplay:{
+
+
+        delay:4500,
+
+        disableOnInteraction:false
+
+
+    },
+
+
+    grabCursor:true,
+
+
+    effect:"coverflow",
+
+
+    coverflowEffect:{
+
+
+        rotate:10,
+
+        stretch:0,
+
+        depth:150,
+
+        modifier:1,
+
+        slideShadows:false
+
+
+    },
+
+
+    pagination:{
+
+
+        el:".swiper-pagination",
+
+        clickable:true
+
+
+    },
+
+
+    navigation:{
+
+
+        nextEl:".testimonial-next",
+
+        prevEl:".testimonial-prev"
+
+
+    },
+
+
+    breakpoints:{
+
+
+        0:{
+
+
+            slidesPerView:1
+
+
+        },
+
+
+        768:{
+
+
+            slidesPerView:2
+
+
+        },
+
+
+        1200:{
+
+
+            slidesPerView:3
+
+
+        }
+
+
+    }
+
+
+});
+
+
+}
+
+
+
+/*==============================================================
+GALLERY FILTER SYSTEM
+==============================================================*/
+
+
+const filterButtons=document.querySelectorAll(
+
+".gallery-filter button"
+
+);
+
+
+const galleryItems=document.querySelectorAll(
+
+".gallery-item"
+
+);
+
+
+
+filterButtons.forEach(button=>{
+
+
+    button.addEventListener("click",()=>{
+
+
+        filterButtons.forEach(btn=>{
+
+
+            btn.classList.remove("active");
+
+
+        });
+
+
+
+        button.classList.add("active");
+
+
+
+        let filter=
+
+        button.dataset.filter;
+
+
+
+        galleryItems.forEach(item=>{
+
+
+            let category=
+
+            item.dataset.category;
+
+
+
+            if(filter==="all" || filter===category){
+
+
+                item.classList.remove("hide");
+
+
+                item.classList.add("show");
+
+
+            }
+
+            else{
+
+
+                item.classList.add("hide");
+
+
+                item.classList.remove("show");
+
+
+            }
+
+
+
+        });
+
+
+
+    });
+
+
+});
+
+
+
+/*==============================================================
+GALLERY LIGHTBOX
+==============================================================*/
+
+
+const lightbox=
+
+document.querySelector(".lightbox");
+
+
+const lightboxImage=
+
+document.querySelector(".lightbox img");
+
+
+const galleryImages=
+
+document.querySelectorAll(
+
+".gallery-item img"
+
+);
+
+
+const closeLightbox=
+
+document.querySelector(".lightbox-close");
+
+
+const nextImage=
+
+document.querySelector(".lightbox-next");
+
+
+const prevImage=
+
+document.querySelector(".lightbox-prev");
+
+
+
+let currentIndex=0;
+
+
+
+galleryImages.forEach((image,index)=>{
+
+
+    image.addEventListener("click",()=>{
+
+
+        currentIndex=index;
+
+
+        openLightbox();
+
+
+    });
+
+
+});
+
+
+
+function openLightbox(){
+
+
+    if(!lightbox) return;
+
+
+    lightboxImage.src=
+
+    galleryImages[currentIndex].src;
+
+
+
+    lightbox.classList.add("active");
+
+
+    document.body.style.overflow="hidden";
+
+
+}
+
+
+
+function closeBox(){
+
+
+    lightbox.classList.remove("active");
+
+
+    document.body.style.overflow="";
+
+
+}
+
+
+
+if(closeLightbox){
+
+
+closeLightbox.addEventListener(
+
+"click",
+
+closeBox
+
+);
+
+
+}
+
+
+
+if(lightbox){
+
+
+lightbox.addEventListener(
+
+"click",
+
+(e)=>{
+
+
+    if(e.target===lightbox){
+
+
+        closeBox();
+
+
+    }
+
+
+}
+
+);
+
+
+}
+
+
+
+/*==============================================================
+LIGHTBOX NEXT PREVIOUS
+==============================================================*/
+
+
+function showNext(){
+
+
+    currentIndex++;
+
+
+    if(currentIndex>=galleryImages.length){
+
+
+        currentIndex=0;
+
+
+    }
+
+
+    openLightbox();
+
+
+}
+
+
+
+function showPrevious(){
+
+
+    currentIndex--;
+
+
+    if(currentIndex<0){
+
+
+        currentIndex=
+
+        galleryImages.length-1;
+
+
+    }
+
+
+    openLightbox();
+
+
+}
+
+
+
+if(nextImage){
+
+
+nextImage.addEventListener(
+
+"click",
+
+showNext
+
+);
+
+
+}
+
+
+
+if(prevImage){
+
+
+prevImage.addEventListener(
+
+"click",
+
+showPrevious
+
+);
+
+
+}
+
+
+
+/*==============================================================
+KEYBOARD LIGHTBOX CONTROL
+==============================================================*/
+
+
+document.addEventListener(
+
+"keydown",
+
+(e)=>{
+
+
+    if(!lightbox.classList.contains("active"))
+
+    return;
+
+
+
+    if(e.key==="Escape"){
+
+
+        closeBox();
+
+
+    }
+
+
+    if(e.key==="ArrowRight"){
+
+
+        showNext();
+
+
+    }
+
+
+    if(e.key==="ArrowLeft"){
+
+
+        showPrevious();
+
+
+    }
+
+
+
+}
+
+);
+
+
+
+/*==============================================================
+CONTACT FORM ANIMATION
+==============================================================*/
+
+
+const contactForm=
+
+document.querySelector(".contact-form form");
+
+
+
+if(contactForm){
+
+
+contactForm.addEventListener(
+
+"submit",
+
+(e)=>{
+
+
+    e.preventDefault();
+
+
+
+    let success=
+
+    document.querySelector(".form-success");
+
+
+
+    if(success){
+
+
+        success.classList.add("show");
+
+
+
+        gsap.from(success,{
+
+
+            y:30,
+
+            opacity:0,
+
+            duration:.5
+
+
+        });
+
+
+    }
+
+
+
+    contactForm.reset();
+
+
+
+}
+
+);
+
+
+}
+
+
+
+/*==============================================================
+NEWSLETTER FORM
+==============================================================*/
+
+
+const newsletter=
+
+document.querySelector(".newsletter-form");
+
+
+
+if(newsletter){
+
+
+newsletter.addEventListener(
+
+"submit",
+
+(e)=>{
+
+
+    e.preventDefault();
+
+
+
+    let button=
+
+    newsletter.querySelector("button");
+
+
+
+    let oldText=
+
+    button.innerHTML;
+
+
+
+    button.innerHTML=
+
+    '<i class="fa-solid fa-check"></i>';
+
+
+
+    gsap.from(button,{
+
+
+        scale:.6,
+
+        duration:.4
+
+
+    });
+
+
+
+    setTimeout(()=>{
+
+
+        button.innerHTML=oldText;
+
+
+    },3000);
+
+
+
+}
+
+);
+
+
+}
+
+
+
+/*==============================================================
+MOUSE PARALLAX EFFECT
+==============================================================*/
+
+
+const parallaxSection=
+
+document.querySelector(".hero");
+
+
+
+if(parallaxSection){
+
+
+parallaxSection.addEventListener(
+
+"mousemove",
+
+(e)=>{
+
+
+    let x=
+
+    (window.innerWidth/2-e.clientX)/50;
+
+
+
+    let y=
+
+    (window.innerHeight/2-e.clientY)/50;
+
+
+
+    gsap.to(".hero-image",{
+
+
+        x:x,
+
+        y:y,
+
+        duration:.5
+
+
+    });
+
+
+
+}
+
+);
+
+
+}
+
+
+
+/*==============================================================
+END OF PART 9B
+
+NEXT:
+PART 9C
+
+✔ Mobile Optimization JS
+✔ Cursor Effects
+✔ Lazy Loading
+✔ Performance Optimization
+✔ Final Website Initialization
+==============================================================
+*/
+/*==============================================================
+PART 9C
+FINAL JAVASCRIPT POLISH
+
+FEATURES:
+✔ Mobile Optimizations
+✔ Custom Cursor
+✔ Lazy Loading Images
+✔ Scroll Progress
+✔ Active Navigation
+✔ Performance Enhancements
+✔ Final Website Initialization
+==============================================================*/
+
+
+/*==============================================================
+MOBILE DEVICE DETECTION
+==============================================================*/
+
+
+const isMobile = window.matchMedia(
+
+    "(max-width:768px)"
+
+).matches;
+
+
+
+/*==============================================================
+DISABLE HEAVY EFFECTS ON MOBILE
+==============================================================*/
+
+
+if(isMobile){
+
+
+    gsap.globalTimeline.timeScale(1);
+
+
+    document.querySelectorAll(
+
+        ".parallax-img, .gallery-cursor"
+
+    )
+
+    .forEach(element=>{
+
+
+        element.style.transform="none";
+
+
+    });
+
+
+}
+
+
+
+/*==============================================================
+CUSTOM CURSOR
+==============================================================*/
+
+
+const cursor=
+
+document.querySelector(".custom-cursor");
+
+
+const cursorFollower=
+
+document.querySelector(".cursor-follower");
+
+
+
+if(cursor && cursorFollower){
+
+
+
+document.addEventListener(
+
+"mousemove",
+
+(e)=>{
+
+
+    gsap.to(cursor,{
+
+
+        x:e.clientX,
+
+        y:e.clientY,
+
+        duration:.2
+
+
+    });
+
+
+
+    gsap.to(cursorFollower,{
+
+
+        x:e.clientX,
+
+        y:e.clientY,
+
+        duration:.6
+
+
+    });
+
+
+
+}
+
+);
+
+
+
+const cursorTargets=
+
+document.querySelectorAll(
+
+"a,button,.gallery-item,.sermon-play"
+
+);
+
+
+
+cursorTargets.forEach(item=>{
+
+
+    item.addEventListener(
+
+    "mouseenter",
+
+    ()=>{
+
+
+        cursor.classList.add("active");
+
+
+        cursorFollower.classList.add("active");
+
+
+    });
+
+
+
+    item.addEventListener(
+
+    "mouseleave",
+
+    ()=>{
+
+
+        cursor.classList.remove("active");
+
+
+        cursorFollower.classList.remove("active");
+
+
+    });
+
+
+
+});
+
+
+}
+
+
+
+/*==============================================================
+IMAGE LAZY LOADING
+==============================================================*/
+
+
+const lazyImages=
+
+document.querySelectorAll(
+
+"img[data-src]"
+
+);
+
+
+
+const imageObserver=
+
+new IntersectionObserver(
+
+(entries,observer)=>{
+
+
+entries.forEach(entry=>{
+
+
+    if(entry.isIntersecting){
+
+
+        const image=
+
+        entry.target;
+
+
+
+        image.src=
+
+        image.dataset.src;
+
+
+
+        image.onload=()=>{
+
+
+            image.classList.add("loaded");
+
+
+        };
+
+
+
+        observer.unobserve(image);
+
+
+
+    }
+
+
+
+});
+
+
+},
+
+{
+
+    threshold:.2
+
+}
+
+);
+
+
+
+lazyImages.forEach(image=>{
+
+
+    imageObserver.observe(image);
+
+
+});
+
+
+
+/*==============================================================
+SCROLL PROGRESS BAR
+==============================================================*/
+
+
+const progressBar=
+
+document.querySelector(
+
+".scroll-progress"
+
+);
+
+
+
+if(progressBar){
+
+
+
+window.addEventListener(
+
+"scroll",
+
+()=>{
+
+
+    let scrollTop=
+
+    window.scrollY;
+
+
+
+    let height=
+
+    document.documentElement.scrollHeight -
+
+    document.documentElement.clientHeight;
+
+
+
+    let progress=
+
+    (scrollTop/height)*100;
+
+
+
+    progressBar.style.width=
+
+    progress+"%";
+
+
+
+}
+
+);
+
+
+
+}
+
+
+
+/*==============================================================
+ACTIVE NAVIGATION ON SCROLL
+==============================================================*/
+
+
+const sections=
+
+document.querySelectorAll(
+
+"section[id]"
+
+);
+
+
+
+const navLinks=
+
+document.querySelectorAll(
+
+".nav-menu a"
+
+);
+
+
+
+window.addEventListener(
+
+"scroll",
+
+()=>{
+
+
+let current="";
+
+
+
+sections.forEach(section=>{
+
+
+    const sectionTop=
+
+    section.offsetTop-150;
+
+
+
+    const sectionHeight=
+
+    section.clientHeight;
+
+
+
+    if(
+
+        scrollY>=sectionTop &&
+
+        scrollY<sectionTop+sectionHeight
+
+    ){
+
+
+        current=
+
+        section.getAttribute("id");
+
+
+    }
+
+
+});
+
+
+
+navLinks.forEach(link=>{
+
+
+    link.classList.remove("active");
+
+
+
+    if(
+
+        link.getAttribute("href")
+
+        ===
+
+        "#"+current
+
+    ){
+
+
+        link.classList.add("active");
+
+
+    }
+
+
+
+});
+
+
+
+});
+
+
+
+/*==============================================================
+IMAGE HOVER MAGNET EFFECT
+==============================================================*/
+
+
+const magneticElements=
+
+document.querySelectorAll(
+
+".btn,.contact-btn,.gallery-filter button"
+
+);
+
+
+
+magneticElements.forEach(element=>{
+
+
+element.addEventListener(
+
+"mousemove",
+
+(e)=>{
+
+
+const rect=
+
+element.getBoundingClientRect();
+
+
+
+const x=
+
+e.clientX-rect.left-rect.width/2;
+
+
+
+const y=
+
+e.clientY-rect.top-rect.height/2;
+
+
+
+gsap.to(element,{
+
+
+    x:x*.15,
+
+    y:y*.15,
+
+    duration:.3
+
+
+});
+
+
+
+}
+
+);
+
+
+
+element.addEventListener(
+
+"mouseleave",
+
+()=>{
+
+
+gsap.to(element,{
+
+
+    x:0,
+
+    y:0,
+
+    duration:.5
+
+
+});
+
+
+}
+
+);
+
+
+
+});
+
+
+
+/*==============================================================
+BACK BUTTON VISIBILITY
+==============================================================*/
+
+
+const backButton=
+
+document.querySelector(
+
+".back-top"
+
+);
+
+
+
+if(backButton){
+
+
+ScrollTrigger.create({
+
+
+    start:"top -500",
+
+
+    onEnter:()=>{
+
+
+        backButton.classList.add("show");
+
+
+    },
+
+
+    onLeaveBack:()=>{
+
+
+        backButton.classList.remove("show");
+
+
+    }
+
+
+
+});
+
+
+}
+
+
+
+/*==============================================================
+WINDOW RESIZE OPTIMIZATION
+==============================================================*/
+
+
+let resizeTimer;
+
+
+
+window.addEventListener(
+
+"resize",
+
+()=>{
+
+
+clearTimeout(resizeTimer);
+
+
+
+resizeTimer=setTimeout(()=>{
+
+
+    ScrollTrigger.refresh();
+
+
+
+},300);
+
+
+
+});
+
+
+
+/*==============================================================
+PAGE READY ANIMATION
+==============================================================*/
+
+
+window.addEventListener(
+
+"DOMContentLoaded",
+
+()=>{
+
+
+document.body.classList.add(
+
+"page-loaded"
+
+);
+
+
+
+gsap.from(
+
+".navbar",
+
+{
+
+
+    y:-80,
+
+    opacity:0,
+
+    duration:1,
+
+    ease:"power3.out"
+
+
+}
+
+);
+
+
+
+});
+
+
+
+/*==============================================================
+DISABLE RIGHT CLICK ON IMAGES (OPTIONAL)
+==============================================================*/
+
+
+document.querySelectorAll(
+
+".gallery-item img"
+
+)
+
+.forEach(img=>{
+
+
+img.addEventListener(
+
+"contextmenu",
+
+(e)=>{
+
+
+    e.preventDefault();
+
+
+}
+
+);
+
+
+});
+
+
+
+/*==============================================================
+FINAL INITIALIZATION
+==============================================================*/
+
+
+function initChurchWebsite(){
+
+
+    console.log(
+
+        "Church Website Loaded Successfully ✨"
+
+    );
+
+
+
+    ScrollTrigger.refresh();
+
+
+}
+
+
+
+initChurchWebsite();
+
+
+
+/*==============================================================
+END OF PART 9C
+
+JAVASCRIPT COMPLETE
+
+NEXT OPTIONAL:
+✔ PART 10 - Complete HTML Structure Integration
+✔ Navbar HTML
+✔ Hero HTML
+✔ All Sections HTML
+✔ GSAP Classes Included
+✔ Final Folder Structure
+==============================================================
+*/
+
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:1320px;
+
+    padding:0 20px;
+
+}
+
+@media (max-width:991px){
+
+.hero-row{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.about-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.mission-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media (max-width:480px){
+
+h1{
+
+font-size:34px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+h3{
+
+font-size:22px;
+
+}
+
+.hero{
+
+padding-top:90px;
+
+}
+
+.hero-title{
+
+font-size:30px;
+
+line-height:1.2;
+
+}
+
+.hero-text{
+
+font-size:15px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.hero-buttons a{
+
+width:100%;
+
+}
+
+.btn-primary-custom,
+
+.btn-secondary-custom{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.hero-image{
+
+width:100%;
+
+}
+
+.hero-card,
+
+.stats-card,
+
+.about-experience,
+
+.about-mini-card{
+
+position:relative;
+
+left:0;
+
+right:0;
+
+top:0;
+
+bottom:0;
+
+margin:20px auto;
+
+width:100%;
+
+max-width:100%;
+
+}
+
+}
