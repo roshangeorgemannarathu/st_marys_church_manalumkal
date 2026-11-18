@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mass Timings | St. Mary's Church Manalumkal</title>
+<meta name="description" content="Mass timings and prayer schedule of St. Mary's Church Manalumkal.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:#f8f5ef;
+  --paper:#fffdf9;
+  --ink:#27302d;
+  --muted:#737b76;
+  --gold:#b38a45;
+  --gold2:#d2b273;
+  --line:#e8dfd0;
+  --dark:#26312e;
+}
+
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Inter,sans-serif;
+  line-height:1.7;
+}
+.serif { font-family:"Cormorant Garamond",serif; }
+
+/* NAVBAR */
+.main-navbar {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(255,253,249,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(179,138,69,.12);
+  transition:.3s;
+}
+.main-navbar.scrolled {
+  box-shadow:0 10px 30px rgba(42,35,25,.08);
+}
+.navbar-brand {
+  color:var(--ink)!important;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+.brand-symbol {
+  width:46px;
+  height:46px;
+  flex:0 0 46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(184,138,68,.25);
+}
+.brand-symbol img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  border-radius:50%;
+}
+.brand-title {
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.35rem;
+  line-height:1;
+}
+.brand-sub {
+  font-size:.63rem;
+  color:var(--muted);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.nav-link {
+  color:#58605c!important;
+  font-size:.86rem;
+  font-weight:500;
+  margin:0 .25rem;
+  position:relative;
+}
+.nav-link:hover,.nav-link.active {
+  color:var(--gold)!important;
+}
+.nav-link.active:after {
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:1px;
+  height:1px;
+  background:var(--gold);
+}
+.nav-cta {
+  border:1px solid var(--gold);
+  color:var(--gold)!important;
+  border-radius:30px;
+  padding:.52rem 1rem!important;
+}
+.nav-cta:hover {
+  background:var(--gold);
+  color:#fff!important;
+}
+
+/* HERO */
+.hero {
+  min-height:76vh;
+  padding:145px 0 90px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#f8f5ef 0%,#fffdf9 60%,#f2eadc 100%);
+}
+.hero:before,.hero:after {
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+}
+.hero:before {
+  width:480px;
+  height:480px;
+  right:-190px;
+  top:40px;
+  background:radial-gradient(circle,rgba(179,138,69,.15),transparent 68%);
+}
+.hero:after {
+  width:320px;
+  height:320px;
+  left:-160px;
+  bottom:-160px;
+  border:1px solid rgba(179,138,69,.22);
+}
+.eyebrow {
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.25em;
+  color:var(--gold);
+  font-weight:700;
+}
+.hero h1 {
+  font-size:clamp(3.3rem,7vw,6rem);
+  line-height:.9;
+  margin:18px 0;
+}
+.hero p {
+  max-width:650px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+.hero-image-wrap {
+  position:relative;
+  min-height:440px;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid rgba(179,138,69,.35);
+  box-shadow:0 28px 70px rgba(40,32,20,.18);
+  isolation:isolate;
+}
+.hero-image-wrap img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:-2;
+}
+.hero-image-wrap:after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(15,25,22,.02) 35%,rgba(15,25,22,.78) 100%);
+  z-index:-1;
+}
+.hero-image-caption {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:34px;
+  color:#fff;
+}
+.hero-image-caption .cross {
+  font-size:1.8rem;
+  color:#e5c98e;
+}
+.hero-image-caption h3 {
+  font-family:"Cormorant Garamond",serif;
+  font-size:2.15rem;
+  margin:8px 0;
+}
+.hero-image-caption p {
+  color:rgba(255,255,255,.82);
+  font-size:.9rem;
+  margin:0;
+}
+.hero-image-caption .verse {
+  color:#e5c98e;
+  font-size:.78rem;
+  margin-top:12px;
+  letter-spacing:.04em;
+}
+
+/* SECTIONS */
+.section { padding:100px 0; }
+.section-label {
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.23em;
+  color:var(--gold);
+  font-weight:700;
+}
+.section-title {
+  font-size:clamp(2.6rem,5vw,4rem);
+  line-height:.95;
+  margin:10px 0 18px;
+}
+.section-intro {
+  max-width:690px;
+  color:var(--muted);
+}
+
+/* MASS SCHEDULE */
+.schedule-wrap {
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(50,40,25,.07);
+}
+.schedule-head {
+  padding:26px 30px;
+  background:#f4ecde;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+.schedule-head h3 {
+  margin:0;
+  font-family:"Cormorant Garamond",serif;
+  font-size:2rem;
+}
+.day-badge {
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  padding:8px 13px;
+  border:1px solid rgba(179,138,69,.35);
+  border-radius:20px;
+  color:var(--gold);
+  background:#fffdf9;
+}
+.mass-row {
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:25px 30px;
+  border-bottom:1px solid var(--line);
+  transition:.25s;
+}
+.mass-row:last-child { border-bottom:0; }
+.mass-row:hover {
+  background:#fffaf2;
+  transform:translateX(3px);
+}
+.time {
+  min-width:125px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:2rem;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1;
+}
+.mass-icon {
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#f3eadb;
+  color:var(--gold);
+  font-size:1.1rem;
+}
+.mass-info h5 {
+  margin:0 0 3px;
+  font-size:1rem;
+}
+.mass-info p {
+  margin:0;
+  color:var(--muted);
+  font-size:.87rem;
+}
+
+/* QUICK CARDS */
+.quick-card {
+  height:100%;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:30px;
+  transition:.3s;
+}
+.quick-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(50,40,25,.08);
+}
+.quick-icon {
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  background:#f3eadb;
+  color:var(--gold);
+  display:grid;
+  place-items:center;
+  font-size:1.35rem;
+  margin-bottom:20px;
+}
+.quick-card h4 {
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.8rem;
+}
+.quick-card p {
+  color:var(--muted);
+  font-size:.9rem;
+}
+.schedule-mini {
+  padding:10px 0;
+  border-bottom:1px solid var(--line);
+  color:var(--muted);
+  font-size:.88rem;
+}
+.schedule-mini:last-child { border-bottom:0; }
+.schedule-mini strong {
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.15rem;
+  color:var(--ink);
+}
+.schedule-mini.special { color:var(--gold); }
+
+/* PRAYER BAND */
+.note-band {
+  background:var(--dark);
+  color:#fff;
+  padding:75px 0;
+  position:relative;
+  overflow:hidden;
+}
+.note-band:after {
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border:1px solid rgba(210,178,115,.22);
+  border-radius:50%;
+  right:-100px;
+  top:-130px;
+}
+.note-band p { color:rgba(255,255,255,.7); }
+.quote {
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(2rem,4vw,3.4rem);
+  line-height:1.05;
+  color:#f7f0e4;
+}
+
+/* BUTTONS */
+.cta {
+  padding:90px 0;
+  background:#eee5d6;
+  text-align:center;
+}
+.cta h2 {
+  font-size:clamp(2.6rem,5vw,4rem);
+  line-height:.95;
+}
+.cta p {
+  max-width:620px;
+  margin:18px auto 28px;
+  color:var(--muted);
+}
+.btn-gold {
+  background:var(--gold);
+  color:#fff;
+  border:1px solid var(--gold);
+  padding:.8rem 1.5rem;
+  border-radius:30px;
+  font-size:.9rem;
+}
+.btn-gold:hover {
+  background:#9c773c;
+  color:#fff;
+}
+.btn-outline-gold {
+  border:1px solid var(--gold);
+  color:var(--gold);
+  padding:.8rem 1.5rem;
+  border-radius:30px;
+  font-size:.9rem;
+}
+.btn-outline-gold:hover {
+  background:var(--gold);
+  color:#fff;
+}
+
+/* FOOTER */
+footer {
+  background:#202925;
+  color:#fff;
+  padding:65px 0 25px;
+}
+footer h5 {
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.5rem;
+}
+footer p,footer li,footer a {
+  color:rgba(255,255,255,.63);
+  font-size:.85rem;
+}
+footer a { text-decoration:none; }
+footer a:hover { color:#d2b273; }
+.footer-line {
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:45px;
+  padding-top:22px;
+  font-size:.78rem;
+  color:rgba(255,255,255,.45);
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+.reveal.show {
+  opacity:1;
+  transform:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:991px) {
+  .navbar-collapse {
+    background:rgba(255,253,249,.98);
+    padding:15px;
+    border-bottom:1px solid var(--line);
+  }
+  .nav-link.active:after { display:none; }
+  .hero {
+    min-height:auto;
+    padding-top:125px;
+  }
+  .hero-image-wrap { min-height:390px; }
+  .mass-row { align-items:flex-start; }
+  .time { min-width:105px; }
+}
+
+@media(max-width:575px) {
+  .hero { padding:120px 0 70px; }
+  .hero-image-wrap {
+    min-height:340px;
+    border-radius:22px;
+  }
+  .hero-image-caption { padding:24px; }
+  .hero-image-caption h3 { font-size:1.85rem; }
+  .section { padding:72px 0; }
+  .schedule-head {
+    padding:20px;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .mass-row {
+    padding:21px 18px;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .time {
+    min-width:92px;
+    font-size:1.65rem;
+  }
+  .mass-icon {
+    width:40px;
+    height:40px;
+  }
+  .mass-info {
+    flex:1;
+    min-width:190px;
+  }
+  .hero h1 { font-size:3.5rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg main-navbar" id="mainNavbar">
+  <div class="container py-2">
+
+    <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
+      <span class="brand-symbol">
+        <img src="img/Church/st_mays_church1.jpg" alt="St. Mary's Church">
+      </span>
+
+      <span>
+        <span class="brand-title d-block">St. Mary's Church Manalumkal</span>
+        <span class="brand-sub">By SMYM Manalumkal</span>
+      </span>
+    </a>
+
+    <button class="navbar-toggler border-0 shadow-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#nav">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="mass_timing.html">Mass Times</a></li>
+        <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="parish_announcements.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link nav-cta ms-lg-2" href="">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6 reveal">
+        <div class="eyebrow">Worship Schedule</div>
+        <h1 class="serif">Come. Pray.<br><em>Be renewed.</em></h1>
+
+        <p>
+          Find the regular Holy Mass timings and prayer schedule at
+          St. Mary's Church Manalumkal. Come together as a parish family
+          to worship, listen and receive God's grace.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a href="#weekly" class="btn btn-gold">View Mass Times</a>
+          <a href="contact.html" class="btn btn-outline-gold">Contact Parish</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 reveal">
+        <div class="hero-image-wrap">
+          <img src="img/Church/st_mays_church1.jpg"
+            alt="St. Mary's Church Manalumkal">
+
+          <div class="hero-image-caption">
+            <i class="bi bi-cross cross"></i>
+            <h3>A place to worship</h3>
+            <p>“Where two or three gather in my name, there am I with them.”</p>
+            <div class="verse">MATTHEW 18:20</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- WEEKLY MASS SCHEDULE -->
+<section class="section" id="weekly">
+  <div class="container">
+
+    <div class="row mb-5 align-items-end">
+      <div class="col-lg-7 reveal">
+        <div class="section-label">Weekly Schedule</div>
+        <h2 class="section-title serif">Mass timings</h2>
+        <p class="section-intro">
+          Our regular schedule helps you plan your time for Holy Mass
+          and parish prayer. Please arrive a few minutes early so that
+          you can enter into the celebration peacefully.
+        </p>
+      </div>
+
+      <div class="col-lg-5 text-lg-end reveal">
+        <span class="day-badge">
+          <i class="bi bi-calendar3 me-1"></i>
+          Regular Parish Schedule
+        </span>
+      </div>
+    </div>
+
+    <div class="schedule-wrap reveal">
+
+      <div class="schedule-head">
+        <h3>Sunday — The Lord's Day</h3>
+        <span class="day-badge">Sunday Schedule</span>
+      </div>
+
+      <div class="mass-row">
+        <div class="mass-icon"><i class="bi bi-stars"></i></div>
+        <div class="time">05:45 AM</div>
+        <div class="mass-info">
+          <h5>Eucharistic Adoration</h5>
+          <p>A time of quiet prayer before the Blessed Sacrament</p>
+        </div>
+      </div>
+
+      <div class="mass-row">
+        <div class="mass-icon"><i class="bi bi-sunrise"></i></div>
+        <div class="time">06:30 AM</div>
+        <div class="mass-info">
+          <h5>Holy Mass</h5>
+          <p>Morning celebration</p>
+        </div>
+      </div>
+
+      <div class="mass-row">
+        <div class="mass-icon"><i class="bi bi-bookmark-star"></i></div>
+        <div class="time">09:30 AM</div>
+        <div class="mass-info">
+          <h5>Sapra</h5>
+          <p>Sunday parish prayer</p>
+        </div>
+      </div>
+
+      <div class="mass-row">
+        <div class="mass-icon"><i class="bi bi-sun"></i></div>
+        <div class="time">09:45 AM</div>
+        <div class="mass-info">
+          <h5>Holy Mass</h5>
+          <p>Parish celebration</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WEEKDAY CARDS -->
+    <div class="row g-4 mt-4">
+
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="quick-card">
+          <div class="quick-icon"><i class="bi bi-calendar-day"></i></div>
+          <h4>Monday</h4>
+          <div class="schedule-mini"><strong>05:45 AM</strong> · Eucharistic Adoration</div>
+          <div class="schedule-mini"><strong>06:25 AM</strong> · Holy Mass</div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="quick-card">
+          <div class="quick-icon"><i class="bi bi-calendar-day"></i></div>
+          <h4>Tuesday</h4>
+          <div class="schedule-mini"><strong>05:45 AM</strong> · Eucharistic Adoration</div>
+          <div class="schedule-mini"><strong>06:25 AM</strong> · Holy Mass</div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="quick-card">
+          <div class="quick-icon"><i class="bi bi-calendar-day"></i></div>
+          <h4>Wednesday</h4>
+          <div class="schedule-mini"><strong>05:45 AM</strong> · Eucharistic Adoration</div>
+          <div class="schedule-mini"><strong>06:25 AM</strong> · Holy Mass</div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="quick-card">
+          <div class="quick-icon"><i class="bi bi-calendar-day"></i></div>
+          <h4>Thursday</h4>
+          <div class="schedule-mini"><strong>05:45 AM</strong> · Eucharistic Adoration</div>
+          <div class="schedule-mini"><strong>06:25 AM</strong> · Holy Mass</div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="quick-card">
+          <div class="quick-icon"><i class="bi bi-calendar-day"></i></div>
+          <h4>Friday</h4>
+          <div class="schedule-mini"><strong>05:45 AM</strong> · Eucharistic Adoration</div>
+          <div class="schedule-mini"><strong>06:25 AM</strong> · Holy Mass</div>
+          <div class="schedule-mini special"><strong>07:00 AM</strong> · Infant Jesus Novena</div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="quick-card">
+          <div class="quick-icon"><i class="bi bi-calendar-day"></i></div>
+          <h4>Saturday</h4>
+          <div class="schedule-mini"><strong>05:45 AM</strong> · Eucharistic Adoration</div>
+          <div class="schedule-mini"><strong>06:25 AM</strong> · Holy Mass</div>
+          <div class="schedule-mini special"><strong>07:00 AM</strong> · St. Mary Novena</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRAYER SECTION -->
+<section class="note-band">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-8 reveal">
+        <div class="section-label" style="color:#d2b273">A moment of prayer</div>
+        <div class="quote mt-3">“Be still, and know that I am God.”</div>
+        <p class="mt-3 mb-0">
+          Come as you are. Make time for silence, prayer and the Eucharist.
+        </p>
+      </div>
+
+      <div class="col-lg-4 text-lg-end reveal">
+        <i class="bi bi-cross"
+          style="font-size:5rem;color:#d2b273;opacity:.75"></i>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <div class="container reveal">
+    <div class="section-label">Parish Life</div>
+    <h2 class="serif">Make time for what matters.</h2>
+    <p>
+      Stay connected with St. Mary's Church Manalumkal through parish
+      ministries, events and community life.
+    </p>
+
+    <div class="d-flex justify-content-center flex-wrap gap-2">
+      <a href="ministries.html" class="btn btn-gold">Explore Ministries</a>
+      <a href="media.html" class="btn btn-outline-gold">View Media</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-5">
+        <h5>St. Mary's Church Manalumkal</h5>
+        <p class="mt-3">
+          A parish community rooted in faith, united in love and called to serve.
+        </p>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5>Explore</h5>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About</a></li>
+          <li class="mb-2"><a href="ministries.html">Ministries</a></li>
+          <li><a href="media.html">Media</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5>Parish</h5>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><a href="mass timing.html">Mass Times</a></li>
+          <li class="mb-2"><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h5>Visit Us</h5>
+        <p class="mt-3 mb-1">St. Mary's Church</p>
+        <p>Manalumkal, Kerala</p>
+      </div>
+
+    </div>
+
+    <div class="footer-line d-flex flex-wrap justify-content-between gap-2">
+      <span>Created by SMYM Manalumkal · Inspired by St. Carlo Acutis</span>
+      <span>Faith • Hope • Love</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const nav = document.getElementById('mainNavbar');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+const io = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

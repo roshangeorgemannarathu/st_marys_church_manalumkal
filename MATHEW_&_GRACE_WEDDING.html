@@ -1,0 +1,5692 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Martin & Nirya | Wedding Invitation</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italianno&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================
+   GLOBAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    background: #fff7ed;
+}
+
+/* Desktop */
+.hero-background {
+    background-image: url("im/desktop-background.png");
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .hero-background {
+        background-image: url("img/mobile-background.png");
+    }
+}
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.wedding-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+    background: #f9eddf;
+}
+
+
+/* Desktop Background */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background-image: url("image/desktop-background.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   FLORAL DECORATIONS
+===================================== */
+
+.floral {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+.floral-top-left {
+    top: 0;
+    left: 0;
+    width: 27%;
+    max-width: 480px;
+}
+
+.floral-top-right {
+    top: 0;
+    right: 0;
+    width: 27%;
+    max-width: 480px;
+}
+
+.floral-left {
+    left: 0;
+    top: 34%;
+    width: 7%;
+    max-width: 140px;
+}
+
+.floral-right {
+    right: 0;
+    top: 34%;
+    width: 7%;
+    max-width: 140px;
+}
+
+
+/* =====================================
+   INVITATION CONTENT
+===================================== */
+
+.invitation-content {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 25px 20px 260px;
+
+    text-align: center;
+    color: #60432e;
+}
+
+
+/* CROSS */
+
+.cross-symbol {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 12px;
+    color: #79502e;
+}
+
+
+/* SUBTITLE */
+
+.invitation-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #947153;
+}
+
+
+/* HEADING */
+
+.invitation-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #503726;
+}
+
+
+/* FAMILY DETAILS */
+
+.family-details {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #76563e;
+}
+
+.family-details span {
+    display: block;
+    font-weight: 500;
+}
+
+
+/* =====================================
+   COUPLE NAMES
+===================================== */
+
+.couple-names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 12px 0;
+
+    font-family: 'Italianno', cursive;
+    color: #68462f;
+}
+
+.couple-names span {
+    font-size: clamp(45px, 4vw, 62px);
+    line-height: 0.95;
+}
+
+.couple-names small {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+
+/* =====================================
+   WEDDING DETAILS
+===================================== */
+
+.wedding-details {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+    color: #523a29;
+}
+
+.wedding-details h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.wedding-details h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+/* WISHES */
+
+.best-wishes {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #aa895e;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.relatives {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #806347;
+}
+
+
+/* =====================================
+   WEDDING STAGE
+===================================== */
+
+.wedding-stage {
+    position: absolute;
+    z-index: 2;
+
+    width: 38%;
+    max-width: 650px;
+    height: 48%;
+
+    right: 7%;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.wedding-arch {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.wedding-couple {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 2%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 42%;
+    max-height: 85%;
+
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+
+/* =====================================
+   SCROLL INDICATOR
+===================================== */
+
+.scroll-indicator {
+    position: absolute;
+    z-index: 5;
+
+    bottom: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: #fffaf2;
+
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 13px;
+
+    animation: scrollFloat 2s infinite;
+}
+
+.scroll-indicator i {
+    font-size: 18px;
+}
+
+@keyframes scrollFloat {
+
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 7px);
+    }
+
+}
+
+
+/* =====================================
+   FLOATING PETALS
+===================================== */
+
+.petal-container {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.petal {
+    position: absolute;
+    width: 7px;
+    height: 10px;
+
+    border-radius: 70% 30% 70% 30%;
+
+    background: rgba(204, 157, 112, 0.35);
+
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+
+    0% {
+        transform: translateY(-30px) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(105vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================
+   NEXT SECTION
+===================================== */
+
+.next-section {
+    min-height: 350px;
+    background: #fffaf4;
+    color: #60432e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.next-section h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media (min-width: 1200px) {
+
+    .wedding-hero {
+        min-height: 860px;
+        height: 100vh;
+    }
+
+    .invitation-content {
+        padding-top: 28px;
+    }
+
+    .wedding-stage {
+        width: 38%;
+        right: 7%;
+        height: 47%;
+    }
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .wedding-hero {
+        min-height: 850px;
+    }
+
+    .invitation-content {
+        max-width: 550px;
+        padding-top: 30px;
+        padding-bottom: 300px;
+    }
+
+    .wedding-stage {
+        width: 48%;
+        height: 38%;
+        right: 3%;
+    }
+
+    .floral-left,
+    .floral-right {
+        width: 10%;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 575px) {
+
+    .wedding-hero {
+        height: auto;
+        min-height: 760px;
+        min-height: max(760px, 100svh);
+    }
+
+    /* Mobile background */
+
+    .hero-background {
+        background-image: url("image/mobile-background.png");
+        background-position: center center;
+        background-size: 100% 100%;
+    }
+
+    /* Floral decorations */
+
+    .floral-top-left {
+        width: 45%;
+        top: 0;
+        left: 0;
+    }
+
+    .floral-top-right {
+        width: 45%;
+        top: 0;
+        right: 0;
+    }
+
+    .floral-left {
+        width: 16%;
+        top: 36%;
+        left: 0;
+    }
+
+    .floral-right {
+        width: 16%;
+        top: 36%;
+        right: 0;
+    }
+
+
+    /* Invitation text */
+
+    .invitation-content {
+        width: 100%;
+        max-width: 390px;
+
+        padding: 38px 20px 0;
+        margin: 0 auto;
+    }
+
+    .cross-symbol {
+        font-size: 43px;
+        margin-bottom: 9px;
+    }
+
+    .invitation-subtitle {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .invitation-heading {
+        font-size: 19px;
+        line-height: 1.35;
+        margin-bottom: 7px;
+    }
+
+    .family-details {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .couple-names {
+        margin: 7px 0;
+    }
+
+    .couple-names span {
+        font-size: 45px;
+    }
+
+    .couple-names small {
+        font-size: 14px;
+        margin: 3px 0;
+    }
+
+    .wedding-details {
+        margin-top: 7px;
+    }
+
+    .wedding-details h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .wedding-details h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .best-wishes {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+
+    .relatives {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+
+    /* Couple and arch */
+
+    .wedding-stage {
+        position: absolute;
+
+        width: 100%;
+        max-width: none;
+
+        height: 34%;
+        right: 0;
+        bottom: 0;
+    }
+
+    .wedding-arch {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: bottom center;
+    }
+
+    .wedding-couple {
+        width: 43%;
+        max-height: 83%;
+        bottom: 1%;
+    }
+
+
+    /* Scroll */
+
+    .scroll-indicator {
+        bottom: 10px;
+        font-size: 11px;
+    }
+
+}
+
+
+/* =====================================
+   EXTRA SMALL MOBILE
+===================================== */
+
+@media (max-width: 380px) {
+
+    .wedding-hero {
+        min-height: 740px;
+    }
+
+    .invitation-content {
+        padding-top: 32px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .invitation-heading {
+        font-size: 17px;
+    }
+
+    .family-details {
+        font-size: 12px;
+    }
+
+    .couple-names span {
+        font-size: 40px;
+    }
+
+    .wedding-details h3,
+    .wedding-details h4 {
+        font-size: 13px;
+    }
+
+    .wedding-stage {
+        height: 32%;
+    }
+
+}
+
+/* =========================================
+   OUR STORY - PREMIUM VELVET DESIGN
+========================================= */
+
+.our-story-section {
+
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding: 90px 20px 65px;
+
+    color: #fff5e9;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 20%,
+            #741d31 0%,
+            #550d20 45%,
+            #300510 100%
+        );
+
+}
+
+/* Velvet texture effect */
+
+.our-story-section::before {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.15;
+
+    background-image:
+        repeating-linear-gradient(
+            115deg,
+            transparent 0px,
+            rgba(255,255,255,0.04) 1px,
+            transparent 3px,
+            transparent 7px
+        );
+
+}
+
+.story-inner {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 1150px;
+    margin: auto;
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.story-heading {
+
+    margin-bottom: 55px;
+
+}
+
+.story-eyebrow {
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 5px;
+
+    color: #e4c48d;
+
+}
+
+.story-heading h2 {
+
+    font-family: 'Italianno', cursive;
+
+    font-size: clamp(65px, 7vw, 100px);
+
+    line-height: 1;
+
+    margin: 12px 0;
+
+    color: #f4d7a2;
+
+}
+
+.story-divider {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    color: #e5c38a;
+
+    margin: 15px 0;
+
+}
+
+.story-divider::before,
+.story-divider::after {
+
+    content: "";
+
+    width: 75px;
+    height: 1px;
+
+    background: #c8a66d;
+
+}
+
+.story-heading p {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 16px;
+    font-style: italic;
+
+    color: #ead6c9;
+
+    margin: 0;
+
+}
+
+
+/* =========================================
+   COUPLE LAYOUT - LAPTOP
+========================================= */
+
+.story-couple {
+
+    display: grid;
+
+    grid-template-columns: 1fr 100px 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+}
+
+.story-person {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* =========================================
+   PHOTO FRAME
+========================================= */
+
+.story-photo {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 310px;
+
+    height: 400px;
+
+    padding: 9px;
+
+    border: 1px solid #d9b87c;
+
+    border-radius: 160px 160px 8px 8px;
+
+    background: rgba(255,255,255,0.04);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.35),
+        0 0 20px rgba(215,180,120,0.08);
+
+    overflow: hidden;
+
+}
+
+.story-photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    border: 1px solid rgba(225,194,137,0.45);
+
+    border-radius: 155px 155px 5px 5px;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+}
+
+.story-photo img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 150px 150px 4px 4px;
+
+    transition: transform 0.7s ease;
+
+}
+
+.story-photo:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+/* =========================================
+   NAMES
+========================================= */
+
+.story-person h3 {
+
+    font-family: 'Italianno', cursive;
+
+    font-size: 58px;
+
+    line-height: 1;
+
+    margin: 22px 0 5px;
+
+    color: #f2d29b;
+
+}
+
+.story-role {
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #d8b77c;
+
+}
+
+
+/* =========================================
+   CENTER DESIGN
+========================================= */
+
+.story-middle {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.story-ampersand {
+
+    font-family: 'Italianno', cursive;
+
+    font-size: 100px;
+
+    color: #e8c58d;
+
+    line-height: 1;
+
+}
+
+.story-middle-line {
+
+    width: 1px;
+    height: 65px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #d9b77c,
+        transparent
+    );
+
+}
+
+.story-heart {
+
+    font-size: 30px;
+
+    color: #e8c58d;
+
+    margin-top: 12px;
+
+}
+
+
+/* =========================================
+   STORY DESCRIPTION
+========================================= */
+
+.story-description {
+
+    max-width: 730px;
+
+    margin: 75px auto 35px;
+
+    padding: 35px 45px;
+
+    border-top: 1px solid rgba(222,190,135,0.5);
+
+    border-bottom: 1px solid rgba(222,190,135,0.5);
+
+}
+
+.story-quote {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 65px;
+
+    line-height: 0.8;
+
+    color: #d9b77c;
+
+}
+
+.story-description h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    color: #f1d49b;
+
+    margin: 12px 0 18px;
+
+}
+
+.story-description p {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    color: #f0dfd1;
+
+}
+
+.story-signature {
+
+    font-family: 'Italianno', cursive;
+
+    font-size: 48px;
+
+    color: #f1d49b;
+
+    margin-top: 20px;
+
+}
+
+.story-signature span {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.story-footer {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #dfbd83;
+
+}
+
+.story-footer span {
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .our-story-section {
+
+        padding: 75px 25px 55px;
+
+    }
+
+    .story-couple {
+
+        grid-template-columns: 1fr 65px 1fr;
+
+        gap: 15px;
+
+    }
+
+    .story-photo {
+
+        max-width: 260px;
+
+        height: 340px;
+
+    }
+
+    .story-ampersand {
+
+        font-size: 75px;
+
+    }
+
+    .story-description {
+
+        margin-top: 55px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .our-story-section {
+
+        min-height: auto;
+
+        padding: 65px 18px 45px;
+
+    }
+
+    .story-heading {
+
+        margin-bottom: 35px;
+
+    }
+
+    .story-eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .story-heading h2 {
+
+        font-size: 67px;
+
+    }
+
+    .story-heading p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* Stack bride and groom */
+
+    .story-couple {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+    }
+
+    .story-person {
+
+        width: 100%;
+
+    }
+
+
+    /* Mobile photo */
+
+    .story-photo {
+
+        width: 78%;
+
+        max-width: 270px;
+
+        height: 340px;
+
+        padding: 7px;
+
+    }
+
+    .story-person h3 {
+
+        font-size: 49px;
+
+        margin-top: 14px;
+
+    }
+
+    .story-role {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    /* Center decoration */
+
+    .story-middle {
+
+        flex-direction: row;
+
+        gap: 15px;
+
+        margin: 12px 0;
+
+    }
+
+    .story-ampersand {
+
+        font-size: 65px;
+
+    }
+
+    .story-middle-line {
+
+        width: 55px;
+
+        height: 1px;
+
+        background: #d9b77c;
+
+    }
+
+    .story-heart {
+
+        display: none;
+
+    }
+
+
+    /* Story text */
+
+    .story-description {
+
+        margin: 45px auto 30px;
+
+        padding: 25px 8px;
+
+    }
+
+    .story-description h3 {
+
+        font-size: 21px;
+
+    }
+
+    .story-description p {
+
+        font-size: 14px;
+
+        line-height: 1.9;
+
+    }
+
+    .story-signature {
+
+        font-size: 43px;
+
+    }
+
+    .story-footer {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+        gap: 10px;
+
+    }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .our-story-section {
+
+        padding-left: 12px;
+        padding-right: 12px;
+
+    }
+
+    .story-photo {
+
+        width: 82%;
+
+        height: 300px;
+
+    }
+
+    .story-description p {
+
+        font-size: 13px;
+
+    }
+
+    .story-eyebrow {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+}
+
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .story-photo img {
+
+        transition: none;
+
+    }
+
+}
+
+/* =====================================================
+   WEDDING VENUES SECTION
+   UPDATED - MATCHES WELCOME & THANK YOU BACKGROUND
+===================================================== */
+
+.wedding-venues {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 100px 5% 85px;
+
+    /* SAME BACKGROUND AS WELCOME & THANK YOU */
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(225, 190, 154, 0.23),
+            transparent 25%
+        ),
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(225, 190, 154, 0.20),
+            transparent 25%
+        ),
+        radial-gradient(
+            ellipse at 50% 45%,
+            #ffffff 0%,
+            #fffefd 55%,
+            #faf3e9 100%
+        );
+
+    color: #6d5947;
+
+    isolation: isolate;
+
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+
+/* BACKGROUND DECORATIONS */
+
+.wedding-venues::before,
+.wedding-venues::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 90%;
+
+    top: 5%;
+
+    background: rgba(180, 143, 91, 0.25);
+
+    z-index: -1;
+
+}
+
+.wedding-venues::before {
+    left: 25px;
+}
+
+.wedding-venues::after {
+    right: 25px;
+}
+
+
+/* CONTAINER */
+
+.venue-container {
+
+    max-width: 1500px;
+
+    margin: auto;
+
+}
+
+
+/* HEADER */
+
+.venue-header {
+
+    text-align: center;
+
+    margin-bottom: 75px;
+
+}
+
+.venue-eyebrow {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+
+    color: #a08467;
+
+    margin-bottom: 15px;
+
+}
+
+.venue-header h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    font-weight: 500;
+
+    color: #6d5947;
+
+    margin-bottom: 15px;
+
+}
+
+.venue-header h2 span {
+
+    font-style: italic;
+
+    color: #b18b65;
+
+}
+
+.venue-header p {
+
+    font-size: 15px;
+
+    color: #887866;
+
+    letter-spacing: 0.5px;
+
+    margin: 0;
+
+}
+
+
+/* HEADER DIVIDER */
+
+.venue-divider {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    color: #c79c68;
+
+}
+
+.venue-divider span {
+
+    width: 55px;
+
+    height: 1px;
+
+    background: #d8b68e;
+
+}
+
+.venue-divider i {
+
+    font-size: 17px;
+
+    font-style: normal;
+
+}
+
+
+/* VENUE ROW */
+
+.venue-row {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: clamp(40px, 6vw, 100px);
+
+    max-width: 1350px;
+
+    margin: 0 auto;
+
+    padding: 20px 0;
+
+}
+
+
+/* IMAGE */
+
+.venue-image-column {
+
+    width: 100%;
+
+    min-width: 0;
+
+}
+
+.venue-image-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 490px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.65);
+
+    border: 1px solid rgba(202, 164, 122, 0.35);
+
+    padding: 12px;
+
+    box-shadow:
+        0 18px 45px rgba(106, 79, 52, 0.09);
+
+}
+
+.venue-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    transition: transform 0.8s ease;
+
+}
+
+.venue-image-frame:hover .venue-image {
+
+    transform: scale(1.035);
+
+}
+
+
+/* IMAGE NUMBER */
+
+.venue-image-number {
+
+    position: absolute;
+
+    bottom: 24px;
+
+    left: 25px;
+
+    padding: 7px 15px;
+
+    background: rgba(255, 253, 249, 0.94);
+
+    color: #927451;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* CONTENT */
+
+.venue-content-column {
+
+    width: 100%;
+
+    max-width: 570px;
+
+}
+
+.venue-label {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: #b18b65;
+
+    margin-bottom: 20px;
+
+}
+
+.venue-content-column h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(32px, 3.5vw, 51px);
+
+    font-weight: 500;
+
+    line-height: 1.18;
+
+    color: #6d5947;
+
+    margin-bottom: 25px;
+
+}
+
+.venue-content-column h3 span {
+
+    font-style: italic;
+
+    color: #a88661;
+
+}
+
+
+/* QUOTE */
+
+.venue-quote {
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: #887866;
+
+    margin-bottom: 30px;
+
+    max-width: 520px;
+
+}
+
+
+/* TIME */
+
+.venue-time {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 17px 20px;
+
+    margin-bottom: 25px;
+
+    border-top: 1px solid #e4d4c1;
+
+    border-bottom: 1px solid #e4d4c1;
+
+}
+
+.venue-time-value {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #a27c50;
+
+}
+
+.venue-time-description {
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #887866;
+
+}
+
+
+/* MAP BUTTON */
+
+.venue-map-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    width: 100%;
+
+    max-width: 460px;
+
+    min-height: 85px;
+
+    padding: 15px 19px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(202, 164, 122, 0.30);
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    color: #6d5947;
+
+    box-shadow:
+        0 8px 25px rgba(106, 79, 52, 0.06);
+
+    transition: all 0.35s ease;
+
+}
+
+.venue-map-button:hover {
+
+    background: #fffaf2;
+
+    border-color: #c49a69;
+
+    transform: translateY(-4px);
+
+    color: #6d5947;
+
+    box-shadow:
+        0 12px 30px rgba(106, 79, 52, 0.12);
+
+}
+
+
+/* MAP ICON */
+
+.venue-map-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: #f8efe5;
+
+    color: #b8894e;
+
+    font-size: 21px;
+
+}
+
+
+/* MAP TEXT */
+
+.venue-map-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+.venue-map-text strong {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #6d5947;
+
+}
+
+.venue-map-text small {
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #96836d;
+
+}
+
+.venue-map-arrow {
+
+    color: #b28a55;
+
+    font-size: 18px;
+
+}
+
+
+/* SECOND VENUE */
+
+.venue-reception {
+
+    margin-top: 25px;
+
+}
+
+
+/* SEPARATOR */
+
+.venue-section-divider {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    max-width: 500px;
+
+    margin: 70px auto 45px;
+
+    color: #b38d5c;
+
+}
+
+.venue-section-divider span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #dfcdb5;
+
+}
+
+.venue-section-divider i {
+
+    font-size: 22px;
+
+    font-style: normal;
+
+}
+
+
+/* FOOTER */
+
+.venue-footer {
+
+    text-align: center;
+
+    margin-top: 90px;
+
+}
+
+.venue-footer > span {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: #a0845c;
+
+}
+
+.venue-footer p {
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-size: 20px;
+
+    color: #887866;
+
+    margin-top: 12px;
+
+}
+
+.venue-footer-flower {
+
+    font-size: 22px;
+
+    color: #b38c5c;
+
+    margin-top: 15px;
+
+}
+
+
+/* REVEAL ANIMATION */
+
+.venue-reveal {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+.venue-reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (min-width: 1400px) {
+
+    .venue-image-frame {
+
+        height: 550px;
+
+    }
+
+    .venue-row {
+
+        gap: 100px;
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .wedding-venues {
+
+        padding: 75px 5%;
+
+    }
+
+    .venue-row {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+
+    }
+
+    .venue-image-frame {
+
+        height: 390px;
+
+    }
+
+    .venue-content-column h3 {
+
+        font-size: 34px;
+
+    }
+
+    .venue-quote {
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+    }
+
+    .venue-map-button {
+
+        gap: 12px;
+
+        padding: 13px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575px) {
+
+    .wedding-venues {
+
+        padding: 65px 20px 55px;
+
+    }
+
+    .wedding-venues::before {
+
+        left: 8px;
+
+    }
+
+    .wedding-venues::after {
+
+        right: 8px;
+
+    }
+
+    .venue-header {
+
+        margin-bottom: 40px;
+
+    }
+
+    .venue-eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .venue-header h2 {
+
+        font-size: 39px;
+
+    }
+
+    .venue-header p {
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+    }
+
+    /* Stack image and content */
+
+    .venue-row {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 28px;
+
+        padding: 0;
+
+        margin-top: 15px;
+
+    }
+
+    .venue-image-column {
+
+        width: 100%;
+
+    }
+
+    .venue-image-frame {
+
+        height: 260px;
+
+        padding: 8px;
+
+    }
+
+    .venue-image-number {
+
+        bottom: 17px;
+
+        left: 17px;
+
+        font-size: 11px;
+
+    }
+
+    .venue-content-column {
+
+        max-width: 100%;
+
+        text-align: center;
+
+    }
+
+    .venue-label {
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 14px;
+
+    }
+
+    .venue-content-column h3 {
+
+        font-size: 34px;
+
+        line-height: 1.2;
+
+        margin-bottom: 18px;
+
+    }
+
+    .venue-quote {
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        margin: 0 auto 22px;
+
+    }
+
+    .venue-time {
+
+        padding: 14px 10px;
+
+        margin-bottom: 20px;
+
+    }
+
+    .venue-time-value {
+
+        font-size: 23px;
+
+    }
+
+    .venue-time-description {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+    .venue-map-button {
+
+        min-height: 80px;
+
+        padding: 12px;
+
+        gap: 11px;
+
+        text-align: left;
+
+    }
+
+    .venue-map-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 18px;
+
+    }
+
+    .venue-map-text strong {
+
+        font-size: 11px;
+
+    }
+
+    .venue-map-text small {
+
+        font-size: 10px;
+
+    }
+
+    .venue-map-arrow {
+
+        font-size: 15px;
+
+    }
+
+    .venue-section-divider {
+
+        margin: 50px auto 40px;
+
+        gap: 12px;
+
+    }
+
+    .venue-reception {
+
+        margin-top: 0;
+
+    }
+
+    .venue-footer {
+
+        margin-top: 55px;
+
+    }
+
+    .venue-footer > span {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .venue-footer p {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .wedding-venues {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+    .venue-header h2 {
+
+        font-size: 34px;
+
+    }
+
+    .venue-image-frame {
+
+        height: 225px;
+
+    }
+
+    .venue-content-column h3 {
+
+        font-size: 30px;
+
+    }
+
+    .venue-quote {
+
+        font-size: 14px;
+
+    }
+
+    .venue-map-text strong {
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+/* ============================================
+   RED VELVET WEDDING SCHEDULE
+============================================ */
+
+.wedding-schedule {
+
+    --velvet: #681b28;
+    --velvet-dark: #380c17;
+    --velvet-light: #8a2939;
+    --gold: #d8b675;
+    --gold-light: #f5dfae;
+    --cream: #fff5e8;
+
+    position: relative;
+    isolation: isolate;
+
+    overflow: hidden;
+
+    padding: 110px 6% 100px;
+
+    color: var(--cream);
+
+    background:
+        radial-gradient(
+            ellipse at 50% 30%,
+            rgba(160, 55, 70, 0.55),
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            #310a14,
+            #721c2b 45%,
+            #3d0d19 100%
+        );
+
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+
+/* VELVET TEXTURE */
+
+.wedding-schedule::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    opacity: .20;
+
+    background-image:
+        repeating-linear-gradient(
+            110deg,
+            transparent 0px,
+            rgba(255,255,255,.025) 2px,
+            transparent 5px,
+            transparent 11px
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* GOLD CORNERS */
+
+.wedding-schedule::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 20px;
+
+    border: 1px solid rgba(216,182,117,.25);
+
+    pointer-events: none;
+
+}
+
+
+/* CONTAINER */
+
+.schedule-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+}
+
+
+/* HEADER */
+
+.schedule-header {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+}
+
+.schedule-eyebrow {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+}
+
+.schedule-header h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(40px, 5vw, 68px);
+
+    font-weight: 500;
+
+    color: var(--cream);
+
+}
+
+.schedule-header h2 span {
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+.schedule-header p {
+
+    max-width: 550px;
+
+    margin: 20px auto 0;
+
+    color: #e2c9bb;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+}
+
+
+/* ORNAMENT */
+
+.schedule-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 22px;
+
+    color: var(--gold);
+
+}
+
+.schedule-ornament span {
+
+    width: 65px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+}
+
+
+/* DATE */
+
+.schedule-date {
+
+    position: relative;
+
+    max-width: 380px;
+
+    margin: 0 auto 90px;
+
+    padding: 27px 20px;
+
+    text-align: center;
+
+    border: 1px solid rgba(216,182,117,.65);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(0,0,0,.15)
+        );
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25),
+        inset 0 0 25px rgba(216,182,117,.06);
+
+    transform-style: preserve-3d;
+
+    transition: .4s ease;
+
+}
+
+.schedule-date:hover {
+
+    transform:
+        perspective(800px)
+        rotateX(5deg)
+        translateY(-5px);
+
+}
+
+.schedule-date > span {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: var(--gold);
+
+}
+
+.schedule-date h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    margin: 12px 0;
+
+    color: var(--gold-light);
+
+}
+
+.schedule-date p {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #e9d5c3;
+
+    margin: 0;
+
+}
+
+.date-decoration {
+
+    position: absolute;
+
+    top: -17px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 26px;
+
+    color: var(--gold);
+
+}
+
+
+/* TIMELINE */
+
+.schedule-timeline {
+
+    position: relative;
+
+    max-width: 1050px;
+
+    margin: auto;
+
+}
+
+
+/* CENTRAL LINE */
+
+.schedule-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 2px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            var(--gold),
+            var(--gold-light),
+            var(--gold),
+            transparent
+        );
+
+    box-shadow: 0 0 12px rgba(216,182,117,.5);
+
+}
+
+
+/* EVENT ROW */
+
+.schedule-event {
+
+    position: relative;
+
+    width: 50%;
+
+    padding: 0 55px 70px;
+
+    perspective: 1000px;
+
+}
+
+.left-event {
+
+    margin-right: auto;
+
+}
+
+.right-event {
+
+    margin-left: 50%;
+
+}
+
+
+/* GOLD TIMELINE DOT */
+
+.schedule-event::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 42px;
+
+    width: 17px;
+
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: var(--gold-light);
+
+    border: 4px solid var(--velvet);
+
+    box-shadow:
+        0 0 0 2px var(--gold),
+        0 0 20px rgba(216,182,117,.7);
+
+    z-index: 2;
+
+}
+
+.left-event::before {
+
+    right: -9px;
+
+}
+
+.right-event::before {
+
+    left: -9px;
+
+}
+
+
+/* 3D EVENT CARD */
+
+.event-card {
+
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 35px 30px 25px;
+
+    overflow: hidden;
+
+    transform-style: preserve-3d;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.13),
+            rgba(255,255,255,.035) 55%,
+            rgba(0,0,0,.18)
+        );
+
+    border: 1px solid rgba(216,182,117,.6);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.15);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+}
+
+.event-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100%;
+
+    left: -70%;
+
+    width: 60%;
+
+    height: 300%;
+
+    transform: rotate(30deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    transition: .8s ease;
+
+    pointer-events: none;
+
+}
+
+.event-card:hover::before {
+
+    left: 130%;
+
+}
+
+.event-card:hover {
+
+    transform:
+        perspective(1000px)
+        rotateY(-5deg)
+        rotateX(3deg)
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: var(--gold-light);
+
+    box-shadow:
+        0 30px 55px rgba(0,0,0,.4),
+        0 0 25px rgba(216,182,117,.12);
+
+}
+
+.right-event .event-card:hover {
+
+    transform:
+        perspective(1000px)
+        rotateY(5deg)
+        rotateX(3deg)
+        translateY(-10px)
+        scale(1.02);
+
+}
+
+
+/* NUMBER */
+
+.event-number {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 45px;
+
+    font-style: italic;
+
+    color: rgba(216,182,117,.18);
+
+}
+
+
+/* ICON */
+
+.event-icon {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    color: var(--gold-light);
+
+    font-size: 23px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 0 20px rgba(216,182,117,.12),
+        inset 0 0 15px rgba(216,182,117,.10);
+
+    animation: iconFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes iconFloat {
+
+    0%,100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-6px);
+
+    }
+
+}
+
+
+/* EVENT CONTENT */
+
+.event-category {
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    color: var(--gold);
+
+}
+
+.event-card h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    color: var(--gold-light);
+
+    margin: 12px 0 17px;
+
+}
+
+
+/* TIME */
+
+.event-time {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--gold);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+}
+
+.event-card p {
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #e8d6c9;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* BOTTOM */
+
+.event-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(216,182,117,.3);
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* CLOSING */
+
+.schedule-closing {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    padding-top: 35px;
+
+}
+
+.closing-ornament {
+
+    color: var(--gold);
+
+    font-size: 45px;
+
+}
+
+.schedule-closing h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(25px, 3vw, 37px);
+
+    font-style: italic;
+
+    font-weight: 400;
+
+    color: var(--gold-light);
+
+    margin: 12px 0;
+
+}
+
+.schedule-closing p {
+
+    color: #e6c9b9;
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+}
+
+.schedule-closing > span {
+
+    display: block;
+
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+/* SCROLL ANIMATION */
+
+.schedule-reveal {
+
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s cubic-bezier(.2,.7,.2,1);
+
+}
+
+.schedule-reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* FLOATING PARTICLES */
+
+.schedule-particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+}
+
+.schedule-particle {
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: var(--gold-light);
+
+    box-shadow: 0 0 12px var(--gold);
+
+    animation: goldFloat linear infinite;
+
+}
+
+@keyframes goldFloat {
+
+    0% {
+
+        transform: translateY(100vh) scale(.5);
+
+        opacity: 0;
+
+    }
+
+    20%,80% {
+
+        opacity: .7;
+
+    }
+
+    100% {
+
+        transform: translateY(-100px) scale(1.5);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ============================================
+   TABLET
+============================================ */
+
+@media(max-width: 991px) {
+
+    .wedding-schedule {
+
+        padding: 85px 4%;
+
+    }
+
+    .schedule-event {
+
+        padding-left: 35px;
+
+        padding-right: 35px;
+
+    }
+
+    .event-card {
+
+        padding: 28px 22px;
+
+        min-height: 340px;
+
+    }
+
+    .event-card h3 {
+
+        font-size: 24px;
+
+    }
+
+}
+
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media(max-width: 575px) {
+
+    .wedding-schedule {
+
+        padding: 75px 22px;
+
+    }
+
+    .wedding-schedule::after {
+
+        inset: 9px;
+
+    }
+
+    .schedule-header {
+
+        margin-bottom: 40px;
+
+    }
+
+    .schedule-header h2 {
+
+        font-size: 39px;
+
+    }
+
+    .schedule-header p {
+
+        font-size: 14px;
+
+    }
+
+    .schedule-eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 4px;
+
+    }
+
+    .schedule-date {
+
+        margin-bottom: 65px;
+
+        max-width: 310px;
+
+        padding: 23px 12px;
+
+    }
+
+    .schedule-date h3 {
+
+        font-size: 24px;
+
+    }
+
+    /* MOBILE TIMELINE */
+
+    .schedule-timeline::before {
+
+        left: 10px;
+
+    }
+
+    .schedule-event {
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0 0 40px 35px;
+
+    }
+
+    .schedule-event::before {
+
+        left: 2px;
+
+        right: auto;
+
+        top: 35px;
+
+        width: 17px;
+
+        height: 17px;
+
+    }
+
+    .event-card {
+
+        min-height: auto;
+
+        padding: 27px 21px 22px;
+
+    }
+
+    .event-card:hover,
+    .right-event .event-card:hover {
+
+        transform:
+            perspective(1000px)
+            rotateX(2deg)
+            translateY(-5px);
+
+    }
+
+    .event-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 20px;
+
+        margin-bottom: 18px;
+
+    }
+
+    .event-card h3 {
+
+        font-size: 27px;
+
+    }
+
+    .event-card p {
+
+        font-size: 12px;
+
+    }
+
+    .event-number {
+
+        font-size: 37px;
+
+    }
+
+    .event-category {
+
+        font-size: 8px;
+
+        letter-spacing: 1.8px;
+
+    }
+
+    .event-bottom {
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .schedule-closing {
+
+        margin-top: 15px;
+
+    }
+
+    .schedule-closing p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media(prefers-reduced-motion: reduce) {
+
+    .schedule-reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+    .event-icon,
+    .schedule-particle {
+
+        animation: none;
+
+    }
+
+    .event-card {
+
+        transition: none;
+
+    }
+
+}
+
+/* ==========================================
+   WELCOME & THANK YOU
+========================================== */
+
+.welcome-thankyou {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 850px;
+
+    padding: 90px 20px 100px;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            #ffffff 0%,
+            #fffefd 55%,
+            #faf3e9 100%
+        );
+
+    color: #6d5947;
+
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+
+/* SUBTLE WATERCOLOUR TEXTURE */
+
+.welcome-thankyou::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(225, 190, 154, .23),
+            transparent 25%
+        ),
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(225, 190, 154, .20),
+            transparent 25%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* ==========================================
+   FLORAL CORNER IMAGES
+========================================== */
+
+.thankyou-floral {
+
+    position: absolute;
+
+    z-index: 1;
+
+    width: 340px;
+
+    pointer-events: none;
+
+}
+
+.thankyou-floral img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+.thankyou-floral-top {
+
+    top: -15px;
+
+    right: -10px;
+
+    width: 370px;
+
+}
+
+.thankyou-floral-bottom {
+
+    bottom: -25px;
+
+    left: -10px;
+
+    width: 370px;
+
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.thankyou-container {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   COUPLE IMAGE
+========================================== */
+
+.thankyou-couple {
+
+    width: 150px;
+
+    height: 190px;
+
+    margin-bottom: 25px;
+
+    perspective: 1000px;
+
+}
+
+.couple-image-frame {
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform-style: preserve-3d;
+
+    animation: coupleFloat 5s ease-in-out infinite;
+
+}
+
+.thankyou-couple-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+
+    filter: drop-shadow(
+        0 12px 12px rgba(98, 75, 50, .12)
+    );
+
+    transition: transform .6s ease;
+
+}
+
+.couple-image-frame:hover
+.thankyou-couple-image {
+
+    transform: scale(1.06);
+
+}
+
+@keyframes coupleFloat {
+
+    0%, 100% {
+
+        transform: translateY(0) rotateY(-2deg);
+
+    }
+
+    50% {
+
+        transform: translateY(-9px) rotateY(2deg);
+
+    }
+
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.thankyou-heading {
+
+    position: relative;
+
+    margin-bottom: 22px;
+
+}
+
+.thankyou-heading h2 {
+
+    font-family: 'Italianno', cursive;
+
+    font-size: clamp(48px, 5vw, 67px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    color: #a4866b;
+
+    margin: 0;
+
+}
+
+.thankyou-heading h2 span {
+
+    display: block;
+
+    margin-top: 0;
+
+}
+
+
+/* HEADING ORNAMENT */
+
+.thankyou-heading-decoration {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 12px;
+
+    color: #c79c68;
+
+}
+
+.thankyou-heading-decoration span {
+
+    width: 40px;
+
+    height: 1px;
+
+    background: #d8b68e;
+
+}
+
+.thankyou-heading-decoration i {
+
+    font-size: 20px;
+
+    font-style: normal;
+
+}
+
+
+/* ==========================================
+   THANK YOU CARD
+========================================== */
+
+.thankyou-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 25px 30px 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.97),
+            rgba(250,246,239,.95)
+        );
+
+    border: 1px solid #eadac7;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 12px 35px rgba(106, 79, 52, .07),
+        inset 0 0 20px rgba(255,255,255,.8);
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+
+}
+
+.thankyou-card:hover {
+
+    transform:
+        perspective(1000px)
+        rotateX(2deg)
+        translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(106, 79, 52, .12);
+
+}
+
+
+/* CARD BORDER */
+
+.thankyou-card-border {
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 1px solid rgba(202, 164, 122, .18);
+
+    border-radius: 7px;
+
+    pointer-events: none;
+
+}
+
+
+/* CARD CONTENT */
+
+.thankyou-card-content {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* MESSAGE */
+
+.thankyou-message {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    font-weight: 400;
+
+    color: #786f64;
+
+    margin: 0 0 17px;
+
+}
+
+
+/* ==========================================
+   SIGNATURE
+========================================== */
+
+.thankyou-signature {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+.thankyou-signature span {
+
+    font-family: 'Italianno', cursive;
+
+    font-size: 34px;
+
+    color: #c38b4c;
+
+    line-height: 1.2;
+
+}
+
+.thankyou-signature small {
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #9b8469;
+
+}
+
+
+/* ==========================================
+   BOTTOM ORNAMENT
+========================================== */
+
+.thankyou-bottom-ornament {
+
+    margin-top: 35px;
+
+    color: #c9a476;
+
+    font-size: 23px;
+
+}
+
+
+/* ==========================================
+   FLOATING PETALS
+========================================== */
+
+.thankyou-petals {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+}
+
+.thankyou-petal {
+
+    position: absolute;
+
+    top: -20px;
+
+    width: 7px;
+
+    height: 10px;
+
+    border-radius: 70% 30% 70% 30%;
+
+    background: rgba(204, 163, 117, .35);
+
+    animation: thankyouPetalFall linear infinite;
+
+}
+
+@keyframes thankyouPetalFall {
+
+    0% {
+
+        transform: translateY(-20px) rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: .8;
+
+    }
+
+    100% {
+
+        transform: translateY(105vh) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.reveal-thankyou {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+
+}
+
+.reveal-thankyou.show-thankyou {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .welcome-thankyou {
+
+        min-height: 850px;
+
+        padding-top: 80px;
+
+        padding-bottom: 80px;
+
+    }
+
+    .thankyou-floral-top {
+
+        width: 390px;
+
+    }
+
+    .thankyou-floral-bottom {
+
+        width: 390px;
+
+    }
+
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+    .welcome-thankyou {
+
+        min-height: 760px;
+
+        padding: 75px 25px;
+
+    }
+
+    .thankyou-floral-top,
+    .thankyou-floral-bottom {
+
+        width: 270px;
+
+    }
+
+    .thankyou-card {
+
+        max-width: 480px;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 575px) {
+
+    .welcome-thankyou {
+
+        min-height: 780px;
+
+        padding: 65px 20px 75px;
+
+    }
+
+    .thankyou-floral-top {
+
+        width: 155px;
+
+        top: 0;
+
+        right: -10px;
+
+    }
+
+    .thankyou-floral-bottom {
+
+        width: 165px;
+
+        bottom: 0;
+
+        left: -10px;
+
+    }
+
+    .thankyou-container {
+
+        max-width: 100%;
+
+    }
+
+    .thankyou-couple {
+
+        width: 115px;
+
+        height: 145px;
+
+        margin-bottom: 22px;
+
+    }
+
+    .thankyou-heading {
+
+        margin-bottom: 20px;
+
+    }
+
+    .thankyou-heading h2 {
+
+        font-size: 48px;
+
+    }
+
+    .thankyou-heading-decoration {
+
+        gap: 12px;
+
+        margin-bottom: 10px;
+
+    }
+
+    .thankyou-heading-decoration span {
+
+        width: 27px;
+
+    }
+
+    .thankyou-card {
+
+        max-width: 100%;
+
+        padding: 23px 20px 21px;
+
+        border-radius: 9px;
+
+    }
+
+    .thankyou-message {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+
+        margin-bottom: 16px;
+
+    }
+
+    .thankyou-signature span {
+
+        font-size: 31px;
+
+    }
+
+    .thankyou-signature small {
+
+        font-size: 8px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+    .thankyou-bottom-ornament {
+
+        margin-top: 25px;
+
+    }
+
+}
+
+
+/* ==========================================
+   EXTRA SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+
+    .welcome-thankyou {
+
+        padding: 55px 16px 65px;
+
+    }
+
+    .thankyou-couple {
+
+        width: 100px;
+
+        height: 130px;
+
+    }
+
+    .thankyou-heading h2 {
+
+        font-size: 43px;
+
+    }
+
+    .thankyou-card {
+
+        padding: 20px 16px;
+
+    }
+
+    .thankyou-message {
+
+        font-size: 12px;
+
+        line-height: 1.85;
+
+    }
+
+    .thankyou-floral-top,
+    .thankyou-floral-bottom {
+
+        width: 125px;
+
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .couple-image-frame {
+
+        animation: none;
+
+    }
+
+    .thankyou-petal {
+
+        animation: none;
+
+    }
+
+    .reveal-thankyou {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+}
+
+/* =====================================
+   FULL SCREEN WEDDING HERO VIDEO
+===================================== */
+
+.wedding-hero-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 500px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* VIDEO */
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+/* DESKTOP VIDEO */
+
+.desktop-video {
+    display: block;
+}
+
+.mobile-video {
+    display: none;
+}
+
+/* LAPTOP */
+
+@media (max-width: 1200px) {
+    .wedding-hero-video {
+        height: 90vh;
+        height: 90svh;
+        min-height: 500px;
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .wedding-hero-video {
+        height: 85vh;
+        height: 85svh;
+        min-height: 500px;
+    }
+
+    .hero-video {
+        object-position: center;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .wedding-hero-video {
+        width: 100%;
+        height: 100svh;
+        min-height: 480px;
+        max-height: 850px;
+    }
+
+    .desktop-video {
+        display: none;
+    }
+
+    .mobile-video {
+        display: block;
+    }
+
+    .hero-video {
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .wedding-hero-video {
+        min-height: 450px;
+    }
+}
+
+/* =====================================
+   FLOATING MUSIC CONTROL
+===================================== */
+
+.music-control {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    background: rgba(35, 20, 25, 0.55);
+    color: #ffffff;
+
+    font-size: 20px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    cursor: pointer;
+    z-index: 9999;
+
+    transition: all 0.3s ease;
+}
+
+.music-control:hover {
+    background: #d4af87;
+    color: #241820;
+    transform: scale(1.08);
+}
+
+.music-control:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .music-control {
+        width: 45px;
+        height: 45px;
+        top: 20px;
+        right: 20px;
+        font-size: 19px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .music-control {
+        width: 42px;
+        height: 42px;
+        top: 15px;
+        right: 15px;
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+<!-- BACKGROUND WEDDING MUSIC -->
+<audio id="weddingMusic" loop preload="auto">
+    <source src="music/wedding-song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC CONTROL BUTTON -->
+<button
+    class="music-control"
+    id="musicToggle"
+    type="button"
+    aria-label="Play background music"
+    aria-pressed="false">
+
+    <i class="bi bi-volume-mute-fill" id="musicIcon"></i>
+
+</button>
+<!-- FULL SCREEN WEDDING HERO VIDEO -->
+
+<section class="wedding-hero-video">
+
+    <video
+        class="hero-video desktop-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="images/wedding-poster.jpg">
+
+        <source src="videos/wedding-hero.mp4" type="video/mp4">
+    </video>
+
+    <!-- Mobile Video (Optional) -->
+    <video
+        class="hero-video mobile-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="images/wedding-mobile-poster.jpg">
+
+        <source src="videos/wedding-mobile.mp4" type="video/mp4">
+    </video>
+
+</section>
+<!-- =====================================
+     WEDDING INVITATION
+===================================== -->
+
+<section class="wedding-hero" id="home">
+
+    <!-- BACKGROUND -->
+
+    <div class="hero-background"></div>
+
+
+    <!-- FLORAL DECORATIONS -->
+
+    <img src="image/floral-top-left.png"
+         class="floral floral-top-left"
+         alt="Floral decoration">
+
+    <img src="image/floral-top-right.png"
+         class="floral floral-top-right"
+         alt="Floral decoration">
+
+    <img src="image/floral-left.png"
+         class="floral floral-left"
+         alt="Floral decoration">
+
+    <img src="image/floral-right.png"
+         class="floral floral-right"
+         alt="Floral decoration">
+
+
+    <!-- PETALS -->
+
+    <div class="petal-container" id="petalContainer"></div>
+
+
+    <!-- INVITATION CONTENT -->
+
+    <div class="invitation-content">
+
+        <div class="cross-symbol">✝</div>
+
+        <p class="invitation-subtitle">
+            You are Cordially Invited to the
+        </p>
+
+        <h1 class="invitation-heading">
+            WEDDING CEREMONY OF
+        </h1>
+
+
+        <!-- GROOM FAMILY -->
+
+        <div class="family-details">
+
+            S/o Mr. Tomy PL & Mrs. Ambily Tomy
+
+            <span>Punnolil House</span>
+
+        </div>
+
+
+        <!-- COUPLE NAMES -->
+
+        <div class="couple-names">
+
+            <span>Mathew Punnolil</span>
+
+            <small>&amp;</small>
+
+            <span>Grace Mathew</span>
+
+        </div>
+
+
+        <!-- BRIDE FAMILY -->
+
+        <div class="family-details">
+
+            D/o Mr. Mathews Kurian & Mrs. Ancy Mathews
+
+            <span>Poonattu House</span>
+
+        </div>
+
+
+        <!-- WEDDING DATE -->
+
+        <div class="wedding-details">
+
+            <h3>On Saturday, January 16, 2027</h3>
+
+            <h4>Church Ceremony</h4>
+
+            <h4>4:30 PM</h4>
+
+        </div>
+
+
+        <!-- WISHES -->
+
+        <p class="best-wishes">
+            WITH LOVE &amp; BEST WISHES
+        </p>
+
+        <p class="relatives">
+            Roy P Tomy, 
+        </p>
+
+    </div>
+
+
+    <!-- WEDDING ARCH AND COUPLE -->
+
+    <div class="wedding-stage">
+
+        <img src="image/wedding-arch.png"
+             class="wedding-arch"
+             alt="Wedding floral arch">
+
+        <img src="image/wedding-couple.png"
+             class="wedding-couple"
+             alt="Bride and groom">
+
+    </div>
+
+
+    <!-- SCROLL DOWN -->
+
+    <a href="#next-section" class="scroll-indicator">
+
+        <span>scroll down</span>
+
+        <i class="bi bi-chevron-down"></i>
+
+    </a>
+
+</section>
+
+
+<!-- =====================================
+     OUR STORY SECTION
+===================================== -->
+
+<section class="our-story-section" id="next-section">
+
+    <div class="story-inner container">
+
+        <!-- Heading -->
+        <div class="story-heading">
+
+            <span class="story-eyebrow">
+                TWO HEARTS · ONE DESTINY
+            </span>
+
+            <h2>Our Story</h2>
+
+            <div class="story-divider">
+                <span>✦</span>
+            </div>
+
+            <p>Every love story is beautiful, but ours is our favourite.</p>
+
+        </div>
+
+
+        <!-- Couple Portraits -->
+
+        <div class="story-couple">
+
+            <!-- Groom -->
+            <div class="story-person groom">
+
+                <div class="story-photo">
+
+                    <img src="image/WhatsApp Image 2026-10-24 at 2.16.45 PM.jpeg"
+                         alt="Mathew Punnolil - Groom"
+                         loading="lazy">
+
+                </div>
+
+                <h3>Mathew Punnolil</h3>
+
+                <span class="story-role">THE GROOM</span>
+
+            </div>
+
+
+            <!-- Center Decoration -->
+            <div class="story-middle">
+
+                <span class="story-ampersand">&</span>
+
+                <div class="story-middle-line"></div>
+
+                <span class="story-heart">♡</span>
+
+            </div>
+
+
+            <!-- Bride -->
+            <div class="story-person bride">
+
+                <div class="story-photo">
+
+                    <img src="image/WhatsApp Image 2026-10-24 at 2.16.45 PM.jpeg"
+                         alt="Grace Mathew - Bride"
+                         loading="lazy">
+
+                </div>
+
+                <h3>Grace Mathew</h3>
+
+                <span class="story-role">THE BRIDE</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Story Text -->
+
+        <div class="story-description">
+
+            <span class="story-quote">“</span>
+
+            <h3>A Beautiful Beginning</h3>
+
+            <p>
+                Two souls, two hearts, and one beautiful destiny.
+
+                What began as two separate journeys has now
+                become a story of love, togetherness and forever.
+
+                With the blessings of our families and the
+                grace of God, we are beginning a beautiful
+                new chapter of our lives together.
+            </p>
+
+            <div class="story-signature">
+                Mathew  <span>&</span> Grace 
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Decoration -->
+
+        <div class="story-footer">
+
+            <span>✦</span>
+
+            FOREVER BEGINS HERE
+
+            <span>✦</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     WEDDING VENUES SECTION
+===================================================== -->
+
+<section class="wedding-venues" id="venues">
+
+    <!-- Decorative elements -->
+    <div class="venue-decoration venue-decoration-left"></div>
+    <div class="venue-decoration venue-decoration-right"></div>
+
+    <div class="container-fluid venue-container">
+
+        <!-- SECTION HEADER -->
+        <div class="venue-header">
+
+            <span class="venue-eyebrow">
+                JOIN US IN CELEBRATION
+            </span>
+
+            <h2>
+                Wedding <span>Venues</span>
+            </h2>
+
+            <p>
+                We would be honoured to celebrate these
+                special moments with you.
+            </p>
+
+            <div class="venue-divider">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             VENUE 01 - CHURCH
+        ================================================== -->
+
+        <div class="venue-row venue-reveal">
+
+            <!-- Church Image -->
+            <div class="venue-image-column">
+
+                <div class="venue-image-frame">
+
+                    <img
+                        src="img/church.png"
+                        alt="St. Michael's Church, Kuruvinala"
+                        class="venue-image"
+                        loading="lazy">
+
+                    <span class="venue-image-number">01</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Church Details -->
+            <div class="venue-content-column">
+
+                <span class="venue-label">
+                    THE SACRAMENT OF MARRIAGE
+                </span>
+
+                <h3>
+                    St. Michael's Church,
+                    <span>Kuruvinala</span>
+                </h3>
+
+                <p class="venue-quote">
+                    “Two paths crossing in silence,
+                    bound forever by love, built upon
+                    grace, and blessed under the eye
+                    of Heaven.”
+                </p>
+
+                <div class="venue-time">
+
+                    <span class="venue-time-value">
+                        4:30 PM
+                    </span>
+
+                    <span class="venue-time-description">
+                        Church wedding ceremony
+                    </span>
+
+                </div>
+
+
+                <!-- Church Map Button -->
+                <a
+                    href="https://maps.app.goo.gl/34xLaCcDrwC5XtN77?g_st=aw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="venue-map-button">
+
+                    <span class="venue-map-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </span>
+
+                    <span class="venue-map-text">
+                        <strong>
+                            Open Wedding Location on Maps
+                        </strong>
+
+                        <small>
+                            St. Michael's Church, Kuruvinala
+                        </small>
+                    </span>
+
+                    <i class="bi bi-arrow-up-right venue-map-arrow"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- VENUE SEPARATOR -->
+        <div class="venue-section-divider">
+            <span></span>
+            <i>❀</i>
+            <span></span>
+        </div>
+
+
+        <!-- =================================================
+             VENUE 02 - AUDITORIUM
+        ================================================== -->
+
+        <div class="venue-row venue-reception venue-reveal">
+
+            <!-- Auditorium Image -->
+            <div class="venue-image-column">
+
+                <div class="venue-image-frame">
+
+                    <img
+                        src="img/auditorium.png"
+                        alt="Wedding reception auditorium"
+                        class="venue-image"
+                        loading="lazy">
+
+                    <span class="venue-image-number">02</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Auditorium Details -->
+            <div class="venue-content-column">
+
+                <span class="venue-label">
+                    LET THE CELEBRATION CONTINUE
+                </span>
+
+                <h3>
+                    Wedding
+                    <span>Reception</span>
+                </h3>
+
+                <p class="venue-quote">
+                    A beautiful beginning deserves
+                    a joyful celebration. Join us as
+                    we gather with family and friends
+                    to celebrate love, happiness,
+                    and togetherness.
+                </p>
+
+                <div class="venue-time">
+
+                    <span class="venue-time-value">
+                        6:00 PM
+                    </span>
+
+                    <span class="venue-time-description">
+                        Wedding reception
+                    </span>
+
+                </div>
+
+
+                <!-- Reception Map Button -->
+                <a
+                    href="https://maps.app.goo.gl/34xLaCcDrwC5XtN77?g_st=aw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="venue-map-button">
+
+                    <span class="venue-map-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </span>
+
+                    <span class="venue-map-text">
+                        <strong>
+                            Open Reception Location on Maps
+                        </strong>
+
+                        <small>
+                            Wedding reception auditorium
+                        </small>
+                    </span>
+
+                    <i class="bi bi-arrow-up-right venue-map-arrow"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM MESSAGE -->
+        <div class="venue-footer venue-reveal">
+
+            <span>WITH LOVE &amp; BLESSINGS</span>
+
+            <p>
+                Your presence will make our celebration
+                even more special.
+            </p>
+
+            <div class="venue-footer-flower">✿</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================================
+     WEDDING SCHEDULE OF EVENTS
+================================================ -->
+
+<section class="wedding-schedule" id="schedule">
+
+    <div class="schedule-particles"></div>
+
+    <div class="schedule-container">
+
+        <!-- HEADER -->
+
+        <div class="schedule-header schedule-reveal">
+
+            <span class="schedule-eyebrow">
+                A DAY TO REMEMBER
+            </span>
+
+            <h2>
+                Schedule of <span>Events</span>
+            </h2>
+
+            <div class="schedule-ornament">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+
+            <p>
+                Every beautiful moment has its own story.
+                Join us as we celebrate the beginning
+                of our forever.
+            </p>
+
+        </div>
+
+
+        <!-- WEDDING DATE -->
+
+        <div class="schedule-date schedule-reveal">
+
+            <div class="date-decoration">✧</div>
+
+            <span>OUR SPECIAL DAY</span>
+
+            <h3>October 26, 2026</h3>
+
+            <p>MONDAY · WITH LOVE & BLESSINGS</p>
+
+        </div>
+
+
+        <!-- EVENT TIMELINE -->
+
+        <div class="schedule-timeline">
+
+
+            <!-- EVENT 01 -->
+
+            <div class="schedule-event left-event schedule-reveal">
+
+                <div class="event-card">
+
+                    <div class="event-number">01</div>
+
+                    <div class="event-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+
+                    <span class="event-category">
+                        THE SACRAMENT OF MARRIAGE
+                    </span>
+
+                    <h3>Church Ceremony</h3>
+
+                    <div class="event-time">
+                        <i class="bi bi-clock"></i>
+                        4:30 PM
+                    </div>
+
+                    <p>
+                        A sacred beginning as we exchange
+                        our vows and unite our lives
+                        in the presence of God.
+                    </p>
+
+                    <div class="event-bottom">
+                        <span>ST. MICHAEL'S CHURCH</span>
+                        <span>✦</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 02 -->
+
+            <div class="schedule-event right-event schedule-reveal">
+
+                <div class="event-card">
+
+                    <div class="event-number">02</div>
+
+                    <div class="event-icon">
+                        <i class="bi bi-camera"></i>
+                    </div>
+
+                    <span class="event-category">
+                        BEAUTIFUL MEMORIES
+                    </span>
+
+                    <h3>Celebration &amp; Photos</h3>
+
+                    <div class="event-time">
+                        <i class="bi bi-clock"></i>
+                        After the Ceremony
+                    </div>
+
+                    <p>
+                        Capturing precious moments,
+                        sharing smiles and creating
+                        memories with our loved ones.
+                    </p>
+
+                    <div class="event-bottom">
+                        <span>LOVE · JOY · TOGETHERNESS</span>
+                        <span>✦</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 03 -->
+
+            <div class="schedule-event left-event schedule-reveal">
+
+                <div class="event-card">
+
+                    <div class="event-number">03</div>
+
+                    <div class="event-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <span class="event-category">
+                        THE GRAND CELEBRATION
+                    </span>
+
+                    <h3>Wedding Reception</h3>
+
+                    <div class="event-time">
+                        <i class="bi bi-clock"></i>
+                        6:00 PM
+                    </div>
+
+                    <p>
+                        Let the celebration continue!
+                        Join us for an evening filled
+                        with happiness, laughter and love.
+                    </p>
+
+                    <div class="event-bottom">
+                        <span>RECEPTION VENUE</span>
+                        <span>✦</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 04 -->
+
+            <div class="schedule-event right-event schedule-reveal">
+
+                <div class="event-card">
+
+                    <div class="event-number">04</div>
+
+                    <div class="event-icon">
+                        <i class="bi bi-cup-hot"></i>
+                    </div>
+
+                    <span class="event-category">
+                        A MOMENT OF TOGETHERNESS
+                    </span>
+
+                    <h3>Dining &amp; Fellowship</h3>
+
+                    <div class="event-time">
+                        <i class="bi bi-heart-fill"></i>
+                        Following the Reception
+                    </div>
+
+                    <p>
+                        A joyful gathering with family
+                        and friends, sharing delicious
+                        food and unforgettable moments.
+                    </p>
+
+                    <div class="event-bottom">
+                        <span>WITH LOVE FROM OUR FAMILIES</span>
+                        <span>✦</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLOSING MESSAGE -->
+
+        <div class="schedule-closing schedule-reveal">
+
+            <div class="closing-ornament">❧</div>
+
+            <h3>
+                Two hearts. One beautiful journey.
+            </h3>
+
+            <p>
+                We look forward to celebrating
+                every moment with you.
+            </p>
+
+            <span>WITH LOVE, MARTIN &amp; NIRYA</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     WELCOME & THANK YOU SECTION
+=========================================== -->
+
+<section class="welcome-thankyou" id="thank-you">
+
+    <!-- Floral Decorations -->
+    <div class="thankyou-floral thankyou-floral-top">
+        <img src="image/floral-top-right.png"
+             alt=""
+             loading="lazy">
+    </div>
+
+    <div class="thankyou-floral thankyou-floral-bottom">
+        <img src="image/floral-left.png"
+             alt=""
+             loading="lazy">
+    </div>
+
+    <!-- Floating Petals -->
+    <div class="thankyou-petals" id="thankyouPetals"></div>
+
+
+    <!-- Main Content -->
+    <div class="thankyou-container">
+
+        <!-- Couple Photograph -->
+        <div class="thankyou-couple reveal-thankyou">
+
+            <div class="couple-image-frame">
+
+                <img
+                    src="img/wedding-couple.png"
+                    alt="Martin and Nirya"
+                    class="thankyou-couple-image">
+
+            </div>
+
+        </div>
+
+
+        <!-- Heading -->
+        <div class="thankyou-heading reveal-thankyou">
+
+            <div class="thankyou-heading-decoration">
+                <span></span>
+                <i>❧</i>
+                <span></span>
+            </div>
+
+            <h2>
+                Welcome &amp; Thank
+                <span>You</span>
+            </h2>
+
+        </div>
+
+
+        <!-- Gratitude Card -->
+        <div class="thankyou-card reveal-thankyou">
+
+            <div class="thankyou-card-border"></div>
+
+            <div class="thankyou-card-content">
+
+                <p class="thankyou-message">
+
+                    As we step into this beautiful new
+                    chapter of our lives, we are
+                    overwhelmingly grateful for your
+                    love, support, and presence.
+
+                    Having you here to witness our
+                    union fills our hearts with
+                    immense joy. Thank you for being
+                    a part of our story and celebrating
+                    this unforgettable milestone with us.
+
+                </p>
+
+
+                <!-- Signature -->
+                <div class="thankyou-signature">
+
+                    <span>Mathew &amp; Grace </span>
+
+                    <small>
+                        WITH LOVE &amp; GRATITUDE
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Ornament -->
+        <div class="thankyou-bottom-ornament reveal-thankyou">
+            <span>✦</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* FLOATING PETALS */
+
+    const petalContainer =
+        document.getElementById("petalContainer");
+
+    if (petalContainer) {
+
+        const totalPetals = 18;
+
+        for (let i = 0; i < totalPetals; i++) {
+
+            const petal = document.createElement("span");
+
+            petal.classList.add("petal");
+
+            petal.style.left =
+                Math.random() * 100 + "%";
+
+            petal.style.animationDuration =
+                (8 + Math.random() * 10) + "s";
+
+            petal.style.animationDelay =
+                (Math.random() * 10) + "s";
+
+            petal.style.opacity =
+                0.2 + Math.random() * 0.5;
+
+            petalContainer.appendChild(petal);
+
+        }
+
+    }
+
+
+    /* SMOOTH SCROLL */
+
+    const scrollLink =
+        document.querySelector(".scroll-indicator");
+
+    if (scrollLink) {
+
+        scrollLink.addEventListener("click", function (event) {
+
+            const target =
+                document.querySelector("#next-section");
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    }
+
+});
+
+
+
+/* ==========================================
+   WEDDING VENUE SCROLL ANIMATION
+========================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const venueElements = document.querySelectorAll(
+        ".venue-reveal"
+    );
+
+    if ("IntersectionObserver" in window) {
+
+        const venueObserver = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        venueObserver.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        venueElements.forEach(function (element) {
+
+            venueObserver.observe(element);
+
+        });
+
+    } else {
+
+        venueElements.forEach(function (element) {
+
+            element.classList.add("visible");
+
+        });
+
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ==================================
+       SCROLL REVEAL
+    ================================== */
+
+    const revealElements = document.querySelectorAll(
+        ".schedule-reveal"
+    );
+
+    const scheduleObserver = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    scheduleObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    revealElements.forEach((element, index) => {
+
+        element.style.transitionDelay =
+            (index % 3) * 100 + "ms";
+
+        scheduleObserver.observe(element);
+
+    });
+
+
+    /* ==================================
+       GOLD FLOATING PARTICLES
+    ================================== */
+
+    const particleContainer =
+        document.querySelector(".schedule-particles");
+
+    if (particleContainer) {
+
+        for (let i = 0; i < 35; i++) {
+
+            const particle = document.createElement("span");
+
+            particle.className = "schedule-particle";
+
+            particle.style.left = Math.random() * 100 + "%";
+
+            particle.style.animationDuration =
+                (8 + Math.random() * 12) + "s";
+
+            particle.style.animationDelay =
+                (Math.random() * 12) + "s";
+
+            particle.style.opacity =
+                0.2 + Math.random() * 0.6;
+
+            particleContainer.appendChild(particle);
+
+        }
+
+    }
+
+
+    /* ==================================
+       3D MOUSE TILT
+    ================================== */
+
+    const cards = document.querySelectorAll(".event-card");
+
+    const desktopPointer = window.matchMedia(
+        "(hover: hover) and (pointer: fine)"
+    );
+
+    if (desktopPointer.matches) {
+
+        cards.forEach((card) => {
+
+            card.addEventListener("mousemove", (event) => {
+
+                const rect = card.getBoundingClientRect();
+
+                const x = event.clientX - rect.left;
+
+                const y = event.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+
+                const centerY = rect.height / 2;
+
+                const rotateX =
+                    ((y - centerY) / centerY) * -5;
+
+                const rotateY =
+                    ((x - centerX) / centerX) * 5;
+
+                card.style.transform =
+                    `perspective(1000px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)
+                     translateY(-5px)`;
+
+            });
+
+            card.addEventListener("mouseleave", () => {
+
+                card.style.transform = "";
+
+            });
+
+        });
+
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =================================
+       SCROLL REVEAL ANIMATION
+    ================================= */
+
+    const thankyouElements = document.querySelectorAll(
+        ".reveal-thankyou"
+    );
+
+    if ("IntersectionObserver" in window) {
+
+        const thankyouObserver = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "show-thankyou"
+                        );
+
+                        thankyouObserver.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        thankyouElements.forEach(function (element, index) {
+
+            element.style.transitionDelay =
+                (index * 120) + "ms";
+
+            thankyouObserver.observe(element);
+
+        });
+
+    } else {
+
+        thankyouElements.forEach(function (element) {
+
+            element.classList.add("show-thankyou");
+
+        });
+
+    }
+
+
+    /* =================================
+       FLOATING PETALS
+    ================================= */
+
+    const petalContainer = document.getElementById(
+        "thankyouPetals"
+    );
+
+    if (petalContainer) {
+
+        for (let i = 0; i < 20; i++) {
+
+            const petal = document.createElement("span");
+
+            petal.classList.add("thankyou-petal");
+
+            petal.style.left =
+                Math.random() * 100 + "%";
+
+            petal.style.animationDuration =
+                (9 + Math.random() * 12) + "s";
+
+            petal.style.animationDelay =
+                (Math.random() * 12) + "s";
+
+            petal.style.opacity =
+                0.2 + Math.random() * 0.5;
+
+            petalContainer.appendChild(petal);
+
+        }
+
+    }
+
+});
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const music = document.getElementById("weddingMusic");
+    const musicToggle = document.getElementById("musicToggle");
+    const musicIcon = document.getElementById("musicIcon");
+
+    let isPlaying = false;
+
+    // Update music button
+    function updateMusicButton() {
+
+        if (isPlaying) {
+            musicIcon.className = "bi bi-volume-up-fill";
+            musicToggle.setAttribute("aria-label", "Mute background music");
+            musicToggle.setAttribute("aria-pressed", "true");
+        } else {
+            musicIcon.className = "bi bi-volume-mute-fill";
+            musicToggle.setAttribute("aria-label", "Play background music");
+            musicToggle.setAttribute("aria-pressed", "false");
+        }
+    }
+
+    // Attempt autoplay when page opens
+    function startMusic() {
+
+        music.volume = 0.5;
+
+        music.play()
+            .then(function () {
+                isPlaying = true;
+                updateMusicButton();
+            })
+            .catch(function () {
+                // Autoplay may be blocked by the browser.
+                isPlaying = false;
+                updateMusicButton();
+            });
+    }
+
+    // Mute / Unmute button
+    musicToggle.addEventListener("click", function () {
+
+        if (music.paused) {
+
+            music.play()
+                .then(function () {
+                    isPlaying = true;
+                    updateMusicButton();
+                })
+                .catch(function () {
+                    isPlaying = false;
+                    updateMusicButton();
+                });
+
+        } else {
+
+            music.pause();
+            isPlaying = false;
+            updateMusicButton();
+
+        }
+    });
+
+    // If autoplay was blocked, start music on first visitor interaction.
+    function firstInteraction() {
+
+        if (music.paused) {
+            music.play()
+                .then(function () {
+                    isPlaying = true;
+                    updateMusicButton();
+                })
+                .catch(function () {
+                    isPlaying = false;
+                    updateMusicButton();
+                });
+        }
+
+        document.removeEventListener("click", firstInteraction);
+        document.removeEventListener("touchstart", firstInteraction);
+        document.removeEventListener("keydown", firstInteraction);
+    }
+
+    document.addEventListener("click", firstInteraction);
+    document.addEventListener("touchstart", firstInteraction, { passive: true });
+    document.addEventListener("keydown", firstInteraction);
+
+    // Keep button state in sync
+    music.addEventListener("play", function () {
+        isPlaying = true;
+        updateMusicButton();
+    });
+
+    music.addEventListener("pause", function () {
+        isPlaying = false;
+        updateMusicButton();
+    });
+
+    // Start on page load
+    startMusic();
+
+});
+</script>
+
+</body>
+</html>
